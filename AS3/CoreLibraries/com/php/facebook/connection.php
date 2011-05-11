@@ -1,8 +1,8 @@
 <?php
 	//configure the facebook install details
-    $fbconfig['appid' ]  = "133886716672207";
-    $fbconfig['api'   ]  = "e80672800e47ba5be414bcf56394a7f7";
-    $fbconfig['secret']  = "274dd573136ee012ddf4189b646d9d02";
+    $fbconfig['appid' ]  = "APPID";
+    $fbconfig['api'   ]  = "APIKEY";
+    $fbconfig['secret']  = "SECRETKEY";
  
 	//check if our api is valid and in existence
     try
