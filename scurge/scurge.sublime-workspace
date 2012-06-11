@@ -71,7 +71,7 @@
 			"file": "scurge.sublime-workspace",
 			"settings":
 			{
-				"buffer_size": 8843,
+				"buffer_size": 11206,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +131,7 @@
 			"file": "Gemfile.lock",
 			"settings":
 			{
-				"buffer_size": 486,
+				"buffer_size": 487,
 				"line_ending": "Unix",
 				"name": "PATH"
 			}
@@ -149,6 +149,33 @@
 			"settings":
 			{
 				"buffer_size": 157,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "module Scurge\n\n	class Token\n\n\n	end\n\n\n	class Document\n\n\n\n	end\n\n\n	def parse_text_to\n	end\n\n	def analyze_sentiment ( text )\n	  \n	  # load the word file (words -> sentiment score)\n	  sentihash = load_senti_file ('sentiwords.txt')\n\n	  # load the symbol file (smiles and ascii symbols -> sentiment score)  \n	  sentihash.merge!(load_senti_file ('sentislang.txt'))\n	  \n	  # tokenize the text\n	  tokens = text.split\n\n	  # Check the sentiment value of each token against the sentihash.\n	  # Since each word has a positive or negative numeric sentiment value\n	  # we can just sum the values of all the sentimental words. If it is\n	  # positive then we say the tweet is positive. If it is negative we \n	  # say the tweet is negative.\n	  sentiment_total = 0.0\n\n	  for token in tokens do\n\n	    sentiment_value = sentihash[token]\n\n	    if sentiment_value\n\n	      # for debugging purposes\n	      #puts \"#{token} => #{sentiment_value}\"\n\n	      sentiment_total += sentiment_value\n\n	    end\n	  end\n	  \n	  # threshold for classification\n	  threshold = 0.0\n\n	  # if less then the negative threshold classify negative\n	  if sentiment_total < (-1 * threshold)\n	    return 0\n	  # if greater then the positive threshold classify positive\n	  elsif sentiment_total > threshold\n	    return 2\n	  # otherwise classify as neutral\n	  else\n	    return 1\n	  end\n	end\nend",
+			"file": "lib/scurge/machinelearning/sentiment_analysis.rb",
+			"file_size": 1774,
+			"file_write_time": 1339454199000000,
+			"settings":
+			{
+				"buffer_size": 1335,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/scurge/utils/utils.rb",
+			"settings":
+			{
+				"buffer_size": 565,
+				"line_ending": "Unix",
+				"name": "module Scurge"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -231,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 13,
 			"sheets":
 			[
 				{
@@ -292,7 +319,7 @@
 					"file": "scurge.sublime-workspace",
 					"settings":
 					{
-						"buffer_size": 8843,
+						"buffer_size": 11206,
 						"regions":
 						{
 						},
@@ -406,8 +433,8 @@
 						"selection":
 						[
 							[
-								9,
-								9
+								48,
+								48
 							]
 						],
 						"settings":
@@ -478,15 +505,15 @@
 					"file": "Gemfile.lock",
 					"settings":
 					{
-						"buffer_size": 486,
+						"buffer_size": 487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								484,
-								484
+								0,
+								0
 							]
 						],
 						"settings":
@@ -558,6 +585,85 @@
 				},
 				{
 					"buffer": 12,
+					"file": "lib/scurge/machinelearning/sentiment_analysis.rb",
+					"settings":
+					{
+						"buffer_size": 1335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "lib/scurge/utils/utils.rb",
+					"settings":
+					{
+						"buffer_size": 565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"auto_name": "module Scurge",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/rexstjohn/Desktop/scanplay/Scanplay/scurge/lib/scurge/datamining",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
 					"file": "/Users/rexstjohn/Desktop/sinew/sinew/sample.sinew",
 					"settings":
 					{
