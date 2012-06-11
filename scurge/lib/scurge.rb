@@ -1,0 +1,1 @@
+Dir["scurge/*"].each {|file| require file }

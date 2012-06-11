@@ -1,0 +1,4 @@
+
+module Scurge
+
+end
