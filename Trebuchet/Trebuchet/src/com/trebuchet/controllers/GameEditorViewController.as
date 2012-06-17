@@ -22,6 +22,10 @@ package com.trebuchet.controllers
 			this._view = _viewNavigator.getViewByName(GameViewBase.EDITOR_VIEW) as EditorView;
 			this._physicsContext = new PhysicsContext(this._view, GameConfig.GAME_BOUNDS);
 			this._gameEditorBuilder = new GameEditorBuilder(_view,_physicsContext);
+			
+			// enable debug mode
+			_physicsContext.debug(true); 
+			_physicsContext.world.enableGrid(true);
 		}
 		
 		override public function update(e:IEvent):void
@@ -38,7 +42,7 @@ package com.trebuchet.controllers
 		
 		private function loadEditor():void
 		{
-			_physicsContext.world.enableGrid(true);
+			_physicsContext.start();
 		}
 	}
 }

@@ -18,7 +18,7 @@ package com.core.mvc
 		public function View(_name:String)
 		{
 			//we have to fill the sprite to ensure it will be the correct size
-			this.fill(StageDimensions.STAGE_WIDTH,StageDimensions.STAGE_HEIGHT);
+			this.fill(StageDimensions.STAGE_WIDTH,StageDimensions.STAGE_HEIGHT,0x00ff00,.25);
 			this._name = _name;
 			this._children = new Array();
 			EventBus.instance.subscribe(this);
