@@ -4,8 +4,7 @@ package com.trebuchet.helpers
 	import com.core.mvc.ApplicationContext;
 	import com.core.ui.components.ViewNavigator;
 	import com.core.util.SuperSprite;
-	import com.trebuchet.controllers.GameMenuViewController;
-	import com.trebuchet.controllers.GameViewController;
+	import com.trebuchet.controllers.*;
 	import com.trebuchet.models.*;
 	import com.trebuchet.views.*;
 
@@ -23,6 +22,7 @@ package com.trebuchet.helpers
 			var _navigator:ViewNavigator = new ViewNavigator(_canvas);
 			_navigator.pushView(new GameView());
 			_navigator.pushView(new TestView());
+			_navigator.pushView(new EditorView());
 
 			//create default models
 			_context.addModel(new TrebuchetModel(), GameModel.TREBUCHET_MODEL);
@@ -32,6 +32,7 @@ package com.trebuchet.helpers
 			_context.viewNavigator = _navigator;
 			_context.addController(new GameMenuViewController(_context));
 			_context.addController(new GameViewController(_context));
+			_context.addController(new GameEditorViewController(_context));
 			return _context;
 		}
 
@@ -51,6 +52,7 @@ package com.trebuchet.helpers
 			_context.viewNavigator = _navigator;
 			_context.addController(new GameMenuViewController(_context));
 			_context.addController(new GameViewController(_context));
+			_context.addController(new GameEditorViewController(_context));
 			return _context;
 
 		}

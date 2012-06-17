@@ -20,21 +20,13 @@ package com.trebuchet.controllers
 			//react to various menu related events here
 			switch(e.type)
 			{
-				case GameEvent.LOAD_MENU_EVENT:
-					break;
-				case GameEvent.LOAD_DIALOG_EVENT:
-					break;
-				case GameEvent.CLOSE_DIALOG_EVENT:
-					break;
-				case GameEvent.NEXT_BUTTON_EVENT:
-					break;
-				case GameEvent.LOADING_COMPLETE:
-					break;
-				case GameEvent.LOAD_SCRIPTED_DIALOG_SEQUENCE_EVENT:
-					break;
 				case GameEvent.START_GAME_EVENT:
 					//start the game
 					_viewNavigator.navigateToView(GameViewBase.GAME_VIEW);
+					break;
+				case GameEvent.START_EDITOR_EVENT:
+					//start the game
+					_viewNavigator.navigateToView(GameViewBase.EDITOR_VIEW);
 					break;
 			}
 		}

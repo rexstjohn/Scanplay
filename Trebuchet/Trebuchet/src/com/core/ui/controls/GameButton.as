@@ -8,21 +8,22 @@ package com.core.ui.controls
 
 	public class GameButton extends GameControl
 	{
-		private var _height:int = 100;
-		private var _width:int = 300;
+		private const DEFAULT_HEIGHT:int = 50;
+		private const DEFAULT_WIDTH:int =  150;
+		private const DEFAULT_COLOR:int =  0xFF0000;
 		private var _label:SuperTextField;
 		private var _event:IEvent;
 
 		public function GameButton(_point:Point, _text:String, _event:IEvent)
 		{
 			//create the button
-			graphics.beginFill(0xFF0000); // choosing the colour for the fill, here it is red
-			graphics.drawRect(0,0,_width,_height); // (x spacing, y spacing, width, height)
+			graphics.beginFill(DEFAULT_COLOR); // choosing the colour for the fill, here it is red
+			graphics.drawRect(0,0,DEFAULT_WIDTH,DEFAULT_HEIGHT); // (x spacing, y spacing, width, height)
 			graphics.endFill(); 
 
 			//set the position
-			this.x = _point.x - _width / 2;
-			this.y = _point.y - _height / 2;
+			this.x = _point.x - DEFAULT_WIDTH / 2;
+			this.y = _point.y - DEFAULT_HEIGHT / 2;
 
 			//add the label
 			_label = new SuperTextField();

@@ -38,6 +38,7 @@ package com.trebuchet.events
 		 */
 
 		public static var START_GAME_EVENT:String = "start game";
+		public static var START_EDITOR_EVENT:String = "start editor";
 		public static var GAME_STARTED_EVENT:String = "game started";
 		public static var END_GAME_EVENT:String = "end game";
 		public static var YOU_LOSE_EVENT:String = "you lose";

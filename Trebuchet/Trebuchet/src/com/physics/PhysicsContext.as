@@ -4,9 +4,10 @@ package com.physics
 	import com.core.interfaces.IObserver;
 	import com.core.interfaces.IPhysicsObject;
 	import com.core.mvc.EventBus;
+	import com.core.util.SuperSprite;
 	import com.physics.events.PhysicsStartedEvent;
 	import com.physics.events.PhysicsStoppedEvent;
-
+	
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.geom.Rectangle;
@@ -34,13 +35,13 @@ package com.physics
 		//a general purpose context in which physics can occur.
 		private var _world:PhysicsWorld; //physics world
 		private var _factory:PhysicsFactory; //factory for generating physics objects
-		private var _canvas:Sprite; //canvas where all the physics occurs
+		private var _canvas:SuperSprite; //canvas where all the physics occurs
 
 		//state of the physics context
 		private var _runningState:String = PAUSED;
 		private var _debugState:String = DEBUG_OFF;
 
-		public function PhysicsContext(_canvas:Sprite, _bounds:Rectangle = null)
+		public function PhysicsContext(_canvas:SuperSprite, _bounds:Rectangle = null)
 		{
 			//create the world
 			this._world = new PhysicsWorld((_bounds == null)?WORLD_BOUNDS:_bounds,_canvas);

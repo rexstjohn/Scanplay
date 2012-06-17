@@ -1,22 +1,18 @@
 package com.trebuchet.helpers
 {
-	import Box2D.Dynamics.Joints.b2Joint;
-	import Box2D.Dynamics.Joints.b2RevoluteJoint;
 	import Box2D.Dynamics.b2Body;
-
+	
 	import com.core.interfaces.IFactory;
-	import com.core.interfaces.IPhysicsObject;
+	import com.core.util.SuperSprite;
 	import com.physics.PhysicsAttributes;
 	import com.physics.PhysicsContext;
 	import com.physics.PhysicsObject;
-	import com.physics.PhysicsUtils;
 	import com.trebuchet.assets.PhysicsObjectDefs;
 	import com.trebuchet.config.TrebuchetConfig;
 	import com.trebuchet.models.TrebuchetModel;
 	import com.trebuchet.prefabs.Background;
 	import com.trebuchet.prefabs.Trebuchet;
-
-	import flash.display.Sprite;
+	
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 
@@ -25,12 +21,12 @@ package com.trebuchet.helpers
 		//this is used to set up a game instance and offload the initialization process of loading a game
 		//into a single area
 		//responsible for: Setting up (and possible destroying) a game instance
-		private var _canvas:Sprite;
+		private var _canvas:SuperSprite;
 		private var _physicsContext:PhysicsContext;
 		private var _model:PhysicsContext;
 		private var _ammunitionBuilder:AmmunitionBuilder;
 
-		public function GameBuilder(_canvas:Sprite, _physicsContext:PhysicsContext)
+		public function GameBuilder(_canvas:SuperSprite, _physicsContext:PhysicsContext)
 		{
 			this._canvas = _canvas;
 			this._physicsContext = _physicsContext;

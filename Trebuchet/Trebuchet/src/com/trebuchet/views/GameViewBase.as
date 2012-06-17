@@ -11,10 +11,7 @@ package com.trebuchet.views
 		public static const GAME_STORE_VIEW:String="GameStoreView";
 		public static const GAME_VIEW:String="GameView";
 		public static const TEST_VIEW:String="TestView";
-		
-		//in game views
-		public static const TREBUCHET_VIEW:String="TrebuchetView";
-		public static const BACKGROUND_VIEW:String="BackgroundView";
+		public static const EDITOR_VIEW:String="EditorView";
 		
 		public function GameViewBase(_name:String)
 		{

@@ -9,9 +9,11 @@ package com.physics
 	import Box2D.Dynamics.b2BodyDef;
 	import Box2D.Dynamics.b2DebugDraw;
 	import Box2D.Dynamics.b2World;
-
+	
 	import com.core.interfaces.*;
-
+	import com.core.util.GraphicsUtils;
+	import com.core.util.SuperSprite;
+	
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.geom.Point;
@@ -32,6 +34,7 @@ package com.physics
 		private static const TIME_STEP:Number = 1.0/30.0;
 		private static const VELOCITY_ITERATIONS:int = 10;
 		private static const POSITION_ITERATIONS:int = 10;
+		private static const GRID_SIZE:int = 50;
 
 		//wall thickness
 		public static const WALL_THICKNESS:Number = 25;
@@ -39,10 +42,11 @@ package com.physics
 		//instance vars
 		private var _world:b2World;
 		private var _doDebugDraw:Boolean = false;
+		private var _drawGrid:Boolean = false;
 		private var _physicsObjects:Array;
-		private var _canvas:Sprite; //copy of the canvas
+		private var _canvas:SuperSprite; //copy of the canvas
 
-		public function PhysicsWorld(_bounds:Rectangle, _canvas:Sprite)
+		public function PhysicsWorld(_bounds:Rectangle, _canvas:SuperSprite)
 		{
 			this._canvas = _canvas;
 			_physicsObjects = new Array();
@@ -80,6 +84,11 @@ package com.physics
 		public function enableDebugDraw(_enabled:Boolean = false):void
 		{
 			_doDebugDraw = _enabled;
+		}
+		
+		public function enableGrid(_enabled:Boolean = false):void
+		{
+			_drawGrid = _enabled;
 		}
 
 		private function createWall(_x:Number, _y:Number, _width:Number, _height:Number):void
@@ -123,6 +132,10 @@ package com.physics
 			// draw debugging information
 			if(_doDebugDraw)
 				_world.DrawDebugData();
+				
+			//draw a grid?
+			if(_drawGrid)
+				GraphicsUtils.drawGrid(_canvas,GRID_SIZE,GRID_SIZE);
 
 			//update all the physics objects
 			for each(var o:IPhysicsObject in _physicsObjects)
