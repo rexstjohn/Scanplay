@@ -8,12 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "b2World.h"
+#import "GLES-Render.h"
 
-#define PTM_RATIO = 32
+#define GRAVITY    -10f
+#define DO_SLEEP  true
+#define PTM_RATIO  32
 
 @interface SPPhysicsWorld : NSObject
 
--(id)init;
+-(id)initWithSize:(CGSize)aSize;
 
-@property(nonatomic,retain) b2World *world;
+//wrapper functions
+-(b2Body*)createBody:(b2BodyDef*)aBodyDef;
+-(b2Joint*)createJoint:(b2JointDef*)aJointDef;
+
+@property(nonatomic) b2World *world;
+@property (nonatomic) GLESDebugDraw *debugDraw;
+
 @end

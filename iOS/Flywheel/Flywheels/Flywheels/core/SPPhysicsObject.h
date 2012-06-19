@@ -15,6 +15,6 @@
 -(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite;
 
 @property(nonatomic, retain) CCSprite *sprite;
-@property(nonatomic, retain) b2Body *body;
+@property(nonatomic) b2Body *body;
 
 @end

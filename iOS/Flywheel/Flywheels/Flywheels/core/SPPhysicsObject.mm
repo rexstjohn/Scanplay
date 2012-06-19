@@ -15,8 +15,13 @@
 
 -(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite
 {
-    _body = body;
-    _sprite = sprite;
+    if(self = [super init])
+    {
+        _body = body;
+        _sprite = sprite;
+    }
+    
+    return self;
 }
 
 @end

@@ -14,16 +14,18 @@
 
 @synthesize world = _world, factory = _factory;
 
--(id)init
+-(id)initWithSize:(CGSize)aSize
 {
     if(self = [super init])
     {
         //create our physics world
-        _world = [[SPPhysicsWorld alloc] init];
+        _world = [[SPPhysicsWorld alloc] initWithSize:aSize];
         
         //create our factory
         _factory = [[SPPhysicsFactory alloc] initWithPhysicsContext:self];
     }
+    
+    return self;
 }
 
 @end

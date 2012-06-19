@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "SPPhysicsWorld.h"
-#import "SPPhysicsFactory.h"
+@class SPPhysicsFactory;
 
 @interface SPPhysicsContext : NSObject
 
--(id)init;
+-(id)initWithSize:(CGSize)aSize;
 
 @property (nonatomic, retain) SPPhysicsWorld *world;
 @property (nonatomic, retain) SPPhysicsFactory *factory;

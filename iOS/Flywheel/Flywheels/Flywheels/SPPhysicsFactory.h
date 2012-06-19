@@ -7,17 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SPPhysicsFactory.h"
-#import "SPGear.h"
-#import "SPPhysicsObject.h"
-#import "SPPhysicsContext.h"
+@class SPPhysicsWorld;
+@class SPPhysicsFactory;
+@class SPGear;
+@class SPPhysicsObject;
+@class SPPhysicsContext;
 
 @interface SPPhysicsFactory : NSObject
 
+//init with a physics context
 -(id)initWithPhysicsContext:(SPPhysicsContext*)aContext;
--(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth;
--(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
 
-@property(nonatomic,retain) PhysicsContext *context;
+//create a basic gear
+-(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth;
+
+//create a circle
+-(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
+
+//create a box
+-(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
+
+@property(nonatomic,retain) SPPhysicsContext *context;
+@property(nonatomic,retain) SPPhysicsWorld *world;
 
 @end

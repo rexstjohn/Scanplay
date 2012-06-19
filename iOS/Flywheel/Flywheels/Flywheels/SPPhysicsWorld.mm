@@ -9,62 +9,84 @@
 #import "SPPhysicsWorld.h"
 #import "b2World.h"
 #import "b2Body.h"
+#import "GLES-Render.h"
 #import "b2PolygonShape.h"
-#import "b2Vec2.h"
-#import "SPPhysicsVars.h"
 
 @interface  SPPhysicsWorld ()
-- (void) createGroundBodyInRect:(CGRect)aRect;
+
+    // Generate a debug draw.
+    -(void) createDebugDraw;
+
+    // Create a ground body to contain the world.
+    - (void) createGroundBodyInRect:(CGRect)aRect;
+
 @end
 
 @implementation SPPhysicsWorld
 
-#define GRAVITY = -10f;
-#define DO_SLEEP = true;
 
-@synthesize world = _world;
+@synthesize world = _world, debugDraw = _debugDraw;
 
--(id)init
+-(id)initWithSize:(CGSize)aSize
 {    
     if(self = [super init])
     {
         // Define the gravity vector.
         b2Vec2 gravity;
-        gravity.Set(0.0f, GRAVITY);
+        gravity.Set(0.0f, -10.0f);
         
         // Do we want to let bodies sleep?
         // This will speed up the physics simulation
-        bool doSleep = DO_SLEEP;
+        bool doSleep = true;
         
         // Construct a world object, which will hold and simulate the rigid bodies.
         _world = new b2World(gravity, doSleep);        
         _world->SetContinuousPhysics(true);
-        
-        // Debug Draw functions
-        m_debugDraw = new GLESDebugDraw( SPPhysicsVars.PTM_RATIO );
-        _world->SetDebugDraw(m_debugDraw);
-        
-        uint32 flags = 0;
-        flags += b2DebugDraw::e_shapeBit;
-        //		flags += b2DebugDraw::e_jointBit;
-        //		flags += b2DebugDraw::e_aabbBit;
-        //		flags += b2DebugDraw::e_pairBit;
-        //		flags += b2DebugDraw::e_centerOfMassBit;
-        m_debugDraw->SetFlags(flags);		
+        		
+        //create the debug draw
+        [self createDebugDraw];
         
         //create the ground body
-        [self createGroundBodyInRect:CGRectMake(0, 0, screenSize.width/SPPhysicsVars.PTM_RATIO, screenSize.height/SPPhysicsVars.PTM_RATIO)];
+        CGRect groundRect = CGRectMake(0, 0, aSize.width/PTM_RATIO, aSize.height/PTM_RATIO);
+        [self createGroundBodyInRect:groundRect];
         
     }
     
     return self;
 }
 
+-(b2Body*)createBody:(b2BodyDef*)aBodyDed
+{
+    return _world->CreateBody(aBodyDed);
+}
+
+-(b2Joint*)createJoint:(b2JointDef*)aJointDef
+{
+    return _world->CreateJoint(aJointDef);
+}
+
+//private methods
+
+-(void) createDebugDraw
+{
+    // Debug Draw functions
+    _debugDraw = new GLESDebugDraw(PTM_RATIO);
+    _world->SetDebugDraw(_debugDraw);
+    
+    uint32 flags = 0;
+    flags += b2DebugDraw::e_shapeBit;
+    //		flags += b2DebugDraw::e_jointBit;
+    //		flags += b2DebugDraw::e_aabbBit;
+    //		flags += b2DebugDraw::e_pairBit;
+    //		flags += b2DebugDraw::e_centerOfMassBit;
+    _debugDraw->SetFlags(flags);
+}
+
 -(void)createGroundBodyInRect:(CGRect)aRect
 {
     // Define the ground body.
     b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0, 0); // bottom-left corner
+    groundBodyDef.position.Set(aRect.origin.x, aRect.origin.y); // bottom-left corner
     
     // Call the body factory which allocates memory for the ground body
     // from a pool and creates the ground box shape (also from a pool).
