@@ -16,6 +16,7 @@
 
 @interface SPPhysicsWorld : NSObject
 {
+    //these items are C++ class objects so they must be handled differently memory-wise.
     b2World *_world;
     GLESDebugDraw *_debugDraw;
 }

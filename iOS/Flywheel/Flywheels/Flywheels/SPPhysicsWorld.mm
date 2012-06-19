@@ -113,8 +113,13 @@
 
 
 - (void) dealloc 
-{    //nil
-    _debugDraw = nil;
+{    
+    delete _world;
+    _world = NULL;
+    
+	delete _debugDraw;
+    _debugDraw = NULL;
+    
     [super dealloc];
 }
 

@@ -30,7 +30,7 @@
     [_sprite dealloc];
     
     //nil
-     _body = nil;
+     _body = NULL; //the world handles the destruction of these bodies.
     _sprite= nil;
     [super dealloc];
 }
