@@ -20,7 +20,7 @@ package com.trebuchet.helpers
 
 			//add default views
 			var _navigator:ViewNavigator = new ViewNavigator(_canvas);
-			_navigator.pushView(new GameView());
+			//_navigator.pushView(new GameView());
 			_navigator.pushView(new TestView());
 			_navigator.pushView(new EditorView());
 
@@ -31,7 +31,7 @@ package com.trebuchet.helpers
 
 			_context.viewNavigator = _navigator;
 			_context.addController(new GameMenuViewController(_context));
-			_context.addController(new GameViewController(_context));
+			//_context.addController(new GameViewController(_context));
 			_context.addController(new GameEditorViewController(_context));
 			return _context;
 		}

@@ -22,15 +22,15 @@ package com.core.util
 			this.y = _point.y + (this.height / 2);
 		}
 
-		public function drawLine(_p1:Point, _p2:Point,_alpha:Number = 1, _color:int = 0x00FF00):void
+		public function drawLine(_p1:Point, _p2:Point,_alpha:Number = 1, _color:int = 0xFF0000):void
 		{
-			graphics.beginFill(_color,_alpha);
+			graphics.lineStyle(2, _color, _alpha);
 			graphics.moveTo(_p1.x, _p1.y); 
 			graphics.lineTo(_p2.x, _p2.y);
 			graphics.endFill();
 		}
 
-		public function drawRect(_rect:Rectangle, _alpha:Number = 1, _color:int = 0x00FF00):void
+		public function drawRect(_rect:Rectangle, _alpha:Number = 1, _color:int = 0xFF0000):void
 		{
 			graphics.beginFill(_color,_alpha);
 			graphics.drawRect(_rect.x,_rect.y,_rect.width,_rect.height);

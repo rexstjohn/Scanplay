@@ -8,7 +8,7 @@ package {
 	import com.trebuchet.helpers.ApplicationContextBuilder;
 	import com.trebuchet.views.*;
 
-	[SWF(width="800", height="600", frameRate="30", backgroundColor="#000000")]
+	[SWF(width="800", height="600", frameRate="30", backgroundColor="#808080")]
 	public class main extends SuperSprite implements IObserver
 	{
 		//the application context
