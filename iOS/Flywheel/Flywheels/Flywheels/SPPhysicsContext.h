@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPPhysicsWorld.h"
+#import "SPPhysicsFactory.h"
 
 @interface SPPhysicsContext : NSObject
 
+-(id)init;
 
+@property (nonatomic, retain) SPPhysicsWorld *world;
+@property (nonatomic, retain) SPPhysicsFactory *factory;
 
 
 @end

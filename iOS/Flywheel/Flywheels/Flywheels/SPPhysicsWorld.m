@@ -11,6 +11,11 @@
 #import "b2Body.h"
 #import "b2PolygonShape.h"
 #import "b2Vec2.h"
+#import "SPPhysicsVars.h"
+
+@interface  SPPhysicsWorld ()
+- (void) createGroundBodyInRect:(CGRect)aRect;
+@end
 
 @implementation SPPhysicsWorld
 
@@ -36,8 +41,8 @@
         _world->SetContinuousPhysics(true);
         
         // Debug Draw functions
-        m_debugDraw = new GLESDebugDraw( PTM_RATIO );
-        world->SetDebugDraw(m_debugDraw);
+        m_debugDraw = new GLESDebugDraw( SPPhysicsVars.PTM_RATIO );
+        _world->SetDebugDraw(m_debugDraw);
         
         uint32 flags = 0;
         flags += b2DebugDraw::e_shapeBit;
@@ -47,37 +52,43 @@
         //		flags += b2DebugDraw::e_centerOfMassBit;
         m_debugDraw->SetFlags(flags);		
         
+        //create the ground body
+        [self createGroundBodyInRect:CGRectMake(0, 0, screenSize.width/SPPhysicsVars.PTM_RATIO, screenSize.height/SPPhysicsVars.PTM_RATIO)];
         
-        // Define the ground body.
-        b2BodyDef groundBodyDef;
-        groundBodyDef.position.Set(0, 0); // bottom-left corner
-        
-        // Call the body factory which allocates memory for the ground body
-        // from a pool and creates the ground box shape (also from a pool).
-        // The body is also added to the world.
-        b2Body* groundBody = world->CreateBody(&groundBodyDef);
-        
-        // Define the ground box shape.
-        b2PolygonShape groundBox;		
-        
-        // bottom
-        groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(screenSize.width/PTM_RATIO,0));
-        groundBody->CreateFixture(&groundBox,0);
-        
-        // top
-        groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO));
-        groundBody->CreateFixture(&groundBox,0);
-        
-        // left
-        groundBox.SetAsEdge(b2Vec2(0,screenSize.height/PTM_RATIO), b2Vec2(0,0));
-        groundBody->CreateFixture(&groundBox,0);
-        
-        // right
-        groundBox.SetAsEdge(b2Vec2(screenSize.width/PTM_RATIO,screenSize.height/PTM_RATIO), b2Vec2(screenSize.width/PTM_RATIO,0));
-        groundBody->CreateFixture(&groundBox,0);
     }
     
     return self;
+}
+
+-(void)createGroundBodyInRect:(CGRect)aRect
+{
+    // Define the ground body.
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0, 0); // bottom-left corner
+    
+    // Call the body factory which allocates memory for the ground body
+    // from a pool and creates the ground box shape (also from a pool).
+    // The body is also added to the world.
+    b2Body* groundBody = _world->CreateBody(&groundBodyDef);
+    
+    // Define the ground box shape.
+    b2PolygonShape groundBox;		
+    
+    // bottom
+    groundBox.SetAsEdge(b2Vec2(0,0), b2Vec2(aRect.size.width,0));
+    groundBody->CreateFixture(&groundBox,0);
+    
+    // top
+    groundBox.SetAsEdge(b2Vec2(0,aRect.size.height), b2Vec2(aRect.size.width,aRect.size.height));
+    groundBody->CreateFixture(&groundBox,0);
+    
+    // left
+    groundBox.SetAsEdge(b2Vec2(0,aRect.size.height), b2Vec2(0,0));
+    groundBody->CreateFixture(&groundBox,0);
+    
+    // right
+    groundBox.SetAsEdge(b2Vec2(aRect.size.width,aRect.size.height), b2Vec2(aRect.size.width,0));
+    groundBody->CreateFixture(&groundBox,0);
 }
 
 @end

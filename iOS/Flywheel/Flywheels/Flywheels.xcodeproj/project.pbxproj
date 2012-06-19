@@ -170,7 +170,6 @@
 /* Begin PBXFileReference section */
 		51774F31159113C800FA745F /* SPPhysicsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsContext.h; sourceTree = "<group>"; };
 		51774F32159113C800FA745F /* SPPhysicsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsContext.m; sourceTree = "<group>"; };
-		51774F351591168500FA745F /* PhysicsVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsVars.h; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
 		51774F39159119C400FA745F /* SPPhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsWorld.m; sourceTree = "<group>"; };
 		51DF11901590205300B90EF0 /* Flywheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flywheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1076,7 +1075,6 @@
 				51DF13901590384800B90EF0 /* SPPhysicsObject.m */,
 				51774F31159113C800FA745F /* SPPhysicsContext.h */,
 				51774F32159113C800FA745F /* SPPhysicsContext.m */,
-				51774F351591168500FA745F /* PhysicsVars.h */,
 				51774F38159119C400FA745F /* SPPhysicsWorld.h */,
 				51774F39159119C400FA745F /* SPPhysicsWorld.m */,
 			);

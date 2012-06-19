@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "b2World.h"
 
+#define PTM_RATIO = 32
+
 @interface SPPhysicsWorld : NSObject
 
 -(id)init;
