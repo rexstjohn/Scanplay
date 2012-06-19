@@ -15,14 +15,15 @@
 #define PTM_RATIO  32
 
 @interface SPPhysicsWorld : NSObject
+{
+    b2World *_world;
+    GLESDebugDraw *_debugDraw;
+}
 
 -(id)initWithSize:(CGSize)aSize;
 
 //wrapper functions
 -(b2Body*)createBody:(b2BodyDef*)aBodyDef;
 -(b2Joint*)createJoint:(b2JointDef*)aJointDef;
-
-@property(nonatomic) b2World *world;
-@property (nonatomic) GLESDebugDraw *debugDraw;
 
 @end

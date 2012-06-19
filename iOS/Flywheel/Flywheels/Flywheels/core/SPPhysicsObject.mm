@@ -11,7 +11,7 @@
 @implementation SPPhysicsObject
 
 // create ivars & syntesize
-@synthesize body = _body, sprite = _sprite;
+@synthesize sprite = _sprite;
 
 -(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite
 {
@@ -22,6 +22,17 @@
     }
     
     return self;
+}
+
+- (void) dealloc 
+{
+    //dealloc
+    [_sprite dealloc];
+    
+    //nil
+     _body = nil;
+    _sprite= nil;
+    [super dealloc];
 }
 
 @end

@@ -28,4 +28,16 @@
     return self;
 }
 
+- (void) dealloc 
+{
+    //dealloc
+    [_world dealloc];
+    [_factory dealloc];
+    
+    //nil
+    _world = nil;
+    _factory = nil;
+    [super dealloc];
+}
+
 @end

@@ -99,4 +99,16 @@
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
+- (void) dealloc 
+{
+    //dealloc
+    [_world dealloc];
+    [_context dealloc];
+    
+    //nil
+    _world = nil;
+    _context = nil;
+    [super dealloc];
+}
+
 @end

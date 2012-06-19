@@ -25,8 +25,6 @@
 @implementation SPPhysicsWorld
 
 
-@synthesize world = _world, debugDraw = _debugDraw;
-
 -(id)initWithSize:(CGSize)aSize
 {    
     if(self = [super init])
@@ -111,6 +109,13 @@
     // right
     groundBox.SetAsEdge(b2Vec2(aRect.size.width,aRect.size.height), b2Vec2(aRect.size.width,0));
     groundBody->CreateFixture(&groundBox,0);
+}
+
+
+- (void) dealloc 
+{    //nil
+    _debugDraw = nil;
+    [super dealloc];
 }
 
 @end

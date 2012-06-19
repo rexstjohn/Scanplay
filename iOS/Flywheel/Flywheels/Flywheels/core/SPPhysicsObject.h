@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCSprite.h"
 #import "b2Body.h"
+@class CCSprite;
 
 @interface SPPhysicsObject : NSObject
+{
+    b2Body *_body;
+}
 
 -(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite;
 
 @property(nonatomic, retain) CCSprite *sprite;
-@property(nonatomic) b2Body *body;
 
 @end

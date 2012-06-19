@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SPPhysicsWorld.h"
+@class SPPhysicsWorld;
 @class SPPhysicsFactory;
 
 @interface SPPhysicsContext : NSObject
