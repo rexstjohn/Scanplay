@@ -10,9 +10,9 @@
 #import "b2World.h"
 #import "GLES-Render.h"
 
-#define GRAVITY    -10f
-#define DO_SLEEP  true
-#define PTM_RATIO  32
+#define kGRAVITY    -10.0f
+#define kDO_SLEEP  true
+#define kPTM_RATIO  32.0f
 
 @interface SPPhysicsWorld : NSObject
 {

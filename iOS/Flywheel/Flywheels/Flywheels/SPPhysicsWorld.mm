@@ -31,11 +31,11 @@
     {
         // Define the gravity vector.
         b2Vec2 gravity;
-        gravity.Set(0.0f, -10.0f);
+        gravity.Set(0.0f, kGRAVITY);
         
         // Do we want to let bodies sleep?
         // This will speed up the physics simulation
-        bool doSleep = true;
+        bool doSleep = kDO_SLEEP;
         
         // Construct a world object, which will hold and simulate the rigid bodies.
         _world = new b2World(gravity, doSleep);        
@@ -45,7 +45,7 @@
         [self createDebugDraw];
         
         //create the ground body
-        CGRect groundRect = CGRectMake(0, 0, aSize.width/PTM_RATIO, aSize.height/PTM_RATIO);
+        CGRect groundRect = CGRectMake(0, 0, aSize.width/kPTM_RATIO, aSize.height/kPTM_RATIO);
         [self createGroundBodyInRect:groundRect];
         
     }
@@ -68,7 +68,7 @@
 -(void) createDebugDraw
 {
     // Debug Draw functions
-    _debugDraw = new GLESDebugDraw(PTM_RATIO);
+    _debugDraw = new GLESDebugDraw(kPTM_RATIO);
     _world->SetDebugDraw(_debugDraw);
     
     uint32 flags = 0;

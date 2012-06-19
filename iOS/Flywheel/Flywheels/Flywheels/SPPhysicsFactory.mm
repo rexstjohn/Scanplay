@@ -47,7 +47,7 @@
         bodyDef.type = b2_staticBody;
     
     //
-	bodyDef.position.Set(point.x/PTM_RATIO, point.y/PTM_RATIO);
+	bodyDef.position.Set(point.x/kPTM_RATIO, point.y/kPTM_RATIO);
 	bodyDef.userData = sprite;  // Assign the sprite representation of the body.
 	b2Body *body = [_world createBody:&bodyDef];
 	
@@ -80,7 +80,7 @@
         bodyDef.type = b2_staticBody;
     
     //
-	bodyDef.position.Set(aRect.origin.x/PTM_RATIO, aRect.origin.y/PTM_RATIO);
+	bodyDef.position.Set(aRect.origin.x/kPTM_RATIO, aRect.origin.y/kPTM_RATIO);
 	bodyDef.userData = sprite;  // Assign the sprite representation of the body.
     b2Body *body = [_world createBody:&bodyDef];
 	
