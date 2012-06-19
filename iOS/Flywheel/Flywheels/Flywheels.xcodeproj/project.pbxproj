@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51774F33159113C800FA745F /* SPPhysicsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.m */; };
+		51774F3A159119C500FA745F /* SPPhysicsWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.m */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
 		51DF11971590205300B90EF0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11961590205300B90EF0 /* OpenGLES.framework */; };
 		51DF11991590205300B90EF0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11981590205300B90EF0 /* OpenAL.framework */; };
@@ -166,6 +168,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51774F31159113C800FA745F /* SPPhysicsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsContext.h; sourceTree = "<group>"; };
+		51774F32159113C800FA745F /* SPPhysicsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsContext.m; sourceTree = "<group>"; };
+		51774F351591168500FA745F /* PhysicsVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsVars.h; sourceTree = "<group>"; };
+		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
+		51774F39159119C400FA745F /* SPPhysicsWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsWorld.m; sourceTree = "<group>"; };
 		51DF11901590205300B90EF0 /* Flywheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flywheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DF11941590205300B90EF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		51DF11961590205300B90EF0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1067,6 +1074,11 @@
 				51DF138D1590380B00B90EF0 /* SPPhysicsFactory.m */,
 				51DF138F1590384800B90EF0 /* SPPhysicsObject.h */,
 				51DF13901590384800B90EF0 /* SPPhysicsObject.m */,
+				51774F31159113C800FA745F /* SPPhysicsContext.h */,
+				51774F32159113C800FA745F /* SPPhysicsContext.m */,
+				51774F351591168500FA745F /* PhysicsVars.h */,
+				51774F38159119C400FA745F /* SPPhysicsWorld.h */,
+				51774F39159119C400FA745F /* SPPhysicsWorld.m */,
 			);
 			name = physics;
 			sourceTree = "<group>";
@@ -1280,6 +1292,8 @@
 				51DF13861590263300B90EF0 /* Utils.m in Sources */,
 				51DF138E1590380B00B90EF0 /* SPPhysicsFactory.m in Sources */,
 				51DF13911590384800B90EF0 /* SPPhysicsObject.m in Sources */,
+				51774F33159113C800FA745F /* SPPhysicsContext.m in Sources */,
+				51774F3A159119C500FA745F /* SPPhysicsWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,7 +1347,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Flywheels/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1352,7 +1366,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Flywheels/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1381,6 +1395,7 @@
 				51DF137C1590205700B90EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

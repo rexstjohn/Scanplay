@@ -71,7 +71,7 @@
 			"file": "scurge.sublime-workspace",
 			"settings":
 			{
-				"buffer_size": 11206,
+				"buffer_size": 13319,
 				"line_ending": "Unix"
 			}
 		},
@@ -80,6 +80,17 @@
 			"settings":
 			{
 				"buffer_size": 43,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "require \"Scurge\"\n\nurl = \"http://www.dailyfinance.com/2012/06/13/why-the-dow-dropped-late-today/\"\n\ntokens = devour(url)",
+			"file": "lib/scurge/recipies/DailyFinance.rb",
+			"file_size": 118,
+			"file_write_time": 1339629811000000,
+			"settings":
+			{
+				"buffer_size": 118,
 				"line_ending": "Unix"
 			}
 		},
@@ -145,6 +156,27 @@
 			}
 		},
 		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "test/test_main.rb",
 			"settings":
 			{
@@ -184,6 +216,14 @@
 			"settings":
 			{
 				"buffer_size": 283,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "recipies/DailyFinance.rb",
+			"settings":
+			{
+				"buffer_size": 700,
 				"line_ending": "Unix"
 			}
 		}
@@ -258,7 +298,7 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 20,
 			"sheets":
 			[
 				{
@@ -319,7 +359,7 @@
 					"file": "scurge.sublime-workspace",
 					"settings":
 					{
-						"buffer_size": 11206,
+						"buffer_size": 13319,
 						"regions":
 						{
 						},
@@ -369,6 +409,32 @@
 				},
 				{
 					"buffer": 4,
+					"file": "lib/scurge/recipies/DailyFinance.rb",
+					"settings":
+					{
+						"buffer_size": 118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "com/scanners/scanner.rb",
 					"settings":
 					{
@@ -394,7 +460,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "scurge.gemspec",
 					"settings":
 					{
@@ -422,7 +488,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "lib/scurge/version.rb",
 					"settings":
 					{
@@ -448,7 +514,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "RakeFile",
 					"settings":
 					{
@@ -475,7 +541,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "Gemfile",
 					"settings":
 					{
@@ -501,7 +567,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "Gemfile.lock",
 					"settings":
 					{
@@ -530,7 +596,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "lib/scurge/main.rb",
 					"settings":
 					{
@@ -556,7 +622,83 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/rexstjohn/Desktop/scanplay/Scanplay/scurge/lib/scurge/recipies",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
 					"file": "test/test_main.rb",
 					"settings":
 					{
@@ -584,7 +726,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "lib/scurge/machinelearning/sentiment_analysis.rb",
 					"settings":
 					{
@@ -601,7 +743,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 24.0,
@@ -610,7 +753,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 17,
 					"file": "lib/scurge/utils/utils.rb",
 					"settings":
 					{
@@ -628,7 +771,8 @@
 						"settings":
 						{
 							"auto_name": "module Scurge",
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -637,7 +781,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 18,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -663,7 +807,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 19,
 					"file": "/Users/rexstjohn/Desktop/sinew/sinew/sample.sinew",
 					"settings":
 					{
@@ -674,13 +818,39 @@
 						"selection":
 						[
 							[
-								283,
-								283
+								110,
+								110
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "recipies/DailyFinance.rb",
+					"settings":
+					{
+						"buffer_size": 700,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								700,
+								700
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -747,6 +917,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true
 }

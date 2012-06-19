@@ -10,6 +10,13 @@
 
 @implementation SPPhysicsObject
 
-@synthesize body = body_, sprite = sprite_;
+// create ivars & syntesize
+@synthesize body = _body, sprite = _sprite;
+
+-(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite
+{
+    _body = body;
+    _sprite = sprite;
+}
 
 @end
