@@ -27,6 +27,7 @@
 //create a box
 -(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
 
+
 @property(nonatomic,retain) SPPhysicsContext *context;
 @property(nonatomic,retain) SPPhysicsWorld *world;
 

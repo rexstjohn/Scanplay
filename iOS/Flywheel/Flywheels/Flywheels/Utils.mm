@@ -7,14 +7,13 @@
 //
 
 #import "Utils.h"
+#import "GameConfig.h"
 
 @implementation Utils
 
-#define PTM_RATIO 32
-
-+(CGPoint)toMeters:(CGPoint)point
-{
-    return CGPointMake(point.x / PTM_RATIO, point.y / PTM_RATIO);
++(CGPoint)toMeters:(CGPoint)point {
+    
+    return CGPointMake(point.x / kPTM_RATIO, point.y / kPTM_RATIO);
 }
 
 @end

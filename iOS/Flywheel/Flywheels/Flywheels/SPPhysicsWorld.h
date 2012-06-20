@@ -11,17 +11,22 @@
 #import "GLES-Render.h"
 
 
-@interface SPPhysicsWorld : NSObject
-{
+@interface SPPhysicsWorld : NSObject {
+    
     //these items are C++ class objects so they must be handled differently memory-wise.
     b2World *_world;
     GLESDebugDraw *_debugDraw;
 }
 
--(id)initWithBounds:(CGRect)aRect;
+-(id)initWithSize:(CGSize)aSize;
+
+//
+@property(nonatomic, assign) CGSize screensize;
 
 //wrapper functions
 -(b2Body*)createBody:(b2BodyDef*)aBodyDef;
 -(b2Joint*)createJoint:(b2JointDef*)aJointDef;
+-(void)drawDebugData;
+-(void)step:(ccTime) dt;
 
 @end

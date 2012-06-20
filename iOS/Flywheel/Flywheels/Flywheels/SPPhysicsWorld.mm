@@ -25,10 +25,14 @@
 
 @implementation SPPhysicsWorld
 
--(id)initWithBounds:(CGRect)aRect
-{    
-    if(self = [super init])
-    {
+@synthesize screensize = _screensize;
+
+-(id)initWithSize:(CGSize)aSize{  
+    
+    if(self = [super init]){
+        
+        _screensize = aSize;
+        
         // Define the gravity vector.
         b2Vec2 gravity;
         gravity.Set(0.0f, kGRAVITY);
@@ -45,7 +49,7 @@
         [self createDebugDraw];
         
         //create the ground body
-        CGRect groundRect = CGRectMake(aRect.origin.x, aRect.origin.y, aRect.size.width/kPTM_RATIO, aRect.size.height/kPTM_RATIO);
+        CGRect groundRect = CGRectMake(0, 0, _screensize.width/kPTM_RATIO, _screensize.height/kPTM_RATIO);
         [self createGroundBodyInRect:groundRect];
         
     }
@@ -53,20 +57,22 @@
     return self;
 }
 
--(b2Body*)createBody:(b2BodyDef*)aBodyDed
-{
+-(b2Body*)createBody:(b2BodyDef*)aBodyDed{
     return _world->CreateBody(aBodyDed);
 }
 
--(b2Joint*)createJoint:(b2JointDef*)aJointDef
-{
+-(b2Joint*)createJoint:(b2JointDef*)aJointDef{
     return _world->CreateJoint(aJointDef);
+}
+
+-(void)drawDebugData{
+    _world->DrawDebugData();
 }
 
 //private methods
 
--(void) createDebugDraw
-{
+-(void) createDebugDraw {
+    
     // Debug Draw functions
     _debugDraw = new GLESDebugDraw(kPTM_RATIO);
     _world->SetDebugDraw(_debugDraw);
@@ -80,8 +86,8 @@
     _debugDraw->SetFlags(flags);
 }
 
--(void)createGroundBodyInRect:(CGRect)aRect
-{
+-(void)createGroundBodyInRect:(CGRect)aRect {
+    
     // Define the ground body.
     b2BodyDef groundBodyDef;
     groundBodyDef.position.Set(aRect.origin.x, aRect.origin.y); // bottom-left corner
@@ -109,6 +115,28 @@
     // right
     groundBox.SetAsEdge(b2Vec2(aRect.size.width,aRect.size.height), b2Vec2(aRect.size.width,0));
     groundBody->CreateFixture(&groundBox,0);
+}
+
+-(void)step:(ccTime) dt{
+    
+	int32 velocityIterations = 8;
+	int32 positionIterations = 1;
+	
+	// Instruct the world to perform a single step of simulation. It is
+	// generally best to keep the time step and iterations fixed.
+	_world->Step(dt, velocityIterations, positionIterations);
+	
+	//Iterate over the bodies in the physics world
+	for (b2Body* b = _world->GetBodyList(); b; b = b->GetNext()) {
+        
+		if (b->GetUserData() != NULL) {
+            
+			//Synchronize the AtlasSprites position and rotation with the corresponding body
+			CCSprite *myActor = (CCSprite*)b->GetUserData();
+			myActor.position = CGPointMake( b->GetPosition().x * kPTM_RATIO, b->GetPosition().y * kPTM_RATIO);
+			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
+		}	
+	}
 }
 
 

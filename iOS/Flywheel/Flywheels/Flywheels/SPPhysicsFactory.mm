@@ -15,6 +15,14 @@
 
 @implementation SPPhysicsFactory
 
+//TODO: make this less gay
+enum {
+	kTagTileMap = 1,
+	kTagBatchNode = 1,
+	kTagAnimation1 = 1,
+};
+
+
 @synthesize context = _context, world = _world;
 
 -(id)initWithPhysicsContext:(SPPhysicsContext*)aContext{

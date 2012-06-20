@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 @class SPPhysicsContext;
 
-
 @interface AppDelegate : NSObject <UIApplicationDelegate> 
 
 // Window in which the game occurs.

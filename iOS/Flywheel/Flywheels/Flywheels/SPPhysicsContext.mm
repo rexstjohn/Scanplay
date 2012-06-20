@@ -12,10 +12,11 @@
 #import "SPPhysicsViewController.h"
 #import "GameConfig.h"
 #import "CCDirector.h"
+#import "SPPhysicsGameLayer.h"
 
 @implementation SPPhysicsContext
 
-@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window;
+@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window, layer =_layer;
 
 -(id)initWithWindow:(UIWindow*)aWindow {
     
@@ -23,7 +24,8 @@
         _window = aWindow;
         
         //create our physics world
-        _world = [[SPPhysicsWorld alloc] initWithBounds:[_window bounds]];
+		CGSize screenSize = [CCDirector sharedDirector].winSize;
+        _world = [[SPPhysicsWorld alloc] initWithSize:screenSize];
         
         //create our factory
         _factory = [[SPPhysicsFactory alloc] initWithPhysicsContext:self];
@@ -78,7 +80,12 @@
         [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
         
         // Run the intro Scene
-        [[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+        CCScene *scene = [CCScene node]; // 'scene' is an autorelease object.
+        _layer = [[SPPhysicsGameLayer alloc] initWithWorld:_world];
+        [scene addChild: _layer];// add layer as a child to scene
+        
+        //start the scene
+        [[CCDirector sharedDirector] runWithScene: scene];
     }
     
     return self;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E213E159185DF0074DC73 /* SPPhysicsViewController.m */; };
+		513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
@@ -158,12 +159,10 @@
 		51DF13621590205700B90EF0 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13611590205700B90EF0 /* b2WeldJoint.cpp */; };
 		51DF13681590205700B90EF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13671590205700B90EF0 /* main.m */; };
 		51DF136B1590205700B90EF0 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF136A1590205700B90EF0 /* AppDelegate.mm */; };
-		51DF136E1590205700B90EF0 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF136D1590205700B90EF0 /* RootViewController.mm */; };
-		51DF13711590205700B90EF0 /* HelloWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13701590205700B90EF0 /* HelloWorldLayer.mm */; };
 		51DF13741590205700B90EF0 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13731590205700B90EF0 /* GLES-Render.mm */; };
 		51DF13771590205700B90EF0 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 51DF13761590205700B90EF0 /* blocks.png */; };
 		51DF13811590219100B90EF0 /* SPGear.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13801590219100B90EF0 /* SPGear.mm */; };
-		51DF13861590263300B90EF0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13851590263300B90EF0 /* Utils.m */; };
+		51DF13861590263300B90EF0 /* Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13851590263300B90EF0 /* Utils.mm */; };
 		51DF138E1590380B00B90EF0 /* SPPhysicsFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */; };
 		51DF13911590384800B90EF0 /* SPPhysicsObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51DF13901590384800B90EF0 /* SPPhysicsObject.mm */; };
 /* End PBXBuildFile section */
@@ -171,6 +170,8 @@
 /* Begin PBXFileReference section */
 		513E213D159185DF0074DC73 /* SPPhysicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsViewController.h; sourceTree = "<group>"; };
 		513E213E159185DF0074DC73 /* SPPhysicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsViewController.m; sourceTree = "<group>"; };
+		513E2141159191D90074DC73 /* SPPhysicsGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsGameLayer.h; sourceTree = "<group>"; };
+		513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsGameLayer.mm; sourceTree = "<group>"; };
 		51774F31159113C800FA745F /* SPPhysicsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsContext.h; sourceTree = "<group>"; };
 		51774F32159113C800FA745F /* SPPhysicsContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsContext.mm; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
@@ -478,10 +479,6 @@
 		51DF13671590205700B90EF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51DF13691590205700B90EF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51DF136A1590205700B90EF0 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
-		51DF136C1590205700B90EF0 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		51DF136D1590205700B90EF0 /* RootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = "<group>"; };
-		51DF136F1590205700B90EF0 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		51DF13701590205700B90EF0 /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWorldLayer.mm; sourceTree = "<group>"; };
 		51DF13721590205700B90EF0 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		51DF13731590205700B90EF0 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		51DF13751590205700B90EF0 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
@@ -489,7 +486,7 @@
 		51DF137F1590219100B90EF0 /* SPGear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGear.h; sourceTree = "<group>"; };
 		51DF13801590219100B90EF0 /* SPGear.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPGear.mm; sourceTree = "<group>"; };
 		51DF13841590263300B90EF0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		51DF13851590263300B90EF0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		51DF13851590263300B90EF0 /* Utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utils.mm; sourceTree = "<group>"; };
 		51DF138C1590380B00B90EF0 /* SPPhysicsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsFactory.h; sourceTree = "<group>"; };
 		51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsFactory.mm; sourceTree = "<group>"; };
 		51DF138F1590384800B90EF0 /* SPPhysicsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPhysicsObject.h; path = core/SPPhysicsObject.h; sourceTree = "<group>"; };
@@ -554,10 +551,6 @@
 				51DF137D159020D900B90EF0 /* game */,
 				51DF13691590205700B90EF0 /* AppDelegate.h */,
 				51DF136A1590205700B90EF0 /* AppDelegate.mm */,
-				51DF136C1590205700B90EF0 /* RootViewController.h */,
-				51DF136D1590205700B90EF0 /* RootViewController.mm */,
-				51DF136F1590205700B90EF0 /* HelloWorldLayer.h */,
-				51DF13701590205700B90EF0 /* HelloWorldLayer.mm */,
 				51DF13721590205700B90EF0 /* GLES-Render.h */,
 				51DF13731590205700B90EF0 /* GLES-Render.mm */,
 				51DF13751590205700B90EF0 /* GameConfig.h */,
@@ -1057,7 +1050,7 @@
 			isa = PBXGroup;
 			children = (
 				51DF13841590263300B90EF0 /* Utils.h */,
-				51DF13851590263300B90EF0 /* Utils.m */,
+				51DF13851590263300B90EF0 /* Utils.mm */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -1082,6 +1075,8 @@
 				51774F39159119C400FA745F /* SPPhysicsWorld.mm */,
 				513E213D159185DF0074DC73 /* SPPhysicsViewController.h */,
 				513E213E159185DF0074DC73 /* SPPhysicsViewController.m */,
+				513E2141159191D90074DC73 /* SPPhysicsGameLayer.h */,
+				513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */,
 			);
 			name = physics;
 			sourceTree = "<group>";
@@ -1288,16 +1283,15 @@
 				51DF13621590205700B90EF0 /* b2WeldJoint.cpp in Sources */,
 				51DF13681590205700B90EF0 /* main.m in Sources */,
 				51DF136B1590205700B90EF0 /* AppDelegate.mm in Sources */,
-				51DF136E1590205700B90EF0 /* RootViewController.mm in Sources */,
-				51DF13711590205700B90EF0 /* HelloWorldLayer.mm in Sources */,
 				51DF13741590205700B90EF0 /* GLES-Render.mm in Sources */,
 				51DF13811590219100B90EF0 /* SPGear.mm in Sources */,
-				51DF13861590263300B90EF0 /* Utils.m in Sources */,
+				51DF13861590263300B90EF0 /* Utils.mm in Sources */,
 				51DF138E1590380B00B90EF0 /* SPPhysicsFactory.mm in Sources */,
 				51DF13911590384800B90EF0 /* SPPhysicsObject.mm in Sources */,
 				51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */,
 				51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */,
 				513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */,
+				513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

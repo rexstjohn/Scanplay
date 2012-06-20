@@ -37,4 +37,7 @@
 // Factory used for producing common objects.
 @property (nonatomic, retain) SPPhysicsFactory *factory;
 
+// Cocos layer where the game occurs.
+@property (nonatomic, retain) CCLayer *layer;
+
 @end
