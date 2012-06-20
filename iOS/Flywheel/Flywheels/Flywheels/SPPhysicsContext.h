@@ -11,6 +11,8 @@
 @class SPPhysicsWorld;
 @class SPPhysicsFactory;
 @class SPPhysicsViewController;
+@class SPUILoader;
+@class SPLevelLoader;
 
 @interface SPPhysicsContext : NSObject
 
@@ -39,5 +41,11 @@
 
 // Cocos layer where the game occurs.
 @property (nonatomic, retain) CCLayer *layer;
+
+// UI Loader for loading UI from XML files.
+@property (nonatomic, retain) SPUILoader *uiLoader;
+
+// Level loader for producing levels from XML files.
+@property (nonatomic, retain) SPLevelLoader *levelLoader;
 
 @end

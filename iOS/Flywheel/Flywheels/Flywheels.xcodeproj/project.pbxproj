@@ -11,6 +11,12 @@
 		513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
+		51C9302715925CF400385D7A /* SPUILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302615925CF400385D7A /* SPUILoader.m */; };
+		51C9302B15925D2000385D7A /* SPLevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302A15925D2000385D7A /* SPLevelLoader.m */; };
+		51C9302F15925EC000385D7A /* menu_system.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C9302E15925EC000385D7A /* menu_system.xml */; };
+		51C930331592611600385D7A /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C930321592611600385D7A /* SMXMLDocument.m */; };
+		51C930351592619E00385D7A /* level.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C930341592619E00385D7A /* level.xml */; };
+		51C93037159261E500385D7A /* sandbox.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C93036159261E500385D7A /* sandbox.xml */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
 		51DF11971590205300B90EF0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11961590205300B90EF0 /* OpenGLES.framework */; };
 		51DF11991590205300B90EF0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11981590205300B90EF0 /* OpenAL.framework */; };
@@ -176,6 +182,15 @@
 		51774F32159113C800FA745F /* SPPhysicsContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsContext.mm; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
 		51774F39159119C400FA745F /* SPPhysicsWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsWorld.mm; sourceTree = "<group>"; };
+		51C9302515925CF400385D7A /* SPUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUILoader.h; sourceTree = "<group>"; };
+		51C9302615925CF400385D7A /* SPUILoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUILoader.m; sourceTree = "<group>"; };
+		51C9302915925D2000385D7A /* SPLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLevelLoader.h; sourceTree = "<group>"; };
+		51C9302A15925D2000385D7A /* SPLevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLevelLoader.m; sourceTree = "<group>"; };
+		51C9302E15925EC000385D7A /* menu_system.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = menu_system.xml; sourceTree = "<group>"; };
+		51C930311592611600385D7A /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
+		51C930321592611600385D7A /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		51C930341592619E00385D7A /* level.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level.xml; sourceTree = "<group>"; };
+		51C93036159261E500385D7A /* sandbox.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sandbox.xml; sourceTree = "<group>"; };
 		51DF11901590205300B90EF0 /* Flywheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flywheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DF11941590205300B90EF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		51DF11961590205300B90EF0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -512,6 +527,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51C9302315925CC400385D7A /* loaders */ = {
+			isa = PBXGroup;
+			children = (
+				51C9302515925CF400385D7A /* SPUILoader.h */,
+				51C9302615925CF400385D7A /* SPUILoader.m */,
+				51C9302915925D2000385D7A /* SPLevelLoader.h */,
+				51C9302A15925D2000385D7A /* SPLevelLoader.m */,
+			);
+			name = loaders;
+			sourceTree = "<group>";
+		};
+		51C9302C15925E8800385D7A /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				51C930341592619E00385D7A /* level.xml */,
+				51C93036159261E500385D7A /* sandbox.xml */,
+			);
+			name = levels;
+			sourceTree = "<group>";
+		};
+		51C9302D15925E9400385D7A /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				51C9302E15925EC000385D7A /* menu_system.xml */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		51C93030159260E900385D7A /* SMXMLDocument */ = {
+			isa = PBXGroup;
+			children = (
+				51C930311592611600385D7A /* SMXMLDocument.h */,
+				51C930321592611600385D7A /* SMXMLDocument.m */,
+			);
+			name = SMXMLDocument;
+			sourceTree = "<group>";
+		};
 		51DF11851590205300B90EF0 = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +616,8 @@
 		51DF11A51590205300B90EF0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51C9302D15925E9400385D7A /* ui */,
+				51C9302C15925E8800385D7A /* levels */,
 				51DF11A61590205300B90EF0 /* Default.png */,
 				51DF11A81590205300B90EF0 /* fps_images.png */,
 				51DF11AA1590205300B90EF0 /* Icon-72.png */,
@@ -582,6 +636,7 @@
 		51DF11B91590205400B90EF0 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				51C93030159260E900385D7A /* SMXMLDocument */,
 				51DF12AF1590205600B90EF0 /* LICENSE_cocos2d.txt */,
 				51DF12BE1590205600B90EF0 /* LICENSE_CocosDenshion.txt */,
 				51DF12C91590205600B90EF0 /* LICENSE_TouchJSON.txt */,
@@ -1040,6 +1095,7 @@
 		51DF1382159025E000B90EF0 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				51C9302315925CC400385D7A /* loaders */,
 				51DF138B159037F600B90EF0 /* physics */,
 				51DF1383159025EA00B90EF0 /* utils */,
 			);
@@ -1142,6 +1198,9 @@
 				51DF11B51590205400B90EF0 /* Icon@2x.png in Resources */,
 				51DF11B81590205400B90EF0 /* iTunesArtwork in Resources */,
 				51DF13771590205700B90EF0 /* blocks.png in Resources */,
+				51C9302F15925EC000385D7A /* menu_system.xml in Resources */,
+				51C930351592619E00385D7A /* level.xml in Resources */,
+				51C93037159261E500385D7A /* sandbox.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1292,6 +1351,9 @@
 				51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */,
 				513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */,
 				513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */,
+				51C9302715925CF400385D7A /* SPUILoader.m in Sources */,
+				51C9302B15925D2000385D7A /* SPLevelLoader.m in Sources */,
+				51C930331592611600385D7A /* SMXMLDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

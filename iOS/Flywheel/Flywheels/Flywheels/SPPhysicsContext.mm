@@ -13,10 +13,12 @@
 #import "GameConfig.h"
 #import "CCDirector.h"
 #import "SPPhysicsGameLayer.h"
+#import "SPLevelLoader.h"
+#import "SPUILoader.h"
 
 @implementation SPPhysicsContext
 
-@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window, layer =_layer;
+@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window, layer =_layer, uiLoader = _uiLoader, levelLoader = _levelLoader;
 
 -(id)initWithWindow:(UIWindow*)aWindow {
     
@@ -86,6 +88,10 @@
         
         //start the scene
         [[CCDirector sharedDirector] runWithScene: scene];
+        
+        //create utility loader helpers
+        _uiLoader = [[SPUILoader alloc] initWithContext:self];
+        _levelLoader = [[SPLevelLoader alloc] initWithContext:self];
     }
     
     return self;
@@ -129,12 +135,16 @@
     [_viewController release];
     [_world release];
     [_factory release];
+    [_uiLoader release];
+    [_levelLoader release];
     
     //nil
     _window = nil;
     _viewController = nil;
     _world = nil;
     _factory = nil;
+    _uiLoader = nil;
+    _levelLoader = nil;
     [super dealloc];
 }
 
