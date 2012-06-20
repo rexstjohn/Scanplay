@@ -27,11 +27,12 @@
 - (void) dealloc 
 {
     //dealloc
-    [_sprite dealloc];
+    [_sprite release];
     
     //nil
      _body = NULL; //the world handles the destruction of these bodies.
     _sprite= nil;
+    
     [super dealloc];
 }
 

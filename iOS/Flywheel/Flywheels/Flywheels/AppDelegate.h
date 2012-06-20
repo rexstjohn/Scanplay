@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SPPhysicsContext;
 
-@class RootViewController;
 
-@interface AppDelegate : NSObject <UIApplicationDelegate> {
-	UIWindow			*window;
-	RootViewController	*viewController;
-}
+@interface AppDelegate : NSObject <UIApplicationDelegate> 
 
+// Window in which the game occurs.
 @property (nonatomic, retain) UIWindow *window;
+
+// Physics context contains everything needed to run the game.
+@property (nonatomic, retain) SPPhysicsContext *context;
 
 @end

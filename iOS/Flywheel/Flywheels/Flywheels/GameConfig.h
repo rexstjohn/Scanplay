@@ -6,6 +6,12 @@
 //  Copyright Scanplay Games 2012. All rights reserved.
 //
 
+//physics config
+#define FRAME_RATE 1.0/60
+#define kGRAVITY    -10.0f
+#define kDO_SLEEP  true
+#define kPTM_RATIO  32.0f
+
 #ifndef __GAME_CONFIG_H
 #define __GAME_CONFIG_H
 

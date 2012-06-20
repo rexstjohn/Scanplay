@@ -43,6 +43,7 @@ struct b2AABB;
 class GLESDebugDraw : public b2DebugDraw
 {
 	float32 mRatio;
+    
 public:
 	GLESDebugDraw();
 

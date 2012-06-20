@@ -11,6 +11,7 @@
 #import "b2Body.h"
 #import "GLES-Render.h"
 #import "b2PolygonShape.h"
+#import "GameConfig.h"
 
 @interface  SPPhysicsWorld ()
 
@@ -24,8 +25,7 @@
 
 @implementation SPPhysicsWorld
 
-
--(id)initWithSize:(CGSize)aSize
+-(id)initWithBounds:(CGRect)aRect
 {    
     if(self = [super init])
     {
@@ -45,7 +45,7 @@
         [self createDebugDraw];
         
         //create the ground body
-        CGRect groundRect = CGRectMake(0, 0, aSize.width/kPTM_RATIO, aSize.height/kPTM_RATIO);
+        CGRect groundRect = CGRectMake(aRect.origin.x, aRect.origin.y, aRect.size.width/kPTM_RATIO, aRect.size.height/kPTM_RATIO);
         [self createGroundBodyInRect:groundRect];
         
     }
@@ -112,13 +112,15 @@
 }
 
 
-- (void) dealloc 
-{    
-    delete _world;
-    _world = NULL;
+- (void) dealloc {
     
+    //delete
+    delete _world;
 	delete _debugDraw;
+    
+    //null
     _debugDraw = NULL;
+    _world     = NULL;
     
     [super dealloc];
 }

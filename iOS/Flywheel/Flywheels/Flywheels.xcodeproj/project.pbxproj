@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E213E159185DF0074DC73 /* SPPhysicsViewController.m */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
@@ -168,6 +169,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		513E213D159185DF0074DC73 /* SPPhysicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsViewController.h; sourceTree = "<group>"; };
+		513E213E159185DF0074DC73 /* SPPhysicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsViewController.m; sourceTree = "<group>"; };
 		51774F31159113C800FA745F /* SPPhysicsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsContext.h; sourceTree = "<group>"; };
 		51774F32159113C800FA745F /* SPPhysicsContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsContext.mm; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
@@ -1077,6 +1080,8 @@
 				51774F32159113C800FA745F /* SPPhysicsContext.mm */,
 				51774F38159119C400FA745F /* SPPhysicsWorld.h */,
 				51774F39159119C400FA745F /* SPPhysicsWorld.mm */,
+				513E213D159185DF0074DC73 /* SPPhysicsViewController.h */,
+				513E213E159185DF0074DC73 /* SPPhysicsViewController.m */,
 			);
 			name = physics;
 			sourceTree = "<group>";
@@ -1292,6 +1297,7 @@
 				51DF13911590384800B90EF0 /* SPPhysicsObject.mm in Sources */,
 				51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */,
 				51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */,
+				513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

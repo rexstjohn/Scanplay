@@ -11,29 +11,31 @@
 #import "SPPhysicsObject.h"
 #import "SPPhysicsWorld.h"
 #import "SPPhysicsContext.h"
+#import "GameConfig.h"
 
 @implementation SPPhysicsFactory
 
 @synthesize context = _context, world = _world;
 
--(id)initWithPhysicsContext:(SPPhysicsContext*)aContext
-{
-    if(self = [super init])
-    {
+-(id)initWithPhysicsContext:(SPPhysicsContext*)aContext{
+    
+    if(self = [super init]){
+        
         _context = aContext;
         _world = aContext.world;
     }
+    
     return self;
 }
 
--(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth
-{
+-(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth{
+    
     SPGear *newGear = [[SPGear alloc] initWithRect:aRect];
     return newGear;
 }
 
--(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic
-{
+-(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
+    
     //create the sprite
     //Resources/Icon-72.png
     CCSprite *sprite = [CCSprite spriteWithFile:aSkinURL];
@@ -66,8 +68,9 @@
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
--(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic
-{    //create the sprite
+-(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
+    
+    //create the sprite
     //Resources/Icon-72.png
     CCSprite *sprite = [CCSprite spriteWithFile:aSkinURL];
     
@@ -99,11 +102,11 @@
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
-- (void) dealloc 
-{
-    //dealloc
-    [_world dealloc];
-    [_context dealloc];
+- (void) dealloc {
+    
+    //release
+    [_world release];
+    [_context release];
     
     //nil
     _world = nil;

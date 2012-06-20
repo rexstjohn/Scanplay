@@ -10,9 +10,6 @@
 #import "b2World.h"
 #import "GLES-Render.h"
 
-#define kGRAVITY    -10.0f
-#define kDO_SLEEP  true
-#define kPTM_RATIO  32.0f
 
 @interface SPPhysicsWorld : NSObject
 {
@@ -21,7 +18,7 @@
     GLESDebugDraw *_debugDraw;
 }
 
--(id)initWithSize:(CGSize)aSize;
+-(id)initWithBounds:(CGRect)aRect;
 
 //wrapper functions
 -(b2Body*)createBody:(b2BodyDef*)aBodyDef;
