@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 @class SPPhysicsWorld;
 @class SPPhysicsFactory;
-@class SPGear;
 @class SPPhysicsObject;
 @class SPPhysicsContext;
+@class SPPhysicsPrefab;
 
 @interface SPPhysicsFactory : NSObject
 
 //init with a physics context
 -(id)initWithPhysicsContext:(SPPhysicsContext*)aContext;
 
-//create a basic gear
--(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth;
+//create an object given a prefab
+-(SPPhysicsObject*) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab;
 
 //create a circle
 -(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;

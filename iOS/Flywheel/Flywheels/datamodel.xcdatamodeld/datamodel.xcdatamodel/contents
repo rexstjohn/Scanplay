@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SPGameLevelManagedObject" syncable="YES">
+        <relationship name="prefabs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SPPhysicsPrefabManagedObject" inverseName="gamelevel" inverseEntity="SPPhysicsPrefabManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SPPhysicsMaterialManagedObject" representedClassName="SPPhysicsMaterialManagedObject" syncable="YES">
+        <attribute name="friction" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mass" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="material_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="restitution" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="texture_file_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="prefab" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SPPhysicsPrefabManagedObject" inverseName="material" inverseEntity="SPPhysicsPrefabManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SPPhysicsPrefabManagedObject" representedClassName="SPPhysicsPrefabManagedObject" syncable="YES">
+        <attribute name="prefab_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gamelevel" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SPGameLevelManagedObject" inverseName="prefabs" inverseEntity="SPGameLevelManagedObject" syncable="YES"/>
+        <relationship name="material" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SPPhysicsMaterialManagedObject" inverseName="prefab" inverseEntity="SPPhysicsMaterialManagedObject" syncable="YES"/>
+        <relationship name="shape" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SPPhysicsShapeManagedObject" inverseName="shape" inverseEntity="SPPhysicsShapeManagedObject" syncable="YES"/>
+    </entity>
+    <entity name="SPPhysicsShapeManagedObject" representedClassName="SPPhysicsShapeManagedObject" syncable="YES">
+        <attribute name="shape_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shape" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SPPhysicsPrefabManagedObject" inverseName="shape" inverseEntity="SPPhysicsPrefabManagedObject" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SPGameLevelManagedObject" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="SPPhysicsMaterialManagedObject" positionX="34" positionY="78" width="128" height="135"/>
+        <element name="SPPhysicsPrefabManagedObject" positionX="-207" positionY="72" width="128" height="105"/>
+        <element name="SPPhysicsShapeManagedObject" positionX="-38" positionY="264" width="128" height="75"/>
+    </elements>
+</model>

@@ -7,7 +7,6 @@
 //
 
 #import "SPPhysicsFactory.h"
-#import "SPGear.h"
 #import "SPPhysicsObject.h"
 #import "SPPhysicsWorld.h"
 #import "SPPhysicsContext.h"
@@ -36,11 +35,11 @@ enum {
     return self;
 }
 
--(SPGear*)createGear:(CGRect)aRect andTeeth:(int)teeth{
+-(SPPhysicsObject*) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab{
     
-    SPGear *newGear = [[SPGear alloc] initWithRect:aRect];
-    return newGear;
+    
 }
+
 
 -(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
     
