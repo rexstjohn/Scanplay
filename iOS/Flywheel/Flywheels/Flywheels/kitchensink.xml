@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+    <ui>
+        <dialog>
+            <script text="push start to begin" prompt="start" action="close"/>
+        </dialog>
+    </ui>
+    <objects>
+        <object x="100" y="100" type="metalgear" radius="10" speed="10"/>
+        <object x="100" y="300" type="metalgear" radius="15" speed="-10"/>
+        <object x="200" y="100" type="stonecircle" radius="10"/>
+        <object x="200" y="200" type="woodblock" height="10" width="10"/>
+        <object x="100" y="400" type="rope" height="10" width="10" length="100">
+            <object x="400" y="400" type="woodblock" height="10" width="10"/>
+            <object x="400" y="600" type="stoneblock" height="10" width="10"/>
+        </object>
+    </objects>
+</level>

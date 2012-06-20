@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prefabs>
+    <prefab id="woodblock" material="wood" shape="block"/>
+    <prefab id="stoneblock" material="wood" shape="block"/>
+    <prefab id="stonecircle" material="stone" shape="circle"/>
+    <prefab id="metalgear" material="metal" shape="gear"/>
+    <prefab id="rope" material="rope" shape="rope"/>
+</prefabs>

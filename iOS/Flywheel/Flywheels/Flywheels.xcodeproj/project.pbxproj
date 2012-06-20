@@ -11,12 +11,18 @@
 		513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
-		51C9302715925CF400385D7A /* SPUILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302615925CF400385D7A /* SPUILoader.m */; };
-		51C9302B15925D2000385D7A /* SPLevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302A15925D2000385D7A /* SPLevelLoader.m */; };
+		51C9302715925CF400385D7A /* SPUILoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302615925CF400385D7A /* SPUILoader.mm */; };
+		51C9302B15925D2000385D7A /* SPLevelLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302A15925D2000385D7A /* SPLevelLoader.mm */; };
 		51C9302F15925EC000385D7A /* menu_system.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C9302E15925EC000385D7A /* menu_system.xml */; };
 		51C930331592611600385D7A /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C930321592611600385D7A /* SMXMLDocument.m */; };
-		51C930351592619E00385D7A /* level.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C930341592619E00385D7A /* level.xml */; };
-		51C93037159261E500385D7A /* sandbox.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C93036159261E500385D7A /* sandbox.xml */; };
+		51C93037159261E500385D7A /* kitchensink.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C93036159261E500385D7A /* kitchensink.xml */; };
+		51C9303A1592730100385D7A /* prefabs.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C930391592730100385D7A /* prefabs.xml */; };
+		51C9303C1592773800385D7A /* materials.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C9303B1592773800385D7A /* materials.xml */; };
+		51C93043159278D700385D7A /* SPPhysicsLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C93042159278D700385D7A /* SPPhysicsLibrary.mm */; };
+		51C9304515927B5E00385D7A /* shapes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C9304415927B5E00385D7A /* shapes.xml */; };
+		51C930481592852100385D7A /* SPPhysicsMaterial.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C930471592852100385D7A /* SPPhysicsMaterial.mm */; };
+		51C9304B159288E400385D7A /* SPPhysicsShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9304A159288E400385D7A /* SPPhysicsShape.mm */; };
+		51C9304F15928B9000385D7A /* SPPhysicsPrefab.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9304E15928B9000385D7A /* SPPhysicsPrefab.mm */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
 		51DF11971590205300B90EF0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11961590205300B90EF0 /* OpenGLES.framework */; };
 		51DF11991590205300B90EF0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11981590205300B90EF0 /* OpenAL.framework */; };
@@ -183,14 +189,24 @@
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
 		51774F39159119C400FA745F /* SPPhysicsWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsWorld.mm; sourceTree = "<group>"; };
 		51C9302515925CF400385D7A /* SPUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUILoader.h; sourceTree = "<group>"; };
-		51C9302615925CF400385D7A /* SPUILoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUILoader.m; sourceTree = "<group>"; };
+		51C9302615925CF400385D7A /* SPUILoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPUILoader.mm; sourceTree = "<group>"; };
 		51C9302915925D2000385D7A /* SPLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLevelLoader.h; sourceTree = "<group>"; };
-		51C9302A15925D2000385D7A /* SPLevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLevelLoader.m; sourceTree = "<group>"; };
+		51C9302A15925D2000385D7A /* SPLevelLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPLevelLoader.mm; sourceTree = "<group>"; };
 		51C9302E15925EC000385D7A /* menu_system.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = menu_system.xml; sourceTree = "<group>"; };
 		51C930311592611600385D7A /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
 		51C930321592611600385D7A /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
-		51C930341592619E00385D7A /* level.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level.xml; sourceTree = "<group>"; };
-		51C93036159261E500385D7A /* sandbox.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sandbox.xml; sourceTree = "<group>"; };
+		51C93036159261E500385D7A /* kitchensink.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = kitchensink.xml; sourceTree = "<group>"; };
+		51C930391592730100385D7A /* prefabs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = prefabs.xml; sourceTree = "<group>"; };
+		51C9303B1592773800385D7A /* materials.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = materials.xml; sourceTree = "<group>"; };
+		51C93041159278D700385D7A /* SPPhysicsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsLibrary.h; sourceTree = "<group>"; };
+		51C93042159278D700385D7A /* SPPhysicsLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsLibrary.mm; sourceTree = "<group>"; };
+		51C9304415927B5E00385D7A /* shapes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shapes.xml; sourceTree = "<group>"; };
+		51C930461592852100385D7A /* SPPhysicsMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsMaterial.h; sourceTree = "<group>"; };
+		51C930471592852100385D7A /* SPPhysicsMaterial.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsMaterial.mm; sourceTree = "<group>"; };
+		51C93049159288E400385D7A /* SPPhysicsShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsShape.h; sourceTree = "<group>"; };
+		51C9304A159288E400385D7A /* SPPhysicsShape.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsShape.mm; sourceTree = "<group>"; };
+		51C9304D15928B9000385D7A /* SPPhysicsPrefab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsPrefab.h; sourceTree = "<group>"; };
+		51C9304E15928B9000385D7A /* SPPhysicsPrefab.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsPrefab.mm; sourceTree = "<group>"; };
 		51DF11901590205300B90EF0 /* Flywheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flywheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DF11941590205300B90EF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		51DF11961590205300B90EF0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -531,9 +547,9 @@
 			isa = PBXGroup;
 			children = (
 				51C9302515925CF400385D7A /* SPUILoader.h */,
-				51C9302615925CF400385D7A /* SPUILoader.m */,
+				51C9302615925CF400385D7A /* SPUILoader.mm */,
 				51C9302915925D2000385D7A /* SPLevelLoader.h */,
-				51C9302A15925D2000385D7A /* SPLevelLoader.m */,
+				51C9302A15925D2000385D7A /* SPLevelLoader.mm */,
 			);
 			name = loaders;
 			sourceTree = "<group>";
@@ -541,8 +557,7 @@
 		51C9302C15925E8800385D7A /* levels */ = {
 			isa = PBXGroup;
 			children = (
-				51C930341592619E00385D7A /* level.xml */,
-				51C93036159261E500385D7A /* sandbox.xml */,
+				51C93036159261E500385D7A /* kitchensink.xml */,
 			);
 			name = levels;
 			sourceTree = "<group>";
@@ -562,6 +577,45 @@
 				51C930321592611600385D7A /* SMXMLDocument.m */,
 			);
 			name = SMXMLDocument;
+			sourceTree = "<group>";
+		};
+		51C93038159272A700385D7A /* object_definitions */ = {
+			isa = PBXGroup;
+			children = (
+				51C930391592730100385D7A /* prefabs.xml */,
+				51C9303B1592773800385D7A /* materials.xml */,
+				51C9304415927B5E00385D7A /* shapes.xml */,
+			);
+			name = object_definitions;
+			sourceTree = "<group>";
+		};
+		51C9303D1592789A00385D7A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		51C9303E159278A700385D7A /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libraries;
+			sourceTree = "<group>";
+		};
+		51C9304C15928B5300385D7A /* objectDefinitions */ = {
+			isa = PBXGroup;
+			children = (
+				51C93041159278D700385D7A /* SPPhysicsLibrary.h */,
+				51C93042159278D700385D7A /* SPPhysicsLibrary.mm */,
+				51C930461592852100385D7A /* SPPhysicsMaterial.h */,
+				51C930471592852100385D7A /* SPPhysicsMaterial.mm */,
+				51C93049159288E400385D7A /* SPPhysicsShape.h */,
+				51C9304A159288E400385D7A /* SPPhysicsShape.mm */,
+				51C9304D15928B9000385D7A /* SPPhysicsPrefab.h */,
+				51C9304E15928B9000385D7A /* SPPhysicsPrefab.mm */,
+			);
+			name = objectDefinitions;
 			sourceTree = "<group>";
 		};
 		51DF11851590205300B90EF0 = {
@@ -600,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				51DF1382159025E000B90EF0 /* core */,
+				51C9303D1592789A00385D7A /* New Group */,
 				51DF137D159020D900B90EF0 /* game */,
 				51DF13691590205700B90EF0 /* AppDelegate.h */,
 				51DF136A1590205700B90EF0 /* AppDelegate.mm */,
@@ -616,6 +671,7 @@
 		51DF11A51590205300B90EF0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51C93038159272A700385D7A /* object_definitions */,
 				51C9302D15925E9400385D7A /* ui */,
 				51C9302C15925E8800385D7A /* levels */,
 				51DF11A61590205300B90EF0 /* Default.png */,
@@ -1095,6 +1151,7 @@
 		51DF1382159025E000B90EF0 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				51C9303E159278A700385D7A /* libraries */,
 				51C9302315925CC400385D7A /* loaders */,
 				51DF138B159037F600B90EF0 /* physics */,
 				51DF1383159025EA00B90EF0 /* utils */,
@@ -1121,6 +1178,7 @@
 		51DF138B159037F600B90EF0 /* physics */ = {
 			isa = PBXGroup;
 			children = (
+				51C9304C15928B5300385D7A /* objectDefinitions */,
 				51DF138C1590380B00B90EF0 /* SPPhysicsFactory.h */,
 				51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */,
 				51DF138F1590384800B90EF0 /* SPPhysicsObject.h */,
@@ -1199,8 +1257,10 @@
 				51DF11B81590205400B90EF0 /* iTunesArtwork in Resources */,
 				51DF13771590205700B90EF0 /* blocks.png in Resources */,
 				51C9302F15925EC000385D7A /* menu_system.xml in Resources */,
-				51C930351592619E00385D7A /* level.xml in Resources */,
-				51C93037159261E500385D7A /* sandbox.xml in Resources */,
+				51C93037159261E500385D7A /* kitchensink.xml in Resources */,
+				51C9303A1592730100385D7A /* prefabs.xml in Resources */,
+				51C9303C1592773800385D7A /* materials.xml in Resources */,
+				51C9304515927B5E00385D7A /* shapes.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,9 +1411,13 @@
 				51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */,
 				513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */,
 				513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */,
-				51C9302715925CF400385D7A /* SPUILoader.m in Sources */,
-				51C9302B15925D2000385D7A /* SPLevelLoader.m in Sources */,
+				51C9302715925CF400385D7A /* SPUILoader.mm in Sources */,
+				51C9302B15925D2000385D7A /* SPLevelLoader.mm in Sources */,
 				51C930331592611600385D7A /* SMXMLDocument.m in Sources */,
+				51C93043159278D700385D7A /* SPPhysicsLibrary.mm in Sources */,
+				51C930481592852100385D7A /* SPPhysicsMaterial.mm in Sources */,
+				51C9304B159288E400385D7A /* SPPhysicsShape.mm in Sources */,
+				51C9304F15928B9000385D7A /* SPPhysicsPrefab.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
