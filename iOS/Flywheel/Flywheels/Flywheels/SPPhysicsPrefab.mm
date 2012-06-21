@@ -7,19 +7,20 @@
 //
 
 #import "SPPhysicsPrefab.h"
+#import "GameConfig.h"
 
 @implementation SPPhysicsPrefab
 
-@synthesize material = _material, shape = _shape, prefabId = _prefabId, className=_className;
+@synthesize material = _material, shape = _shape, prefabId = _prefabId, prefabType=_prefabType;
 
--(id)initWithId:(NSString*)aPrefId andMaterial:(SPPhysicsMaterial*)aMaterial andShape:(SPPhysicsShape*)aShape ofClass:(NSString*)aClass{
+-(id)initWithId:(NSString*)aPrefId andMaterial:(SPPhysicsMaterial*)aMaterial andShape:(SPPhysicsShape*)aShape ofType:(NSString*)aType{
     
     if(self = [super init]){
         
         _prefabId = aPrefId;
         _material = aMaterial;
         _shape = aShape;
-        _className = aClass;
+        _prefabType = aType;
     }
     
     return self;
@@ -27,15 +28,15 @@
 
 -(void)dealloc{
     
-    [_prefabId release];
+    [_prefabType release];
     [_material release];
     [_shape release];
-    [_className release];
+    [_prefabId release];
     
-    _prefabId = nil;
+    _prefabType = nil;
     _material = nil;
     _shape = nil;
-    _className = nil;
+    _prefabId = nil;
     
     [super dealloc];
 }

@@ -14,7 +14,7 @@
 
 +(CGPoint)toMeters:(CGPoint)point {
     
-    return CGPointMake(point.x / kPTM_RATIO, point.y / kPTM_RATIO);
+    return CGPointMake(point.x / PTM_RATIO, point.y / PTM_RATIO);
 }
 
 +(SMXMLElement*) getXMLElement:(NSString*)elementName fromFile:(NSString*)fileName{

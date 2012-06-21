@@ -8,12 +8,38 @@
 
 //physics config
 #define FRAME_RATE 1.0/60
-#define kGRAVITY    -10.0f
-#define kDO_SLEEP  true
-#define kPTM_RATIO  32.0f
+#define GRAVITY    -10.0f
+#define DO_SLEEP  true
+#define PTM_RATIO  32.0f
 
-// Name of the file which contains all of the engine's object definitions.
+// XML related fields and corresponding values.
 #define DEFINITIONS_FILE_NAME  @"definitions"
+#define HEIGHT                 @"height"
+#define WIDTH                  @"width"
+#define X                      @"x"
+#define Y                      @"y"
+#define PREFAB_ID              @"id"
+#define PREFAB                 @"prefab"
+#define RESTITUTION            @"restitution"
+#define FRICTION               @"friction"
+#define MASS                   @"mass"
+#define MATERIAL_ID            @"id"
+#define TEXTURE                @"texture"
+#define MATERIALS              @"materials"
+#define MATERIAL               @"material"
+#define SHAPES                 @"shapes"
+#define SHAPE                  @"shape"
+#define PREFABS                @"prefabs"
+#define PREFAB                 @"prefab"
+#define TYPE                   @"type"
+#define DEFAULT_CLASS_NAME     @"SPPhysicsObject"
+#define SHAPE_ID               @"id"
+
+//primitive object defs (possible types of a prefab)
+#define PRIMITIVE_OBJECT @"primitive"
+#define GEAR_OBJECT      @"gear"
+#define ROPE_OBJECT      @"rope"
+
 
 #ifndef __GAME_CONFIG_H
     #define __GAME_CONFIG_H

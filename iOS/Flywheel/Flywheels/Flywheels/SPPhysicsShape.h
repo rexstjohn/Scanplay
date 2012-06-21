@@ -8,7 +8,6 @@
 
 #import "SMXMLDocument.h"
 
-#define SHAPE_ID     @"id"
 
 @interface SPPhysicsShape : NSObject
 

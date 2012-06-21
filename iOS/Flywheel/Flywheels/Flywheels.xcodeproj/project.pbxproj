@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		513E213F159185E00074DC73 /* SPPhysicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 513E213E159185DF0074DC73 /* SPPhysicsViewController.m */; };
 		513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */; };
+		514B23671593D98D008056BF /* SPPhysicsRope.m in Sources */ = {isa = PBXBuildFile; fileRef = 514B23661593D98D008056BF /* SPPhysicsRope.m */; };
+		514B236A1593D999008056BF /* SPPhysicsGear.m in Sources */ = {isa = PBXBuildFile; fileRef = 514B23691593D999008056BF /* SPPhysicsGear.m */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
 		51C9302715925CF400385D7A /* SPUILoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302615925CF400385D7A /* SPUILoader.mm */; };
@@ -181,6 +183,10 @@
 		513E213E159185DF0074DC73 /* SPPhysicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsViewController.m; sourceTree = "<group>"; };
 		513E2141159191D90074DC73 /* SPPhysicsGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsGameLayer.h; sourceTree = "<group>"; };
 		513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsGameLayer.mm; sourceTree = "<group>"; };
+		514B23651593D98D008056BF /* SPPhysicsRope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsRope.h; sourceTree = "<group>"; };
+		514B23661593D98D008056BF /* SPPhysicsRope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsRope.m; sourceTree = "<group>"; };
+		514B23681593D999008056BF /* SPPhysicsGear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsGear.h; sourceTree = "<group>"; };
+		514B23691593D999008056BF /* SPPhysicsGear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsGear.m; sourceTree = "<group>"; };
 		51774F31159113C800FA745F /* SPPhysicsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsContext.h; sourceTree = "<group>"; };
 		51774F32159113C800FA745F /* SPPhysicsContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsContext.mm; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
@@ -539,6 +545,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		514B23621593D96B008056BF /* primitives */ = {
+			isa = PBXGroup;
+			children = (
+				51774F38159119C400FA745F /* SPPhysicsWorld.h */,
+				51774F39159119C400FA745F /* SPPhysicsWorld.mm */,
+				51DF138F1590384800B90EF0 /* SPPhysicsObject.h */,
+				51DF13901590384800B90EF0 /* SPPhysicsObject.mm */,
+				514B23651593D98D008056BF /* SPPhysicsRope.h */,
+				514B23661593D98D008056BF /* SPPhysicsRope.m */,
+				514B23681593D999008056BF /* SPPhysicsGear.h */,
+				514B23691593D999008056BF /* SPPhysicsGear.m */,
+			);
+			name = primitives;
+			sourceTree = "<group>";
+		};
+		514B236B1593D9A6008056BF /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				51DF138C1590380B00B90EF0 /* SPPhysicsFactory.h */,
+				51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		514B236C1593D9BB008056BF /* views */ = {
+			isa = PBXGroup;
+			children = (
+				513E213D159185DF0074DC73 /* SPPhysicsViewController.h */,
+				513E213E159185DF0074DC73 /* SPPhysicsViewController.m */,
+				513E2141159191D90074DC73 /* SPPhysicsGameLayer.h */,
+				513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		51B041BC15937864008CF7CF /* protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,20 +1221,13 @@
 		51DF138B159037F600B90EF0 /* physics */ = {
 			isa = PBXGroup;
 			children = (
+				514B236C1593D9BB008056BF /* views */,
+				514B236B1593D9A6008056BF /* helpers */,
+				514B23621593D96B008056BF /* primitives */,
 				51B041BC15937864008CF7CF /* protocols */,
 				51C9304C15928B5300385D7A /* library */,
-				51DF138C1590380B00B90EF0 /* SPPhysicsFactory.h */,
-				51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */,
-				51DF138F1590384800B90EF0 /* SPPhysicsObject.h */,
-				51DF13901590384800B90EF0 /* SPPhysicsObject.mm */,
 				51774F31159113C800FA745F /* SPPhysicsContext.h */,
 				51774F32159113C800FA745F /* SPPhysicsContext.mm */,
-				51774F38159119C400FA745F /* SPPhysicsWorld.h */,
-				51774F39159119C400FA745F /* SPPhysicsWorld.mm */,
-				513E213D159185DF0074DC73 /* SPPhysicsViewController.h */,
-				513E213E159185DF0074DC73 /* SPPhysicsViewController.m */,
-				513E2141159191D90074DC73 /* SPPhysicsGameLayer.h */,
-				513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */,
 			);
 			name = physics;
 			sourceTree = "<group>";
@@ -1418,6 +1452,8 @@
 				51C930481592852100385D7A /* SPPhysicsMaterial.mm in Sources */,
 				51C9304B159288E400385D7A /* SPPhysicsShape.mm in Sources */,
 				51C9304F15928B9000385D7A /* SPPhysicsPrefab.mm in Sources */,
+				514B23671593D98D008056BF /* SPPhysicsRope.m in Sources */,
+				514B236A1593D999008056BF /* SPPhysicsGear.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

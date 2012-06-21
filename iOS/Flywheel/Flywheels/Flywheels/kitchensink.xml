@@ -6,11 +6,11 @@
         </dialog>
     </ui>
     <objects>
-        <object x="100" y="100" prefab="metalgear" radius="10" speed="10"/>
-        <object x="100" y="300" prefab="metalgear" radius="15" speed="-10"/>
-        <object x="200" y="100" prefab="stonecircle" radius="10"/>
+        <object x="100" y="100" prefab="metalgear" width="10" height="10"/>
+        <object x="100" y="300" prefab="metalgear" width="15" height="15"/>
+        <object x="200" y="100" prefab="stonecircle" width="10"/>
         <object x="200" y="200" prefab="woodblock" height="10" width="10"/>
-        <object x="100" y="400" prefab="rope" height="10" width="10" length="100">
+        <object x="100" y="400" prefab="rope" height="10" width="1">
             <object x="400" y="400" prefab="woodblock" height="10" width="10"/>
             <object x="400" y="600" prefab="stoneblock" height="10" width="10"/>
         </object>

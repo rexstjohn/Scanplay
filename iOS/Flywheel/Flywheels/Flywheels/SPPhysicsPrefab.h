@@ -13,13 +13,11 @@
 
 @interface SPPhysicsPrefab : NSObject
 
-#define PREFAB_ID @"id"
-
--(id)initWithId:(NSString*)aPrefId andMaterial:(SPPhysicsMaterial*)aMaterial andShape:(SPPhysicsShape*)aShape ofClass:(NSString*)aClass;
+-(id)initWithId:(NSString*)aPrefId andMaterial:(SPPhysicsMaterial*)aMaterial andShape:(SPPhysicsShape*)aShape ofType:(NSString*)aType;
 
 @property(nonatomic,retain) SPPhysicsMaterial *material;
 @property(nonatomic,retain) SPPhysicsShape *shape;
 @property(nonatomic,retain) NSString *prefabId;
-@property(nonatomic,retain) NSString *className;
+@property(nonatomic,retain) NSString *prefabType;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "SPPhysicsShape.h"
 #import "SMXMLDocument.h"
+#import "GameConfig.h"
 
 @implementation SPPhysicsShape
 

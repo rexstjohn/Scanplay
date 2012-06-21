@@ -35,11 +35,11 @@
         
         // Define the gravity vector.
         b2Vec2 gravity;
-        gravity.Set(0.0f, kGRAVITY);
+        gravity.Set(0.0f, GRAVITY);
         
         // Do we want to let bodies sleep?
         // This will speed up the physics simulation
-        bool doSleep = kDO_SLEEP;
+        bool doSleep = DO_SLEEP;
         
         // Construct a world object, which will hold and simulate the rigid bodies.
         _world = new b2World(gravity, doSleep);        
@@ -49,7 +49,7 @@
         [self createDebugDraw];
         
         //create the ground body
-        CGRect groundRect = CGRectMake(0, 0, _screensize.width/kPTM_RATIO, _screensize.height/kPTM_RATIO);
+        CGRect groundRect = CGRectMake(0, 0, _screensize.width/PTM_RATIO, _screensize.height/PTM_RATIO);
         [self createGroundBodyInRect:groundRect];
         
     }
@@ -75,7 +75,7 @@
 -(void) createDebugDraw {
     
     // Debug Draw functions
-    _debugDraw = new GLESDebugDraw(kPTM_RATIO);
+    _debugDraw = new GLESDebugDraw(PTM_RATIO);
     _world->SetDebugDraw(_debugDraw);
     
     uint32 flags = 0;
@@ -135,7 +135,7 @@
             
 			//Synchronize the AtlasSprites position and rotation with the corresponding body
 			CCSprite *myActor = (CCSprite*)b->GetUserData();
-			myActor.position = CGPointMake( b->GetPosition().x * kPTM_RATIO, b->GetPosition().y * kPTM_RATIO);
+			myActor.position = CGPointMake( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO);
 			myActor.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
 		}	
 	}

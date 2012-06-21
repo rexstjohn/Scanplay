@@ -9,11 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "SMXMLDocument.h"
 
-#define RESTITUTION  @"restitution"
-#define FRICTION     @"friction"
-#define MASS         @"mass"
-#define MATERIAL_ID  @"id"
-#define TEXTURE      @"texture"
 
 @interface SPPhysicsMaterial : NSObject
 

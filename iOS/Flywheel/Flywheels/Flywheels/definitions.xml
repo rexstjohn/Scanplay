@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions>
     <prefabs>
-        <prefab id="woodblock" material="wood" shape="block"/>
-        <prefab id="stoneblock" material="wood" shape="block"/>
-        <prefab id="stonecircle" material="stone" shape="circle"/>
-        <prefab id="metalgear" material="metal" shape="gear" class="SPPhysicsGear"/>
-        <prefab id="rope" material="rope" shape="rope" class="SPPhysicsRope"/>
-        <prefab id="rock" material="stone" shape="polygon" >
+        <prefab id="woodblock" material="wood" shape="block" type="primitive"/>
+        <prefab id="stoneblock" material="wood" shape="block" type="primitive"/>
+        <prefab id="stonecircle" material="stone" shape="circle" type="primitive"/>
+        <prefab id="metalgear" material="metal" shape="gear" type="gear"/>
+        <prefab id="rope" material="rope" shape="rope" type="rope"/>
+        <prefab id="rock" material="stone" shape="polygon" type="primitive" >
             <point x="10" y="50"/>
             <point x="20" y="10"/>
             <point x="10" y="10"/>

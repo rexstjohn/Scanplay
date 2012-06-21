@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class SPPhysicsContext;
 @class SPPhysicsLibrary;
+@class SPPhysicsFactory;
 
 #define OBJECTS_KEY @"objects"
 #define OBJECT_KEY  @"object"
@@ -22,5 +23,6 @@
 
 @property(nonatomic,retain) SPPhysicsContext *context;
 @property(nonatomic,retain) SPPhysicsLibrary *library;
+@property(nonatomic,retain) SPPhysicsFactory *factory;
 
 @end

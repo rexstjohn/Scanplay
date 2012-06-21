@@ -10,15 +10,6 @@
 @class SPPhysicsObject;
 @class SPPhysicsPrefab;
 
-//keys for the xml file types
-#define MATERIALS              @"materials"
-#define MATERIAL               @"material"
-#define SHAPES                 @"shapes"
-#define SHAPE                  @"shape"
-#define PREFABS                @"prefabs"
-#define PREFAB                 @"prefab"
-#define CLASS_NAME             @"class"
-#define DEFAULT_CLASS_NAME     @"SPPhysicsObject"
 
 // This class is used to import a list of physics prefabs, materials and shapes.
 // The physics builder class can then use this library to dynamically construct arbitrary physics objects

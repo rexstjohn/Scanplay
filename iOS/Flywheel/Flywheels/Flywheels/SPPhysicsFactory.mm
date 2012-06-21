@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "SMXMLDocument.h"
 #import "SPPhysicsObject.h"
+#import "SPPhysicsPrefab.h"
 
 @implementation SPPhysicsFactory
 
@@ -36,12 +37,16 @@ enum {
 }
 
 //
--(void)createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andElement:(SMXMLElement*)anElement{
+-(void)createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andRect:(CGRect)aRect{
     
-    
+   // id object = [[NSClassFromString(aPrefab.className) alloc] init];
+
 }
 
--(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
+-(SPPhysicsObject*)createCircleWithRadius:(float)theRadius 
+                               atPosition:(CGPoint)point 
+                                 withSkin:(NSString*)aSkinURL 
+                                isDynamic:(BOOL)dynamic{
     
     //create the sprite
     //Resources/Icon-72.png
@@ -56,7 +61,7 @@ enum {
         bodyDef.type = b2_staticBody;
     
     //
-	bodyDef.position.Set(point.x/kPTM_RATIO, point.y/kPTM_RATIO);
+	bodyDef.position.Set(point.x/PTM_RATIO, point.y/PTM_RATIO);
 	bodyDef.userData = sprite;  // Assign the sprite representation of the body.
 	b2Body *body = [_world createBody:&bodyDef];
 	
@@ -90,7 +95,7 @@ enum {
         bodyDef.type = b2_staticBody;
     
     //
-	bodyDef.position.Set(aRect.origin.x/kPTM_RATIO, aRect.origin.y/kPTM_RATIO);
+	bodyDef.position.Set(aRect.origin.x/PTM_RATIO, aRect.origin.y/PTM_RATIO);
 	bodyDef.userData = sprite;  // Assign the sprite representation of the body.
     b2Body *body = [_world createBody:&bodyDef];
 	
@@ -117,7 +122,7 @@ enum {
     // Create the body.
 	b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(aPoint.x/kPTM_RATIO, aPoint.y/kPTM_RATIO);
+    bodyDef.position.Set(aPoint.x/PTM_RATIO, aPoint.y/PTM_RATIO);
     bodyDef.userData = sprite;
     
     // Determine the dynamic nature of the body.
@@ -130,18 +135,18 @@ enum {
 //    int num = 5;
 //    
 //    b2Vec2 verts[] = {
-//        b2Vec2(0.0f*sprite.scale / kPTM_RATIO, 40.8f*sprite.scale / kPTM_RATIO),
-//        b2Vec2(-32.2f*sprite.scale / kPTM_RATIO, 35.0f*sprite.scale / kPTM_RATIO),
-//        b2Vec2(-20.0f*sprite.scale / kPTM_RATIO, -40.0f*sprite.scale / kPTM_RATIO),
-//        b2Vec2(20.0f*sprite.scale / kPTM_RATIO, -40.0f*sprite.scale / kPTM_RATIO),
-//        b2Vec2(32.2f*sprite.scale / kPTM_RATIO, 35.0f*sprite.scale / kPTM_RATIO)
+//        b2Vec2(0.0f*sprite.scale / PTM_RATIO, 40.8f*sprite.scale / PTM_RATIO),
+//        b2Vec2(-32.2f*sprite.scale / PTM_RATIO, 35.0f*sprite.scale / PTM_RATIO),
+//        b2Vec2(-20.0f*sprite.scale / PTM_RATIO, -40.0f*sprite.scale / PTM_RATIO),
+//        b2Vec2(20.0f*sprite.scale / PTM_RATIO, -40.0f*sprite.scale / PTM_RATIO),
+//        b2Vec2(32.2f*sprite.scale / PTM_RATIO, 35.0f*sprite.scale / PTM_RATIO)
 //    };
     int num = [somePoints count];
     b2Vec2 verts[] = {};
     
     for (int i =0; i < [somePoints count]; i++) {
         CGPoint point = [[somePoints objectAtIndex:i] CGPointValue];
-        verts[i] =  b2Vec2(point.x*sprite.scale / kPTM_RATIO,point.y*sprite.scale / kPTM_RATIO);
+        verts[i] =  b2Vec2(point.x*sprite.scale / PTM_RATIO,point.y*sprite.scale / PTM_RATIO);
     }
     
     b2PolygonShape shape;

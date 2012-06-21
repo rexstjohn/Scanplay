@@ -12,6 +12,7 @@
 #import "SPPhysicsMaterial.h"
 #import "SPPhysicsShape.h"
 #import "SPPhysicsPrefab.h"
+#import "GameConfig.h"
 
 @interface  SPPhysicsLibrary ()
 
@@ -95,15 +96,15 @@
         NSString *shapeId = [pref attributeNamed:SHAPE];
         NSString *prefabId = [pref attributeNamed:PREFAB_ID];
         
-        // Ensure a nil clas result will be swapped with a default object def.
-        NSString *className = ([pref attributeNamed:CLASS_NAME] == nil)?DEFAULT_CLASS_NAME:[pref attributeNamed:CLASS_NAME];
+        // Fetch the special type of this class.
+        NSString *prefabType = [pref attributeNamed:TYPE];
         
         // Dump all the prefab object definitions into the library.
         SPPhysicsPrefab *newPrefab = [[SPPhysicsPrefab alloc]
                                        initWithId:prefabId 
                                        andMaterial:[_materials valueForKey:materialId] 
                                        andShape:[_shapes valueForKey:shapeId] 
-                                       ofClass:className];
+                                       ofType:prefabType];
         
         [_prefabs setValue:newPrefab forKey:prefabId];
 	}
