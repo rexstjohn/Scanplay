@@ -11,11 +11,14 @@
 @class CCSprite;
 
 @interface SPPhysicsObject : NSObject{
+    
+    // Our physics body.
     b2Body *_body;
 }
 
 -(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite;
 
+// The sprite for the corresponding physics body.
 @property(nonatomic, retain) CCSprite *sprite;
 
 @end

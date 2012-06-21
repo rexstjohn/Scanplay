@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// Main view controller used to attack the CCLayer to.
+// Not really used aside from that.
 @interface SPPhysicsViewController : UIViewController
 
 @end

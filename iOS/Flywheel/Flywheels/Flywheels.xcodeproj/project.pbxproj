@@ -11,10 +11,6 @@
 		513E2143159191DA0074DC73 /* SPPhysicsGameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 513E2142159191D90074DC73 /* SPPhysicsGameLayer.mm */; };
 		51774F33159113C800FA745F /* SPPhysicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F32159113C800FA745F /* SPPhysicsContext.mm */; };
 		51774F3A159119C500FA745F /* SPPhysicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51774F39159119C400FA745F /* SPPhysicsWorld.mm */; };
-		519BA7ED1592972B00DA7766 /* SPPhysicsShapeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BA7EC1592972B00DA7766 /* SPPhysicsShapeManagedObject.m */; };
-		519BA7F01592972C00DA7766 /* SPPhysicsPrefabManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BA7EF1592972C00DA7766 /* SPPhysicsPrefabManagedObject.m */; };
-		519BA7F31592972C00DA7766 /* SPPhysicsMaterialManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BA7F21592972C00DA7766 /* SPPhysicsMaterialManagedObject.m */; };
-		519BA7F61592983B00DA7766 /* SPPhysicsPrefabManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BA7F51592983B00DA7766 /* SPPhysicsPrefabManagedObject.m */; };
 		51C9302715925CF400385D7A /* SPUILoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302615925CF400385D7A /* SPUILoader.mm */; };
 		51C9302B15925D2000385D7A /* SPLevelLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9302A15925D2000385D7A /* SPLevelLoader.mm */; };
 		51C9302F15925EC000385D7A /* menu_system.xml in Resources */ = {isa = PBXBuildFile; fileRef = 51C9302E15925EC000385D7A /* menu_system.xml */; };
@@ -27,8 +23,6 @@
 		51C930481592852100385D7A /* SPPhysicsMaterial.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C930471592852100385D7A /* SPPhysicsMaterial.mm */; };
 		51C9304B159288E400385D7A /* SPPhysicsShape.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9304A159288E400385D7A /* SPPhysicsShape.mm */; };
 		51C9304F15928B9000385D7A /* SPPhysicsPrefab.mm in Sources */ = {isa = PBXBuildFile; fileRef = 51C9304E15928B9000385D7A /* SPPhysicsPrefab.mm */; };
-		51C930511592942200385D7A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C930501592942100385D7A /* CoreData.framework */; };
-		51C930541592947700385D7A /* datamodel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C930521592947600385D7A /* datamodel.xcdatamodeld */; };
 		51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11941590205300B90EF0 /* QuartzCore.framework */; };
 		51DF11971590205300B90EF0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11961590205300B90EF0 /* OpenGLES.framework */; };
 		51DF11991590205300B90EF0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DF11981590205300B90EF0 /* OpenAL.framework */; };
@@ -193,14 +187,6 @@
 		51774F32159113C800FA745F /* SPPhysicsContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsContext.mm; sourceTree = "<group>"; };
 		51774F38159119C400FA745F /* SPPhysicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorld.h; sourceTree = "<group>"; };
 		51774F39159119C400FA745F /* SPPhysicsWorld.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsWorld.mm; sourceTree = "<group>"; };
-		519BA7EB1592972B00DA7766 /* SPPhysicsShapeManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsShapeManagedObject.h; sourceTree = "<group>"; };
-		519BA7EC1592972B00DA7766 /* SPPhysicsShapeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsShapeManagedObject.m; sourceTree = "<group>"; };
-		519BA7EE1592972C00DA7766 /* SPPhysicsPrefabManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsPrefabManagedObject.h; sourceTree = "<group>"; };
-		519BA7EF1592972C00DA7766 /* SPPhysicsPrefabManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsPrefabManagedObject.m; sourceTree = "<group>"; };
-		519BA7F11592972C00DA7766 /* SPPhysicsMaterialManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsMaterialManagedObject.h; sourceTree = "<group>"; };
-		519BA7F21592972C00DA7766 /* SPPhysicsMaterialManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsMaterialManagedObject.m; sourceTree = "<group>"; };
-		519BA7F41592983B00DA7766 /* SPPhysicsPrefabManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPhysicsPrefabManagedObject.h; path = ../SPPhysicsPrefabManagedObject.h; sourceTree = "<group>"; };
-		519BA7F51592983B00DA7766 /* SPPhysicsPrefabManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPhysicsPrefabManagedObject.m; path = ../SPPhysicsPrefabManagedObject.m; sourceTree = "<group>"; };
 		51B041BE1593788A008CF7CF /* SPPhysicsWorldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorldDelegate.h; sourceTree = "<group>"; };
 		51B041BF159378E3008CF7CF /* SPPhysicsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsAppDelegate.h; sourceTree = "<group>"; };
 		51C9302515925CF400385D7A /* SPUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUILoader.h; sourceTree = "<group>"; };
@@ -223,7 +209,6 @@
 		51C9304D15928B9000385D7A /* SPPhysicsPrefab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsPrefab.h; sourceTree = "<group>"; };
 		51C9304E15928B9000385D7A /* SPPhysicsPrefab.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPPhysicsPrefab.mm; sourceTree = "<group>"; };
 		51C930501592942100385D7A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		51C930531592947600385D7A /* datamodel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = datamodel.xcdatamodel; sourceTree = "<group>"; };
 		51DF11901590205300B90EF0 /* Flywheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flywheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DF11941590205300B90EF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		51DF11961590205300B90EF0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -544,7 +529,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51C930511592942200385D7A /* CoreData.framework in Frameworks */,
 				51DF11951590205300B90EF0 /* QuartzCore.framework in Frameworks */,
 				51DF11971590205300B90EF0 /* OpenGLES.framework in Frameworks */,
 				51DF11991590205300B90EF0 /* OpenAL.framework in Frameworks */,
@@ -559,21 +543,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		519BA7E31592968900DA7766 /* managed_objects */ = {
-			isa = PBXGroup;
-			children = (
-				519BA7F41592983B00DA7766 /* SPPhysicsPrefabManagedObject.h */,
-				519BA7F51592983B00DA7766 /* SPPhysicsPrefabManagedObject.m */,
-				519BA7F11592972C00DA7766 /* SPPhysicsMaterialManagedObject.h */,
-				519BA7F21592972C00DA7766 /* SPPhysicsMaterialManagedObject.m */,
-				519BA7EE1592972C00DA7766 /* SPPhysicsPrefabManagedObject.h */,
-				519BA7EF1592972C00DA7766 /* SPPhysicsPrefabManagedObject.m */,
-				519BA7EB1592972B00DA7766 /* SPPhysicsShapeManagedObject.h */,
-				519BA7EC1592972B00DA7766 /* SPPhysicsShapeManagedObject.m */,
-			);
-			name = managed_objects;
-			sourceTree = "<group>";
-		};
 		51B041BC15937864008CF7CF /* protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,7 +630,6 @@
 		51DF11851590205300B90EF0 = {
 			isa = PBXGroup;
 			children = (
-				51C930521592947600385D7A /* datamodel.xcdatamodeld */,
 				51DF11A41590205300B90EF0 /* Flywheels */,
 				51DF11931590205300B90EF0 /* Frameworks */,
 				51DF11911590205300B90EF0 /* Products */,
@@ -695,7 +663,6 @@
 		51DF11A41590205300B90EF0 /* Flywheels */ = {
 			isa = PBXGroup;
 			children = (
-				519BA7E31592968900DA7766 /* managed_objects */,
 				51DF1382159025E000B90EF0 /* core */,
 				51C9303D1592789A00385D7A /* New Group */,
 				51DF137D159020D900B90EF0 /* game */,
@@ -1459,11 +1426,6 @@
 				51C930481592852100385D7A /* SPPhysicsMaterial.mm in Sources */,
 				51C9304B159288E400385D7A /* SPPhysicsShape.mm in Sources */,
 				51C9304F15928B9000385D7A /* SPPhysicsPrefab.mm in Sources */,
-				51C930541592947700385D7A /* datamodel.xcdatamodeld in Sources */,
-				519BA7ED1592972B00DA7766 /* SPPhysicsShapeManagedObject.m in Sources */,
-				519BA7F01592972C00DA7766 /* SPPhysicsPrefabManagedObject.m in Sources */,
-				519BA7F31592972C00DA7766 /* SPPhysicsMaterialManagedObject.m in Sources */,
-				519BA7F61592983B00DA7766 /* SPPhysicsPrefabManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1568,19 +1530,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		51C930521592947600385D7A /* datamodel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				51C930531592947600385D7A /* datamodel.xcdatamodel */,
-			);
-			currentVersion = 51C930531592947600385D7A /* datamodel.xcdatamodel */;
-			path = datamodel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 51DF11871590205300B90EF0 /* Project object */;
 }

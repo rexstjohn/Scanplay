@@ -4,8 +4,6 @@
     <prefab id="stoneblock" material="wood" shape="block"/>
     <prefab id="stonecircle" material="stone" shape="circle"/>
     <prefab id="metalgear" material="metal" shape="gear"/>
-    <prefab id="rope" material="rope" shape="rope">
-        <anchor/>
-        <anchor/>
-    </prefab>
+    <prefab id="rope" material="rope" shape="rope"/>
+    <prefab id="rock" material="stone" shape="polygon"/>
 </prefabs>

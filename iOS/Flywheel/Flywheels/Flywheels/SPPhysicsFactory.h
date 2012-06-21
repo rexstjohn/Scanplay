@@ -27,6 +27,9 @@
 //create a box
 -(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
 
+// Create a polygon shape given a list of CCW points.
+-(SPPhysicsObject*)createPolygonWithPoints:(NSArray*)somePoints withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic atPoint:(CGPoint)aPoint;
+
 
 @property(nonatomic,retain) SPPhysicsContext *context;
 @property(nonatomic,retain) SPPhysicsWorld *world;

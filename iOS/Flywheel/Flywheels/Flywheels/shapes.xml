@@ -4,4 +4,5 @@
     <shape id="block" />
     <shape id="circle" />
     <shape id="gear"/>
+    <shape id="polygon"/>
 </shapes>

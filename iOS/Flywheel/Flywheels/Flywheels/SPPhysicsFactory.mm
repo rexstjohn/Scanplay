@@ -77,10 +77,10 @@ enum {
 
 -(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
     
-    //create the sprite
-    //Resources/Icon-72.png
+    // Create the sprite
     CCSprite *sprite = [CCSprite spriteWithFile:aSkinURL];
     
+    // Create the body.
 	b2BodyDef bodyDef;
     
     // Determine the dynamic nature of the body.
@@ -104,6 +104,59 @@ enum {
 	fixtureDef.density = 1.0f;
 	fixtureDef.friction = 0.3f;
 	body->CreateFixture(&fixtureDef);
+    
+    // Return the result.
+    return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
+}
+
+
+-(SPPhysicsObject*)createPolygonWithPoints:(NSArray*)somePoints withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic atPoint:(CGPoint)aPoint{
+    
+    // Create the sprite
+    CCSprite *sprite = [CCSprite spriteWithFile:aSkinURL];
+    
+    // Create the body.
+	b2BodyDef bodyDef;
+    bodyDef.type = b2_dynamicBody;
+    bodyDef.position.Set(aPoint.x/kPTM_RATIO, aPoint.y/kPTM_RATIO);
+    bodyDef.userData = sprite;
+    
+    // Determine the dynamic nature of the body.
+    if(dynamic == true) 
+        bodyDef.type = b2_dynamicBody;
+    else
+        bodyDef.type = b2_staticBody;
+    
+    // Define the polygon shape
+//    int num = 5;
+//    
+//    b2Vec2 verts[] = {
+//        b2Vec2(0.0f*sprite.scale / kPTM_RATIO, 40.8f*sprite.scale / kPTM_RATIO),
+//        b2Vec2(-32.2f*sprite.scale / kPTM_RATIO, 35.0f*sprite.scale / kPTM_RATIO),
+//        b2Vec2(-20.0f*sprite.scale / kPTM_RATIO, -40.0f*sprite.scale / kPTM_RATIO),
+//        b2Vec2(20.0f*sprite.scale / kPTM_RATIO, -40.0f*sprite.scale / kPTM_RATIO),
+//        b2Vec2(32.2f*sprite.scale / kPTM_RATIO, 35.0f*sprite.scale / kPTM_RATIO)
+//    };
+    int num = [somePoints count];
+    b2Vec2 verts[] = {};
+    
+    for (int i =0; i < [somePoints count]; i++) {
+        CGPoint point = [[somePoints objectAtIndex:i] CGPointValue];
+        verts[i] =  b2Vec2(point.x*sprite.scale / kPTM_RATIO,point.y*sprite.scale / kPTM_RATIO);
+    }
+    
+    
+    b2PolygonShape shape;
+    shape.Set(verts, num);
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &shape;
+    fixtureDef.density = 0.1 ;
+    fixtureDef.friction = 0.5 ;
+    fixtureDef.restitution = 0.4 ;
+    
+    // Create the body
+    b2Body *body = [_world createBody:&bodyDef];
+    body->CreateFixture(&fixtureDef);
     
     // Return the result.
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];

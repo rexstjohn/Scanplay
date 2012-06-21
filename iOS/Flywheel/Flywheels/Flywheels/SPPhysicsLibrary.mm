@@ -88,7 +88,7 @@
         NSString *shapeId = [pref attributeNamed:SHAPE];
         NSString *prefabId = [pref attributeNamed:PREFAB_ID];
         
-        // dump all the shape object definitions into the library
+        // dump all the prefab object definitions into the library
         SPPhysicsPrefab *newPrefab = [[SPPhysicsPrefab alloc] initWithId:prefabId andMaterial:[_materials valueForKey:materialId] andShape:[_shapes valueForKey:shapeId]];
         [_prefabs setValue:newPrefab forKey:prefabId];
 	}
