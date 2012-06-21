@@ -8,6 +8,7 @@
 
 #import "SPUILoader.h"
 #import "SMXMLDocument.h"
+#import "SPPhysicsLibrary.h"
 #import "Utils.h"
 
 // The purpose of this class is to provide an easy way of rapidly constructing a UI
@@ -16,9 +17,10 @@
 
 @synthesize context = _context;
 
--(id) initWithContext:(SPPhysicsContext*)aContext{
+-(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary{
     
-    if(self = [super init]){        _context = aContext;
+    if(self = [super init]){       
+        _context = aContext;
     }
     
     return self;
@@ -45,7 +47,6 @@
 //		NSLog(@"Found a book!\n ISBN: %@ \n Title: %@ \n Price: %f \n Authors: %@", isbn, title, price, authors);
 	}
 }
-    
 
 -(void) dealloc {
     

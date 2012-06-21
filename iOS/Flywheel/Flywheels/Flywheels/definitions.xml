@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions>
+    <prefabs>
+        <prefab id="woodblock" material="wood" shape="block"/>
+        <prefab id="stoneblock" material="wood" shape="block"/>
+        <prefab id="stonecircle" material="stone" shape="circle"/>
+        <prefab id="metalgear" material="metal" shape="gear" class="SPPhysicsGear"/>
+        <prefab id="rope" material="rope" shape="rope" class="SPPhysicsRope"/>
+        <prefab id="rock" material="stone" shape="polygon" >
+            <point x="10" y="50"/>
+            <point x="20" y="10"/>
+            <point x="10" y="10"/>
+        </prefab>
+    </prefabs>
+    <materials>
+        <material id="wood" mass="1" restitution=".2" texture="wood.png"/>
+        <material id="stone" mass="1" restitution=".1" texture="stone.png"/>
+        <material id="metal" mass="1" restitution=".2" texture="metal.png"/>
+        <material id="rope" mass="1" restitution="0" texture="rope.png"/>
+    </materials>
+    <shapes>
+        <shape id="rope"/>
+        <shape id="block" />
+        <shape id="circle" />
+        <shape id="gear"/>
+        <shape id="polygon"/>
+    </shapes>
+</definitions>

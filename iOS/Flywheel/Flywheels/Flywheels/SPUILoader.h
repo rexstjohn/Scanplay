@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 @class SPPhysicsContext;
+@class SPPhysicsLibrary;
 
 @interface SPUILoader : NSObject {
     
 }
 
 // init with a context
--(id) initWithContext:(SPPhysicsContext*)aContext;
+-(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary;;
 
 // produces a UI from an XML file.
 -(void) loadUIFromXMLFile:(NSString*)filename;
 
 @property(nonatomic,retain) SPPhysicsContext *context;
+@property(nonatomic,retain) SPPhysicsLibrary *library;
 
 @end

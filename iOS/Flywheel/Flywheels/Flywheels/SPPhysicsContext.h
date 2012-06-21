@@ -13,6 +13,7 @@
 @class SPPhysicsFactory;
 @class SPPhysicsViewController;
 @class SPUILoader;
+@class SPPhysicsLibrary;
 @class SPLevelLoader;
 
 @interface SPPhysicsContext : NSObject <SPPhysicsAppDelegate>
@@ -48,5 +49,8 @@
 
 // Level loader for producing levels from XML files.
 @property (nonatomic, retain) SPLevelLoader *levelLoader;
+
+// Library helper class used to fetch the library.
+@property (nonatomic, retain) SPPhysicsLibrary *library;
 
 @end

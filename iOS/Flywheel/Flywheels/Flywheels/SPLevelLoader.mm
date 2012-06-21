@@ -7,49 +7,53 @@
 //
 
 #import "SPLevelLoader.h"
+#import "SPPhysicsContext.h"
 #import "SMXMLDocument.h"
+#import "SPPhysicsLibrary.h"
+#import "SPPhysicsPrefab.h"
 #import "Utils.h"
 
 // The purpose of this class is to provide a rapid method for loading levels.
 @implementation SPLevelLoader
 
-@synthesize context = _context;
+@synthesize context = _context, library = _library;
 
--(id) initWithContext:(SPPhysicsContext*)aContext{
+-(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary{
     
     if(self = [super init]){
         _context = aContext;
+        _library = aLibrary;
     }
-    
     return self;
 }
 
 // produces a UI from an XML file.
--(void) loadUIFromXMLFile:(NSString*)filename{
+-(void) loadObjectsFromXMLFile:(NSString*)filename{
     
-	// Pull out the <views> node
-	SMXMLElement *views = [Utils getXMLElement:@"objects" fromFile:@"objects"];
+	// Pull out the <objects> node from our level file
+	SMXMLElement *objects = [Utils getXMLElement:OBJECTS_KEY fromFile:filename];
 	
 	// Look through <views> children of type <view>
-	for (SMXMLElement *view in [views childrenNamed:@"object"]) {
+	for (SMXMLElement *object in [objects childrenNamed:OBJECT_KEY]) {
         
-        //load level stuff here
-        //		// demonstrate common cases of extracting XML data
-        //		NSString *isbn = [book attributeNamed:@"isbn"]; // XML attribute
-        //		NSString *title = [book valueWithPath:@"title"]; // child node value
-        //		float price = [[book valueWithPath:@"price"] floatValue]; // child node value (converted)
-        //		
-        //		// show off some KVC magic
-        //		NSArray *authors = [[book childNamed:@"authors"].children valueForKey:@"value"];
-        //		
-        //		NSLog(@"Found a book!\n ISBN: %@ \n Title: %@ \n Price: %f \n Authors: %@", isbn, title, price, authors);
+        //Step 1: Identify the object to build.
+        SPPhysicsPrefab *prefab = [_library getPrefabByName:[object attributeNamed:@"prefab"]];
+        
+        //Step 2: Extract the rest of the implementation details from the prefab
+    
+        //Step 2: Send the object to the factory for construction.
+        [_context.factory createObjectFromPrefab:prefab andElement:object];
+        
+        //Step 3: Add the object to the current scene.
 	}
 }
 
 -(void) dealloc {
     
+    [_library release];
     [_context release];
     _context = nil;
+    _library = nil;
     
     [super dealloc];
 }

@@ -12,6 +12,7 @@
 @class SPPhysicsObject;
 @class SPPhysicsContext;
 @class SPPhysicsPrefab;
+@class SMXMLElement;
 
 @interface SPPhysicsFactory : NSObject
 
@@ -19,7 +20,7 @@
 -(id)initWithPhysicsContext:(SPPhysicsContext*)aContext;
 
 //create an object given a prefab
--(SPPhysicsObject*) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab;
+-(void) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andElement:(SMXMLElement*)anElement;
 
 //create a circle
 -(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;

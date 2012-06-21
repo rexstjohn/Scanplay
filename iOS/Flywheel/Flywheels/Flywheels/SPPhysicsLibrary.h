@@ -8,19 +8,17 @@
 
 #import <Foundation/Foundation.h>
 @class SPPhysicsObject;
-
-//file names
-#define MATERIAL_FILE_NAME @"materials"
-#define SHAPE_FILE_NAME    @"shapes"
-#define PREFABS_FILE_NAME  @"prefabs"
+@class SPPhysicsPrefab;
 
 //keys for the xml file types
-#define MATERIALS  @"materials"
-#define MATERIAL   @"material"
-#define SHAPES     @"shapes"
-#define SHAPE      @"shape"
-#define PREFABS    @"prefabs"
-#define PREFAB     @"prefab"
+#define MATERIALS              @"materials"
+#define MATERIAL               @"material"
+#define SHAPES                 @"shapes"
+#define SHAPE                  @"shape"
+#define PREFABS                @"prefabs"
+#define PREFAB                 @"prefab"
+#define CLASS_NAME             @"class"
+#define DEFAULT_CLASS_NAME     @"SPPhysicsObject"
 
 // This class is used to import a list of physics prefabs, materials and shapes.
 // The physics builder class can then use this library to dynamically construct arbitrary physics objects
@@ -28,7 +26,13 @@
 @interface SPPhysicsLibrary : NSObject
 
 // initialize the library with materials and physics objects. 
--(id) initWithPrefabs:(NSString*)prefabFile andMaterials:(NSString*)materialFile andShapes:(NSString*)shapeFile;
+-(id) initWithObjectDefinitions:(NSString*)aDefinitionsFile;
+
+// Retrieve a prefab from the library.
+-(SPPhysicsPrefab*)getPrefabByName:(NSString*)aName;
+
+// Name of the root Object Definitions File.
+@property(nonatomic,retain) NSString *definitionsFile;
 
 //library of physics prefabs available to be constructed.
 @property(nonatomic,retain) NSMutableDictionary *prefabs;

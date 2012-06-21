@@ -15,15 +15,21 @@
 #import "SPPhysicsGameLayer.h"
 #import "SPLevelLoader.h"
 #import "SPUILoader.h"
+#import "SPPhysicsLibrary.h"
 
 @implementation SPPhysicsContext
 
-@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window, layer =_layer, uiLoader = _uiLoader, levelLoader = _levelLoader;
+@synthesize world = _world, factory = _factory, viewController = _viewController, window = _window, layer =_layer, uiLoader = _uiLoader, levelLoader = _levelLoader, library = _library;
 
 -(id)initWithWindow:(UIWindow*)aWindow {
     
     if(self = [super init]) {
+        
+        // Import the window.
         _window = aWindow;
+        
+        // Create the Library.
+        _library = [[SPPhysicsLibrary alloc] initWithObjectDefinitions:DEFINITIONS_FILE_NAME];
         
         // Create our physics world using the screen size as the bounds.
 		CGSize screenSize = [CCDirector sharedDirector].winSize;
@@ -88,8 +94,8 @@
         [[CCDirector sharedDirector] runWithScene: scene];
         
         //create utility loader helpers
-        _uiLoader = [[SPUILoader alloc] initWithContext:self];
-        _levelLoader = [[SPLevelLoader alloc] initWithContext:self];
+        _uiLoader = [[SPUILoader alloc] initWithContext:self andLibrary:_library];
+        _levelLoader = [[SPLevelLoader alloc] initWithContext:self andLibrary:_library];
     }
     
     return self;

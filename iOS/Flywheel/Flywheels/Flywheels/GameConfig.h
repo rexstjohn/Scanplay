@@ -12,6 +12,9 @@
 #define kDO_SLEEP  true
 #define kPTM_RATIO  32.0f
 
+// Name of the file which contains all of the engine's object definitions.
+#define DEFINITIONS_FILE_NAME  @"definitions"
+
 #ifndef __GAME_CONFIG_H
     #define __GAME_CONFIG_H
 

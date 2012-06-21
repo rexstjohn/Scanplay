@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 @class SPPhysicsContext;
+@class SPPhysicsLibrary;
 
-@interface SPLevelLoader : NSObject{
-    
-}
+#define OBJECTS_KEY @"objects"
+#define OBJECT_KEY  @"object"
 
+@interface SPLevelLoader : NSObject
 // init with a context
--(id) initWithContext:(SPPhysicsContext*)aContext;
+-(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary;
 
-// produces a UI from an XML file.
--(void) loadUIFromXMLFile:(NSString*)filename;
+// produces a Objects from an XML file.
+-(void) loadObjectsFromXMLFile:(NSString*)filename;
 
 @property(nonatomic,retain) SPPhysicsContext *context;
+@property(nonatomic,retain) SPPhysicsLibrary *library;
 
 @end

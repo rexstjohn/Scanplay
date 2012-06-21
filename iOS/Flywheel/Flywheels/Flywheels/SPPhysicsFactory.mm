@@ -11,6 +11,7 @@
 #import "SPPhysicsWorld.h"
 #import "SPPhysicsContext.h"
 #import "GameConfig.h"
+#import "SMXMLDocument.h"
 
 @implementation SPPhysicsFactory
 
@@ -20,7 +21,6 @@ enum {
 	kTagBatchNode = 1,
 	kTagAnimation1 = 1,
 };
-
 
 @synthesize context = _context, world = _world;
 
@@ -35,11 +35,10 @@ enum {
     return self;
 }
 
--(SPPhysicsObject*) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab{
+-(void)createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andElement:(SMXMLElement*)anElement{
     
     
 }
-
 
 -(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic{
     
@@ -109,7 +108,6 @@ enum {
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
-
 -(SPPhysicsObject*)createPolygonWithPoints:(NSArray*)somePoints withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic atPoint:(CGPoint)aPoint{
     
     // Create the sprite
@@ -144,7 +142,6 @@ enum {
         CGPoint point = [[somePoints objectAtIndex:i] CGPointValue];
         verts[i] =  b2Vec2(point.x*sprite.scale / kPTM_RATIO,point.y*sprite.scale / kPTM_RATIO);
     }
-    
     
     b2PolygonShape shape;
     shape.Set(verts, num);

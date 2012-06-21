@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<materials>
-    <material id="wood" mass="1" restitution=".2" texture="wood.png"/>
-    <material id="stone" mass="1" restitution=".1" texture="stone.png"/>
-    <material id="metal" mass="1" restitution=".2" texture="metal.png"/>
-    <material id="rope" mass="1" restitution="0" texture="rope.png"/>
-</materials>

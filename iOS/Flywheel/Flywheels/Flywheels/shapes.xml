@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<shapes>
-    <shape id="rope"/>
-    <shape id="block" />
-    <shape id="circle" />
-    <shape id="gear"/>
-    <shape id="polygon"/>
-</shapes>
