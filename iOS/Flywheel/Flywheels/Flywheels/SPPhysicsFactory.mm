@@ -136,16 +136,6 @@ enum {
     else
         bodyDef.type = b2_staticBody;
     
-    // Define the polygon shape
-//    int num = 5;
-//    
-//    b2Vec2 verts[] = {
-//        b2Vec2(0.0f*sprite.scale / PTM_RATIO, 40.8f*sprite.scale / PTM_RATIO),
-//        b2Vec2(-32.2f*sprite.scale / PTM_RATIO, 35.0f*sprite.scale / PTM_RATIO),
-//        b2Vec2(-20.0f*sprite.scale / PTM_RATIO, -40.0f*sprite.scale / PTM_RATIO),
-//        b2Vec2(20.0f*sprite.scale / PTM_RATIO, -40.0f*sprite.scale / PTM_RATIO),
-//        b2Vec2(32.2f*sprite.scale / PTM_RATIO, 35.0f*sprite.scale / PTM_RATIO)
-//    };
     int num = [somePoints count];
     b2Vec2 verts[] = {};
     
@@ -170,14 +160,6 @@ enum {
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
-
-// Create a polygon shape given a list of CCW points.
--(SPPhysicsObject*)createPolygonWithPoints:(NSArray*)somePoints 
-                                  withSkin:(NSString*)aSkinURL 
-                                 isDynamic:(BOOL)dynamic 
-                                   atPoint:(CGPoint)aPoint{
-
-}
 
 // Create a Rope.
 -(SPPhysicsObject*)createRopeWithAnchor:(SPPhysicsObject*)anAnchor 
