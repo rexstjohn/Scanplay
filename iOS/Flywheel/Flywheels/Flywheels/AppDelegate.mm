@@ -53,7 +53,6 @@
     //release
 	[_context release];
 	[_window release];
-	[_context release];
     
     //nil
     _context = nil;
@@ -63,7 +62,6 @@
 - (void)dealloc {
     
     //release
-	[_context release];
 	[_context release];
 	[_window release];
     

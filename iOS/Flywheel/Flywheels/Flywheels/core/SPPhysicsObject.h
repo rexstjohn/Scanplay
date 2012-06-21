@@ -10,8 +10,7 @@
 #import "b2Body.h"
 @class CCSprite;
 
-@interface SPPhysicsObject : NSObject
-{
+@interface SPPhysicsObject : NSObject{
     b2Body *_body;
 }
 

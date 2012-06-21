@@ -15,11 +15,11 @@
 
 @interface  SPPhysicsWorld ()
 
-    // Generate a debug draw.
-    -(void) createDebugDraw;
+// Generate a debug draw.
+-(void) createDebugDraw;
 
-    // Create a ground body to contain the world.
-    - (void) createGroundBodyInRect:(CGRect)aRect;
+// Create a ground body to contain the world.
+- (void) createGroundBodyInRect:(CGRect)aRect;
 
 @end
 
@@ -57,6 +57,7 @@
     return self;
 }
 
+// Wrapper methods.
 -(b2Body*)createBody:(b2BodyDef*)aBodyDed{
     return _world->CreateBody(aBodyDed);
 }
@@ -69,7 +70,7 @@
     _world->DrawDebugData();
 }
 
-//private methods
+// Private methods.
 
 -(void) createDebugDraw {
     
@@ -117,6 +118,7 @@
     groundBody->CreateFixture(&groundBox,0);
 }
 
+// Update the physics world.
 -(void)step:(ccTime) dt{
     
 	int32 velocityIterations = 8;

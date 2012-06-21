@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "SPPhysicsAppDelegate.h"
 @class SPPhysicsWorld;
 @class SPPhysicsFactory;
 @class SPPhysicsViewController;
 @class SPUILoader;
 @class SPLevelLoader;
 
-@interface SPPhysicsContext : NSObject
+@interface SPPhysicsContext : NSObject <SPPhysicsAppDelegate>
 
 //methods
 -(id) initWithWindow:(UIWindow*)aWindow;

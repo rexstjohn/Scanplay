@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "b2World.h"
 #import "GLES-Render.h"
+#import "SPPhysicsWorldDelegate.h"
 
-
-@interface SPPhysicsWorld : NSObject {
+@interface SPPhysicsWorld : NSObject <SPPhysicsWorldDelegate> {
     
     //these items are C++ class objects so they must be handled differently memory-wise.
     b2World *_world;
@@ -23,10 +23,14 @@
 //
 @property(nonatomic, assign) CGSize screensize;
 
-//wrapper functions
+// Wrapper constructor delegate functions for b2World.
 -(b2Body*)createBody:(b2BodyDef*)aBodyDef;
 -(b2Joint*)createJoint:(b2JointDef*)aJointDef;
+
+// Draw debug data for the world.
 -(void)drawDebugData;
+
+// Step the world physics.
 -(void)step:(ccTime) dt;
 
 @end

@@ -25,20 +25,18 @@
     if(self = [super init]) {
         _window = aWindow;
         
-        //create our physics world
+        // Create our physics world using the screen size as the bounds.
 		CGSize screenSize = [CCDirector sharedDirector].winSize;
         _world = [[SPPhysicsWorld alloc] initWithSize:screenSize];
         
-        //create our factory
+        // Create our factory (used for spawning objects on demand).
         _factory = [[SPPhysicsFactory alloc] initWithPhysicsContext:self];
         
-        //create the window and physics world
-        
-        // Init the View Controller
+        // Init the View Controller.
         _viewController = [[SPPhysicsViewController alloc] initWithNibName:nil bundle:nil];
         _viewController.wantsFullScreenLayout = YES;
         
-        // Create the EAGLView 
+        // Create the EAGLView.
         //  1. Create a RGB565 format. Alternative: RGBA8
         //	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
         EAGLView *glView = [EAGLView viewWithFrame:[_window bounds]
@@ -97,7 +95,7 @@
     return self;
 }
 
-// CCDirector important methods
+// CCDirector important methods (basically delegate methods used by the AppDelegate during state changes.
 - (void)pause{
 	[[CCDirector sharedDirector] pause];
 }

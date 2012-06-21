@@ -13,10 +13,9 @@
 // create ivars & syntesize
 @synthesize sprite = _sprite;
 
--(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite
-{
-    if(self = [super init])
-    {
+-(id)initWithBody:(b2Body*) body andSprite:(CCSprite*) sprite{
+    
+    if(self = [super init]){
         _body = body;
         _sprite = sprite;
     }
@@ -24,8 +23,8 @@
     return self;
 }
 
-- (void) dealloc 
-{
+- (void) dealloc {
+    
     //dealloc
     [_sprite release];
     

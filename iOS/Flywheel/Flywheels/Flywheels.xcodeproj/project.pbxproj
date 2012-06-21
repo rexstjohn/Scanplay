@@ -201,6 +201,8 @@
 		519BA7F21592972C00DA7766 /* SPPhysicsMaterialManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPhysicsMaterialManagedObject.m; sourceTree = "<group>"; };
 		519BA7F41592983B00DA7766 /* SPPhysicsPrefabManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPPhysicsPrefabManagedObject.h; path = ../SPPhysicsPrefabManagedObject.h; sourceTree = "<group>"; };
 		519BA7F51592983B00DA7766 /* SPPhysicsPrefabManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPPhysicsPrefabManagedObject.m; path = ../SPPhysicsPrefabManagedObject.m; sourceTree = "<group>"; };
+		51B041BE1593788A008CF7CF /* SPPhysicsWorldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsWorldDelegate.h; sourceTree = "<group>"; };
+		51B041BF159378E3008CF7CF /* SPPhysicsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPhysicsAppDelegate.h; sourceTree = "<group>"; };
 		51C9302515925CF400385D7A /* SPUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUILoader.h; sourceTree = "<group>"; };
 		51C9302615925CF400385D7A /* SPUILoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SPUILoader.mm; sourceTree = "<group>"; };
 		51C9302915925D2000385D7A /* SPLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLevelLoader.h; sourceTree = "<group>"; };
@@ -570,6 +572,15 @@
 				519BA7EC1592972B00DA7766 /* SPPhysicsShapeManagedObject.m */,
 			);
 			name = managed_objects;
+			sourceTree = "<group>";
+		};
+		51B041BC15937864008CF7CF /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				51B041BE1593788A008CF7CF /* SPPhysicsWorldDelegate.h */,
+				51B041BF159378E3008CF7CF /* SPPhysicsAppDelegate.h */,
+			);
+			name = protocols;
 			sourceTree = "<group>";
 		};
 		51C9302315925CC400385D7A /* loaders */ = {
@@ -1208,6 +1219,7 @@
 		51DF138B159037F600B90EF0 /* physics */ = {
 			isa = PBXGroup;
 			children = (
+				51B041BC15937864008CF7CF /* protocols */,
 				51C9304C15928B5300385D7A /* library */,
 				51DF138C1590380B00B90EF0 /* SPPhysicsFactory.h */,
 				51DF138D1590380B00B90EF0 /* SPPhysicsFactory.mm */,
