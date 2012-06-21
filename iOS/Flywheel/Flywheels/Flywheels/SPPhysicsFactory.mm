@@ -7,11 +7,11 @@
 //
 
 #import "SPPhysicsFactory.h"
-#import "SPPhysicsObject.h"
 #import "SPPhysicsWorld.h"
 #import "SPPhysicsContext.h"
 #import "GameConfig.h"
 #import "SMXMLDocument.h"
+#import "SPPhysicsObject.h"
 
 @implementation SPPhysicsFactory
 
@@ -35,6 +35,7 @@ enum {
     return self;
 }
 
+//
 -(void)createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andElement:(SMXMLElement*)anElement{
     
     

@@ -19,13 +19,13 @@
 //init with a physics context
 -(id)initWithPhysicsContext:(SPPhysicsContext*)aContext;
 
-//create an object given a prefab
+// Create an object given a prefab and an xml element containing helpful details needed to implement, size and position the element.
 -(void) createObjectFromPrefab:(SPPhysicsPrefab*)aPrefab andElement:(SMXMLElement*)anElement;
 
-//create a circle
+// Create a circle.
 -(SPPhysicsObject*)createCircleWithRadius:(float32)theRadius atPosition:(CGPoint)point withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
 
-//create a box
+// Create a box.
 -(SPPhysicsObject*)createBoxWithRect:(CGRect)aRect withSkin:(NSString*)aSkinURL isDynamic:(BOOL)dynamic;
 
 // Create a polygon shape given a list of CCW points.
