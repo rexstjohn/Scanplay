@@ -40,6 +40,13 @@
 #define GEAR_OBJECT      @"gear"
 #define ROPE_OBJECT      @"rope"
 
+//shape definitions
+#define CIRCLE_SHAPE    @"circle"
+#define BLOCK_SHAPE     @"block"
+#define GEAR_SHAPE      @"gear"
+#define ROPE_SHAPE      @"rope"
+#define POLYGON_SHAPE      @"polygon"
+
 
 #ifndef __GAME_CONFIG_H
     #define __GAME_CONFIG_H

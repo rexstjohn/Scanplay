@@ -55,7 +55,7 @@
         if ([[prefab prefabType] isEqualToString:PRIMITIVE_OBJECT]) {
             
             //create either a circle or a basic block shape
-            if([prefab.shape isEqual:@"circle"]){
+            if([prefab.shape isEqual:CIRCLE_SHAPE]){
                 
                 // Create a circle.
                newObject = [_factory createCircleWithRadius:width
@@ -63,11 +63,11 @@
                                  withSkin:prefab.material.textureName 
                                  isDynamic:YES];
             }
-            else if([prefab.shape isEqual:@"block"]){
+            else if([prefab.shape isEqual:BLOCK_SHAPE]){
                 // Create a box.
                 newObject = [_factory createBoxWithRect:CGRectMake(x, y, width, height) withSkin:prefab.material.textureName isDynamic:YES];
             }
-            else if([prefab.shape isEqual:@"polygon"]){
+            else if([prefab.shape isEqual:POLYGON_SHAPE]){
                 // Create a polygon.
                 //newObject = [_factory createPolygonWithPoints:<#(NSArray *)#> withSkin:prefab.material.textureName isDynamic:YES atPoint:<#(CGPoint)#>]
             }
