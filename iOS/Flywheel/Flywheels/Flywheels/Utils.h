@@ -15,6 +15,7 @@
 +(CGPoint)toMeters:(CGPoint)point;
 
 //Gets a specific XML element from a specific XML file.
-+(SMXMLElement*) getXMLElement:(NSString*)elementName fromFile:(NSString*)fileName;
++(SMXMLElement*) getXMLElement:(NSString*)elementName 
+                      fromFile:(NSString*)fileName;
 
 @end

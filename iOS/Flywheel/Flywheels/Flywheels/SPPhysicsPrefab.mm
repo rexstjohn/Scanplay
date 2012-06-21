@@ -13,7 +13,10 @@
 
 @synthesize material = _material, shape = _shape, prefabId = _prefabId, prefabType=_prefabType;
 
--(id)initWithId:(NSString*)aPrefId andMaterial:(SPPhysicsMaterial*)aMaterial andShape:(SPPhysicsShape*)aShape ofType:(NSString*)aType{
+-(id)initWithId:(NSString*)aPrefId 
+    andMaterial:(SPPhysicsMaterial*)aMaterial 
+       andShape:(SPPhysicsShape*)aShape 
+         ofType:(NSString*)aType{
     
     if(self = [super init]){
         

@@ -16,7 +16,8 @@
 
 @interface SPLevelLoader : NSObject
 // init with a context
--(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary;
+-(id) initWithContext:(SPPhysicsContext*)aContext 
+           andLibrary:(SPPhysicsLibrary*)aLibrary;
 
 // produces a Objects from an XML file.
 -(void) loadObjectsFromXMLFile:(NSString*)filename;

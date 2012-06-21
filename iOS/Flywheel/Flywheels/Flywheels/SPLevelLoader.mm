@@ -20,7 +20,8 @@
 
 @synthesize context = _context, library = _library, factory = _factory;
 
--(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary{
+-(id) initWithContext:(SPPhysicsContext*)aContext 
+           andLibrary:(SPPhysicsLibrary*)aLibrary{
     
     if(self = [super init]){
         _context = aContext;

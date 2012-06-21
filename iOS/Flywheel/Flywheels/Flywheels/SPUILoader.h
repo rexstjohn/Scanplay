@@ -15,7 +15,8 @@
 }
 
 // init with a context
--(id) initWithContext:(SPPhysicsContext*)aContext andLibrary:(SPPhysicsLibrary*)aLibrary;;
+-(id) initWithContext:(SPPhysicsContext*)aContext 
+           andLibrary:(SPPhysicsLibrary*)aLibrary;;
 
 // produces a UI from an XML file.
 -(void) loadUIFromXMLFile:(NSString*)filename;
