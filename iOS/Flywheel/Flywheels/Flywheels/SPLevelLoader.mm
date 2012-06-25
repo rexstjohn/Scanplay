@@ -74,10 +74,10 @@
             }
         }
         else if([[prefab prefabType] isEqualToString:ROPE_OBJECT]){
-            [[_context factory] createObjectFromPrefab:prefab andRect:CGRectMake(x, y, width, height)];
+            //[[_context factory] createRopeWithAnchor:<#(SPPhysicsObject *)#> withLength:<#(NSNumber *)#>];
         }
             else if([[prefab prefabType] isEqualToString:GEAR_OBJECT]){
-            [[_context factory] createObjectFromPrefab:prefab andRect:CGRectMake(x, y, width, height)];
+                [[_context factory] createGearWithRect:CGRectMake(x, y, width, height)];
         }
         
 	}

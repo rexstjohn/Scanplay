@@ -13,6 +13,8 @@
 #import "SMXMLDocument.h"
 #import "SPPhysicsObject.h"
 #import "SPPhysicsPrefab.h"
+#import "SPPhysicsRope.h"
+#import "SPPhysicsGear.h"
 
 @implementation SPPhysicsFactory
 
@@ -160,42 +162,36 @@ enum {
     return [[SPPhysicsObject alloc] initWithBody:body andSprite:sprite];
 }
 
-
 // Create a Rope.
 -(SPPhysicsObject*)createRopeWithAnchor:(SPPhysicsObject*)anAnchor 
                           andAttachment:(SPPhysicsObject*)anAttachment
                           withLength:(NSNumber*)length{
+    return [[SPPhysicsRope alloc] init];
+} 
 
-} //rope with two anchor bodies
-
+//rope with one anchor body
 -(SPPhysicsObject*)createRopeWithAnchor:(SPPhysicsObject*)anAnchor 
                              withLength:(NSNumber*)length{
+    return [[SPPhysicsRope alloc] init];
+} 
 
-} //rope with one anchor body
-
+//rope with one anchor body with the other end stuck on a point statically in space.
 -(SPPhysicsObject*)createRopeWithAnchor:(SPPhysicsObject*)anAnchor 
                              withLength:(NSNumber*)length 
                         stuckAtPosition:(CGPoint)aPoint{
+    return [[SPPhysicsRope alloc] init];
+} 
 
-
-
-
-} //rope with one anchor body with the other end stuck on a point statically in space.
-
-// Create a Gear.
+// Gear with no motor
 -(SPPhysicsObject*)createGearWithRect:(CGRect)aRect
                        withMotorSpeed:(float)aSpeed{
+    return [[SPPhysicsGear alloc] init];
+} 
 
-
-
-} // gear with a motor
-
+// Normal boring gear.
 -(SPPhysicsObject*)createGearWithRect:(CGRect)aRect{
-
-
-
-} //gear with no motor
-
+    return [[SPPhysicsGear alloc] init];
+} 
 
 - (void) dealloc {
     
