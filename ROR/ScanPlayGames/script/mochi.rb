@@ -1,23 +1,78 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-require 'json'
 require 'net/http'
+require 'uri'
+require 'HTTParty'
+
+#note to self: must gem install httparty or this wont work
+=begin
+# Use the class methods to get down to business quickly
+response = HTTParty.get('http://twitter.com/statuses/public_timeline.json')
+puts response.body, response.code, response.message, response.headers.inspect
+
+response.each do |item|
+  puts item['user']['screen_name']
+end
+
+# Or wrap things up in your own class
+class Twitter
+  include HTTParty
+  base_uri 'twitter.com'
+
+  def initialize(u, p)
+    @auth = {:username => u, :password => p}
+  end
+
+  # which can be :friends, :user or :public
+  # options[:query] can be things like since, since_id, count, etc.
+  def timeline(which=:friends, options={})
+    options.merge!({:basic_auth => @auth})
+    self.class.get("/statuses/#{which}_timeline.json", options)
+  end
+
+  def post(text)
+    options = { :query => {:status => text}, :basic_auth => @auth }
+    self.class.post('/statuses/update.json', options)
+  end
+end
+
+twitter = Twitter.new("rexstjohn@gmail.com", "3w0k5r00l!")
+puts twitter.timeline
+=end
 
 #whatever game url we need to pull the feed from
-base_uri = 'http://catalog.mochimedia.com/feeds/query/?q=recommendation%3A%3E%3D3&partner_id=2a451cb43fb275ac&limit=11851'
+#base_uri = 'http://catalog.mochimedia.com/feeds/query/?q=recommendation%3A%3E%3D3&partner_id=2a451cb43fb275ac&limit=11851'
 
 
-   resp = Net::HTTP.get_response(URI.parse(base_uri))
-   data = resp.body
+#note to self: must gem install httparty or this wont work
 
-   puts data
-   # we convert the returned JSON data to native Ruby
-   # data structure - a hash
-   result = JSON.parse(data)
+# Use the class methods to get down to business quickly
+#response = HTTParty.get(base_uri)
+#puts response.body, response.code, response.message, response.headers.inspect
 
-   # if the hash has 'Error' as a key, we raise an error
-   if result.has_key? 'Error'
-      raise "web service error"
-   end
+#response.each do |item|
+ # puts item
+#end
 
-   puts result
+# Or wrap things up in your own class
+class Mochi
+  include HTTParty
+  base_uri 'catalog.mochimedia.com'
+
+  def initialize
+  end
+
+  # which can be :friends, :user or :public
+  # options[:query] can be things like since, since_id, count, etc.
+  def get_feed()
+    options = { :query => {:recommendation => ':>=3'}, :partner_id => '2a451cb43fb275ac', :limit => '11851' }
+    self.class.get("/feeds/query/",options)
+  end
+
+  def get_feed_with_options()
+    #self.class.get("/statuses/#{which}_timeline.json", options)
+  end
+end
+
+mochi = Mochi.new
+puts mochi.get_feed
