@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  zip_url: MyString
+  rating: MyString
+  uuid: MyString
+  description: MyString
+  game_url: MyString
+  resolution: MyString
+  metascore: 
+
+two:
+  name: MyString
+  zip_url: MyString
+  rating: MyString
+  uuid: MyString
+  description: MyString
+  game_url: MyString
+  resolution: MyString
+  metascore: 

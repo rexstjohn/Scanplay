@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @game.name %>
+</p>
+
+<p>
+  <b>Zip url:</b>
+  <%= @game.zip_url %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @game.rating %>
+</p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @game.uuid %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @game.description %>
+</p>
+
+<p>
+  <b>Game url:</b>
+  <%= @game.game_url %>
+</p>
+
+<p>
+  <b>Resolution:</b>
+  <%= @game.resolution %>
+</p>
+
+<p>
+  <b>Metascore:</b>
+  <%= @game.metascore %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
