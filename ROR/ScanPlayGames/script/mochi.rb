@@ -53,26 +53,46 @@ puts twitter.timeline
 #response.each do |item|
  # puts item
 #end
-
 # Or wrap things up in your own class
 class Mochi
   include HTTParty
   base_uri 'catalog.mochimedia.com'
 
+  attr_accessor :partner_id
+
   def initialize
+    @partner_id = '2a451cb43fb275ac'
   end
 
   # which can be :friends, :user or :public
   # options[:query] can be things like since, since_id, count, etc.
-  def get_feed()
-    options = { :query => {:recommendation => ':>=3'}, :partner_id => '2a451cb43fb275ac', :limit => '11851' }
+  def get_feed
+    options = { :query => {:recommendation => ':>=3'}, :partner_id => @partner_id, :limit => '11851' }
     self.class.get("/feeds/query/",options)
   end
 
-  def get_feed_with_options()
+  def get_feed_with_options
     #self.class.get("/statuses/#{which}_timeline.json", options)
+  end
+
+  def get_game_zips
+      
+  end
+
+  def enumerate_games
+    response = get_feed
+
+    response['games'].each do |game|
+
+      game.each do |k,i|
+        puts "key: #{k} value: #{i}"
+      end
+    end
   end
 end
 
+#fetch the goodness
 mochi = Mochi.new
-puts mochi.get_feed
+mochi.enumerate_games
+#puts mochi.get_feed
+
