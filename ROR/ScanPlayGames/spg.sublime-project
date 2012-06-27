@@ -1,0 +1,44 @@
+{
+	"folders":
+	[
+		{
+			"path": ".bundle"
+		},
+		{
+			"path": ".idea"
+		},
+		{
+			"path": "app"
+		},
+		{
+			"path": "config"
+		},
+		{
+			"path": "db"
+		},
+		{
+			"path": "doc"
+		},
+		{
+			"path": "lib"
+		},
+		{
+			"path": "log"
+		},
+		{
+			"path": "public"
+		},
+		{
+			"path": "script"
+		},
+		{
+			"path": "test"
+		},
+		{
+			"path": "tmp"
+		},
+		{
+			"path": "vendor"
+		}
+	]
+}

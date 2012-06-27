@@ -2,14 +2,6 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Zip url</th>
-    <th>Rating</th>
-    <th>Uuid</th>
-    <th>Description</th>
-    <th>Game url</th>
-    <th>Resolution</th>
-    <th>Metascore</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +9,6 @@
 
 <% @games.each do |game| %>
   <tr>
-    <td><%= game.name %></td>
-    <td><%= game.zip_url %></td>
-    <td><%= game.rating %></td>
-    <td><%= game.uuid %></td>
-    <td><%= game.description %></td>
-    <td><%= game.game_url %></td>
-    <td><%= game.resolution %></td>
-    <td><%= game.metascore %></td>
     <td><%= link_to 'Show', game %></td>
     <td><%= link_to 'Edit', edit_game_path(game) %></td>
     <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>

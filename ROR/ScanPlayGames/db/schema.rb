@@ -11,25 +11,51 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120626060637) do
+ActiveRecord::Schema.define(:version => 20120627035237) do
 
   create_table "games", :force => true do |t|
-    t.string   "name"
-    t.string   "zip_url"
+    t.boolean  "coins_enabled"
+    t.integer  "width"
+    t.integer  "height"
+    t.float    "metascore"
+    t.boolean  "coins_revshare_enabled"
+    t.boolean  "leaderboard_enabled"
+    t.boolean  "achievements_enabled"
+    t.datetime "feed_approval_created"
+    t.integer  "swf_file_size"
+    t.datetime "created"
+    t.string   "screen2_thumb"
+    t.string   "popularity"
+    t.string   "alternate_url"
+    t.string   "video_url"
     t.string   "rating"
+    t.string   "screen1_thumb"
+    t.string   "screen3_url"
+    t.string   "recommendation"
+    t.string   "category"
+    t.string   "screen4_thumb"
     t.string   "uuid"
+    t.string   "author"
+    t.string   "thumbnail_large_url"
+    t.string   "swf_url"
+    t.string   "recommended"
+    t.string   "game_tag"
+    t.string   "zip_url"
+    t.string   "screen1_url"
+    t.string   "updated"
     t.string   "description"
+    t.string   "author_link"
     t.string   "game_url"
-    t.string   "resolution"
-    t.integer  "metascore"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "tests", :force => true do |t|
+    t.string   "screen2_url"
+    t.string   "slug"
+    t.string   "instructions"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "screen3_thumb"
+    t.string   "thumbnail_url"
+    t.string   "screen4_url"
+    t.string   "resolution"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
   end
 
 end
