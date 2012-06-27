@@ -2,13 +2,15 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
+    <th>Game Name</th>
+    <th>Game Description</th>
     <th></th>
   </tr>
 
 <% @games.each do |game| %>
   <tr>
+    <td><%= game.name %></td>
+    <td><%= game.description %></td>
     <td><%= link_to 'Show', game %></td>
     <td><%= link_to 'Edit', edit_game_path(game) %></td>
     <td><%= link_to 'Destroy', game, confirm: 'Are you sure?', method: :delete %></td>

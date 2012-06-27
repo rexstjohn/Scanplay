@@ -1,48 +1,50 @@
 class Game < ActiveRecord::Base
-attr_accessor :key_mappings
-attr_accessor :screen2_thumb
-attr_accessor :popularity
-attr_accessor :alternate_url
-attr_accessor :video_url
-attr_accessor :rating
-attr_accessor :screen1_thumb
-attr_accessor :metascore
-attr_accessor :height
-attr_accessor :screen3_url
-attr_accessor :recommendation
-attr_accessor :coins_revshare_enabled
-attr_accessor :category
-attr_accessor :screen4_thumb
-attr_accessor :uuid
-attr_accessor :author
-attr_accessor :thumbnail_large_url
-attr_accessor :tags
-attr_accessor :controls
-attr_accessor :languages
-attr_accessor :swf_url
-attr_accessor :recommended
-attr_accessor :game_tag
-attr_accessor :achievements_enabled
-attr_accessor :zip_url
-attr_accessor :screen1_url
-attr_accessor :updated
-attr_accessor :description
-attr_accessor :author_link
-attr_accessor :swf_file_size
-attr_accessor :game_url
-attr_accessor :screen2_url
-attr_accessor :slug
-attr_accessor :categories
-attr_accessor :instructions
-attr_accessor :name
-attr_accessor :screen3_thumb
-attr_accessor :control_scheme
-attr_accessor :created
-attr_accessor :feed_approval_created
-attr_accessor :coins_enabled
-attr_accessor :thumbnail_url
-attr_accessor :screen4_url
-attr_accessor :leaderboard_enabled
-attr_accessor :resolution
-attr_accessor :width
+
+	attr_accessor :key_mappings
+	attr_accessor :screen2_thumb
+	attr_accessor :popularity
+	attr_accessor :alternate_url
+	attr_accessor :video_url
+	attr_accessor :rating
+	attr_accessor :screen1_thumb
+	attr_accessor :metascore
+	attr_accessor :height
+	attr_accessor :screen3_url
+	attr_accessor :recommendation
+	attr_accessor :coins_revshare_enabled
+	attr_accessor :category
+	attr_accessor :screen4_thumb
+	attr_accessor :uuid
+	attr_accessor :author
+	attr_accessor :thumbnail_large_url
+	attr_accessor :tags
+	attr_accessor :controls
+	attr_accessor :languages
+	attr_accessor :swf_url
+	attr_accessor :recommended
+	attr_accessor :game_tag
+	attr_accessor :achievements_enabled
+	attr_accessor :zip_url
+	attr_accessor :screen1_url
+	attr_accessor :updated
+	attr_accessor :description
+	attr_accessor :author_link
+	attr_accessor :swf_file_size
+	attr_accessor :game_url
+	attr_accessor :screen2_url
+	attr_accessor :slug
+	attr_accessor :categories
+	attr_accessor :instructions
+	attr_accessor :name
+	attr_accessor :screen3_thumb
+	attr_accessor :control_scheme
+	attr_accessor :created
+	attr_accessor :feed_approval_created
+	attr_accessor :coins_enabled
+	attr_accessor :thumbnail_url
+	attr_accessor :screen4_url
+	attr_accessor :leaderboard_enabled
+	attr_accessor :resolution
+	attr_accessor :width
+
 end
