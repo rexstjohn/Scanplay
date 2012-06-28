@@ -86,6 +86,24 @@ module Mochi
 	    end
 	  end
 
+	  #outputs the fields supported by the model
+	  def get_mochi_fields
+	    response = get_feed
+	    games_key = 'games'
+	    json_attrs = Array.new#empty array of attributes
+
+	    response[games_key].each do |game|
+	      
+	      game.each do |k,i|
+	        print "#{k}, "
+
+	        #shove that attribute in our array here
+	        json_attrs << ":" + k
+	      end
+	      return
+	    end
+	  end
+
 	  #imports a game list and stuffs it in the database
 	  def import_games
 	    response = get_feed
@@ -93,7 +111,6 @@ module Mochi
 
 	    #create games for the database
 	    response[games_key].each do |game|
-	      puts game
 	      Game.create(game)
 	    end
 	  end

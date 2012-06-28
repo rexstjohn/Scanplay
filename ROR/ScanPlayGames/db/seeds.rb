@@ -11,3 +11,4 @@ include Mochi
 
 helper = MochiHelper.new
 helper.import_games
+#mochi = Game.create({:description => "test description"})
