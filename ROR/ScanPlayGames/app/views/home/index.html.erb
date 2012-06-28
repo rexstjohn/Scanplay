@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Game Thumb</th>
+    <th>Game Name</th>
+    <th>Game Description</th>
+    <th></th>
+  </tr>
+
+<% @games.each do |game| %>
+  <%= render :partial => "home/partials/game", :locals => { :game => game } %>
+<% end %>
+</table>
