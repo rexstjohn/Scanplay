@@ -13,11 +13,11 @@ development:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: rizzex_1
+  username: rexstjohn
   port: 3306
-  host: rightbraincoding.com
+  host: 66.175.221.21
   password: 3w0k5r00l!
-  database: rizzex_scanplaygames
+  database: scanplayDB
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -38,9 +38,9 @@ production:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: rizzex_1
+  username: rexstjohn
   port: 3306
-  host: rightbraincoding.com
+  host: 66.175.221.21
   password: 3w0k5r00l!
-  database: rizzex_scanplaygames
+  database: scanplayDB
   socket: /tmp/mysql.sock
