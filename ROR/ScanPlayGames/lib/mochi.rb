@@ -1,11 +1,10 @@
 module Mochi
-
 	class MochiHelper
-	  include HTTParty
 	  require 'net/http'
 	  require 'uri'
 	  require 'HTTParty'
 	  require 'json'
+	  include HTTParty
 
 	  base_uri 'catalog.mochimedia.com'
 
