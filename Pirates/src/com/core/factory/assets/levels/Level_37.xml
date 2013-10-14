@@ -1,0 +1,30 @@
+<level gridsize="50" par="5">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="cwmotornail" x="18" y="5"/>
+  <levelobject type="cwmotornail" x="14" y="5"/>
+  <levelobject type="treasure" x="29" y="5"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="enemypirate" x="32" y="5"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="drunkenseagull" x="26" y="5"/>
+  <levelobject type="objective" event="SeagullKilled"/>
+  <levelobject type="focuspoint" x="29" y="5"/>
+  <levelobject type="starcrate" x="29" y="4"/>
+  <levelobject type="goldcoin" x="32" y="5"/>
+  <levelobject type="staticironplatform" x="13" y="3" x2="19" y2="3"/>
+  <levelobject type="staticironplatform" x="19" y="7" x2="25" y2="7"/>
+  <levelobject type="staticironplatform" x="13" y="3" x2="19" y2="3"/>
+  <levelobject type="staticironplatform" x="19" y="7" x2="25" y2="7"/>
+  <levelobject type="ironplatform" x="18" y="5" x2="16" y2="5"/>
+  <levelobject type="ironplatform" x="14" y="5" x2="12" y2="5"/>
+  <levelobject type="staticironplatform" x="29" y="7" x2="29" y2="6"/>
+  <levelobject type="staticironplatform" x="29" y="6" x2="30" y2="6"/>
+  <levelobject type="staticironplatform" x="30" y="6" x2="30" y2="7"/>
+  <levelobject type="staticironplatform" x="30" y="7" x2="29" y2="7"/>
+  <levelobject type="staticironplatform" x="32" y="7" x2="32" y2="6"/>
+  <levelobject type="staticironplatform" x="32" y="6" x2="33" y2="6"/>
+  <levelobject type="staticironplatform" x="33" y="6" x2="33" y2="7"/>
+  <levelobject type="staticironplatform" x="33" y="7" x2="32" y2="7"/>
+</level>

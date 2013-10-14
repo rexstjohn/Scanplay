@@ -1,0 +1,46 @@
+<level gridsize="50" par="3" totalshots="8">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="28" y="4" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="treasure" x="22" y="4" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="treasure" x="16" y="4" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="powderkeg" x="22" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="22" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="22" y="7" width="1" height="1"/>
+  <levelobject type="starcrate" x="22" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="28" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="29" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="28" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="28" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="28" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="27" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="21" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="23" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="15" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="17" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="22" y="3" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="3" width="1" height="1"/>
+  <levelobject type="powderkeg" x="28" y="3" width="1" height="1"/>
+  <levelobject type="focuspoint" x="28" y="4"/>
+  <levelobject type="staticironplatform" x="16" y="8" x2="16" y2="3"/>
+  <levelobject type="staticironplatform" x="17" y="3" x2="17" y2="8"/>
+  <levelobject type="staticironplatform" x="15" y="9" x2="18" y2="9"/>
+  <levelobject type="staticironplatform" x="21" y="9" x2="24" y2="9"/>
+  <levelobject type="staticironplatform" x="22" y="8" x2="22" y2="3"/>
+  <levelobject type="staticironplatform" x="23" y="8" x2="23" y2="3"/>
+  <levelobject type="staticironplatform" x="27" y="9" x2="30" y2="9"/>
+  <levelobject type="staticironplatform" x="28" y="8" x2="28" y2="3"/>
+  <levelobject type="staticironplatform" x="29" y="8" x2="29" y2="3"/>
+  
+  <levelobject type="staticironplatform" x="33" y="7" x2="36" y2="7"/>
+  <levelobject type="goldcoin" x="34" y="6"/> 
+  <levelobject type="ironblock" x="35" y="6"/> 
+</level>

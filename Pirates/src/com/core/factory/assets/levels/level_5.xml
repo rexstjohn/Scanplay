@@ -1,0 +1,22 @@
+<level gridsize="50" par="5" totalshots="8">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="21" y="8" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="powderkeg" x="19" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="19" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="19" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="20" y="8" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="5" width="1" height="1"/>
+  <levelobject type="starcrate" x="20" y="7" width="1" height="1"/>
+  <levelobject type="focuspoint" x="21" y="8"/>
+  <levelobject type="staticironplatform" x="18" y="9" x2="22" y2="9"/>
+  <levelobject type="staticironplatform" x="22" y="9" x2="22" y2="5"/>
+  <levelobject type="staticironplatform" x="28" y="5" x2="31" y2="5"/>
+  <levelobject type="goldcoin" x="29" y="4"/> 
+  <levelobject type="woodblock" x="30" y="4"/>  
+</level>

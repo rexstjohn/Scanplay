@@ -1,0 +1,38 @@
+<level gridsize="50" par="10">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="enemypirate" x="22" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="27" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="stickyblock" x="17" y="8"/>
+  <levelobject type="stickyblock" x="17" y="7"/>
+  <levelobject type="stickyblock" x="17" y="6"/>
+  <levelobject type="stickyblock" x="17" y="5"/>
+  <levelobject type="starcrate" x="18" y="8"/>
+  <levelobject type="stickyblock" x="22" y="8"/>
+  <levelobject type="stickyblock" x="22" y="7"/>
+  <levelobject type="stickyblock" x="22" y="6"/>
+  <levelobject type="stickyblock" x="22" y="5"/>
+  <levelobject type="stickyblock" x="27" y="8"/>
+  <levelobject type="stickyblock" x="27" y="7"/>
+  <levelobject type="stickyblock" x="27" y="6"/>
+  <levelobject type="stickyblock" x="27" y="5"/>
+  <levelobject type="goldcoin" x="28" y="8"/>
+  <levelobject type="enemypirate" x="17" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="drunkenseagull" x="14" y="4"/>
+  <levelobject type="objective" event="SeagullKilled"/>
+  <levelobject type="drunkenseagull" x="30" y="4"/>
+  <levelobject type="objective" event="SeagullKilled"/>
+  <levelobject type="treasure" x="34" y="5"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="34" y="5"/>
+  <levelobject type="tripleshot" x="11" y="8"/>
+  <levelobject type="staticwoodenplatform" x="10" y="9" x2="13" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="16" y="9" x2="19" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="21" y="9" x2="24" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="26" y="9" x2="29" y2="9"/>
+  <levelobject type="staticironplatform" x="33" y="6" x2="36" y2="6"/>
+</level>

@@ -1,0 +1,34 @@
+<level levelwidth="24" levelheight="40" gridsize="50" par="3" totalshots="4">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="description" text="Description Goes Here"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="12" y="6" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="18" y="6"/>
+  <levelobject type="staticironplatform" x="17" y="10" x2="19" y2="8"/>
+  <levelobject type="staticironplatform" x="19" y="8" x2="19" y2="10"/>
+  <levelobject type="staticironplatform" x="19" y="10" x2="17" y2="10"/>
+  <levelobject type="staticironplatform" x="19" y="8" x2="19" y2="6"/>
+  <levelobject type="staticironplatform" x="19" y="6" x2="17" y2="4"/>
+  <levelobject type="staticironplatform" x="17" y="4" x2="19" y2="4"/>
+  <levelobject type="staticironplatform" x="19" y="4" x2="19" y2="6"/>
+  <levelobject type="staticironplatform" x="15" y="8" x2="16" y2="7"/>
+  <levelobject type="staticironplatform" x="16" y="7" x2="15" y2="7"/>
+  <levelobject type="staticironplatform" x="15" y="7" x2="15" y2="8"/>
+  <levelobject type="staticironplatform" x="15" y="7" x2="11" y2="7"/>
+  <levelobject type="staticironplatform" x="11" y="4" x2="17" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="11" y="7" x2="11" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="10" y="4" x2="10" y2="7"/>
+  <levelobject type="staticwoodenplatform" x="10" y="7" x2="11" y2="7"/>
+  <levelobject type="staticwoodenplatform" x="11" y="4" x2="10" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="10" y="7" x2="9" y2="6"/>
+  <levelobject type="staticwoodenplatform" x="9" y="6" x2="9" y2="5"/>
+  <levelobject type="staticwoodenplatform" x="9" y="5" x2="10" y2="4"/>
+  <levelobject type="starcrate" x="13" y="6"/>
+  
+  <levelobject type="staticironplatform" x="33" y="7" x2="36" y2="7"/>
+  <levelobject type="goldcoin" x="34" y="6"/> 
+  <levelobject type="stickyblock" x="33" y="6"/>  
+  <levelobject type="stickyblock" x="35" y="6"/>  
+</level>

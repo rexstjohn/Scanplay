@@ -1,0 +1,19 @@
+<projectDescription>
+  <id>1265247276614</id>
+  <name>src</name>
+  <asVersion>0</asVersion>
+  <boundTemplate>file:///C|/Documents and Settings/rex/Local Settings/Application Data/Adobe/Flash CS4/en/Configuration/Project/templates/boundClass_as3.as</boundTemplate>
+  <classTemplate>file:///C|/Documents and Settings/rex/Local Settings/Application Data/Adobe/Flash CS4/en/Configuration/Project/templates/standardClass_as3.as</classTemplate>
+  <classPath>.</classPath>
+  <defaultApp/>
+  <rootURI>file:///C|/Documents%20and%20Settings/rex/Desktop/Zombeez/src/</rootURI>
+  <flexSDK/>
+  <sources editable="false"/>
+  <libraries editable="false"/>
+  <externalLibraries editable="false"/>
+  <compileList editable="false">
+    <uri label="SourceAssets.fla">file:///C|/Documents and Settings/rex/Desktop/Zombeez/src/SourceAssets.fla</uri>
+  </compileList>
+  <recentFiles editable="false"/>
+  <locations editable="false"/>
+</projectDescription>

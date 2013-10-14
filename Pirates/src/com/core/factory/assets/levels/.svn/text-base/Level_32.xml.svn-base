@@ -1,0 +1,29 @@
+<level gridsize="50" par="7">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="drunkenseagull" x="15" y="4"/>
+  <levelobject type="drunkenseagull" x="22" y="4"/>
+  <levelobject type="treasure" x="28" y="8"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="treasure" x="27" y="8"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="powderkeg" x="26" y="8"/>
+  <levelobject type="powderkeg" x="26" y="7"/>
+  <levelobject type="powderkeg" x="27" y="7"/>
+  <levelobject type="starcrate" x="29" y="7"/>
+  <levelobject type="goldcoin" x="27" y="6"/>
+  <levelobject type="powderkeg" x="28" y="7"/>
+  <levelobject type="powderkeg" x="29" y="8"/>
+  <levelobject type="enemypirate" x="26" y="6"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="29" y="6"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="objective" event="SeagullKilled"/>
+  <levelobject type="objective" event="SeagullKilled"/>
+  <levelobject type="focuspoint" x="28" y="8"/>
+  <levelobject type="staticglassplatform" x="14" y="4" x2="14" y2="9"/>
+  <levelobject type="staticglassplatform" x="21" y="4" x2="21" y2="9"/>
+  <levelobject type="staticglassplatform" x="26" y="7" x2="30" y2="7"/>
+  <levelobject type="staticglassplatform" x="26" y="9" x2="30" y2="9"/>
+</level>

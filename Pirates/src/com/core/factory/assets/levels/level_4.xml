@@ -1,0 +1,18 @@
+<level gridsize="50" par="5" totalshots="9">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="description" text="Description Goes Here"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="22" y="8" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="starcrate" x="20" y="6" width="1" height="1"/>
+  <levelobject type="grog" x="20" y="7" width="1" height="1"/>
+  <levelobject type="grog" x="24" y="8" width="1" height="1"/>
+  <levelobject type="grog" x="24" y="7" width="1" height="1"/>
+  <levelobject type="grog" x="24" y="6" width="1" height="1"/>
+  <levelobject type="focuspoint" x="22" y="8"/>
+  <levelobject type="staticironplatform" x="20" y="9" x2="25" y2="9"/>
+  <levelobject type="staticironplatform" x="28" y="5" x2="31" y2="5"/>
+  <levelobject type="goldcoin" x="29" y="4"/>
+  <levelobject type="glassblock" x="30" y="4"/>  
+</level>

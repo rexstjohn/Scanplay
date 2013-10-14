@@ -1,0 +1,44 @@
+<level gridsize="50" par="2">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="20" y="9"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="starcrate" x="19" y="9"/>
+  <levelobject type="powderkeg" x="19" y="8"/>
+  <levelobject type="powderkeg" x="20" y="8"/>
+  <levelobject type="powderkeg" x="21" y="8"/>
+  <levelobject type="powderkeg" x="21" y="9"/>
+  <levelobject type="stickyblock" x="16" y="3"/>
+  <levelobject type="stickyblock" x="16" y="5"/>
+  <levelobject type="stickyblock" x="16" y="4"/>
+  <levelobject type="stickyblock" x="16" y="6"/>
+  <levelobject type="stickyblock" x="16" y="7"/>
+  <levelobject type="stickyblock" x="16" y="8"/>
+  <levelobject type="stickyblock" x="16" y="9"/>
+  <levelobject type="stickyblock" x="15" y="9"/>
+  <levelobject type="stickyblock" x="15" y="8"/>
+  <levelobject type="stickyblock" x="15" y="7"/>
+  <levelobject type="stickyblock" x="15" y="6"/>
+  <levelobject type="stickyblock" x="15" y="5"/>
+  <levelobject type="stickyblock" x="15" y="4"/>
+  <levelobject type="stickyblock" x="15" y="3"/>
+  <levelobject type="stickyblock" x="15" y="2"/>
+  <levelobject type="stickyblock" x="16" y="2"/>
+  <levelobject type="enemypirate" x="19" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="22" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="focuspoint" x="20" y="9"/>
+  <levelobject type="staticglassplatform" x="18" y="3" x2="20" y2="5"/>
+  <levelobject type="staticglassplatform" x="21" y="5" x2="23" y2="3"/>
+  <levelobject type="goldcoin" x="24" y="6"/> 
+  <levelobject type="staticglassplatform" x="21" y="5" x2="21" y2="8"/>
+  <levelobject type="staticglassplatform" x="20" y="5" x2="20" y2="8"/>
+  <levelobject type="staticglassplatform" x="19" y="10" x2="19" y2="8"/>
+  <levelobject type="staticglassplatform" x="18" y="8" x2="20" y2="8"/>
+  <levelobject type="staticglassplatform" x="21" y="8" x2="25" y2="8"/>
+  <levelobject type="staticglassplatform" x="22" y="8" x2="22" y2="10"/>
+  <levelobject type="staticglassplatform" x="22" y="10" x2="19" y2="10"/>
+  <levelobject type="staticironplatform" x="15" y="10" x2="17" y2="10"/>
+</level>

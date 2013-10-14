@@ -1,0 +1,37 @@
+<level gridsize="50" par="2">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="enemypirate" x="15" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="16" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="17" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="13" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="15" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="16" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="powderkeg" x="12" y="8"/>
+  <levelobject type="powderkeg" x="13" y="8"/>
+  <levelobject type="powderkeg" x="14" y="8"/>
+  <levelobject type="starcrate" x="12" y="7"/>
+  <levelobject type="goldcoin" x="9" y="5"/>
+  <levelobject type="powderkeg" x="15" y="8"/>
+  <levelobject type="powderkeg" x="16" y="8"/>
+  <levelobject type="powderkeg" x="17" y="8"/>
+  <levelobject type="powderkeg" x="12" y="5"/>
+  <levelobject type="powderkeg" x="14" y="5"/>
+  <levelobject type="powderkeg" x="13" y="5"/>
+  <levelobject type="powderkeg" x="15" y="5"/>
+  <levelobject type="powderkeg" x="16" y="5"/>
+  <levelobject type="powderkeg" x="17" y="5"/>
+  <levelobject type="treasure" x="9" y="6"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="9" y="6"/>
+  <levelobject type="staticwoodenplatform" x="12" y="6" x2="19" y2="6"/>
+  <levelobject type="staticwoodenplatform" x="12" y="9" x2="19" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="9" y="7" x2="10" y2="7"/>
+</level>

@@ -1,0 +1,75 @@
+<level levelwidth="24" levelheight="40" gridsize="50" par="3" totalshots="8">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="focuspoint" x="25" y="6"/>
+  <levelobject type="description" text="Description Goes Here"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="pirateship" points="0" x="0" y="9" width="1" height="1"/>
+  <levelobject type="powderkeg" points="200" x="15" y="7" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="16" y="7" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="14" y="7" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="19" y="4" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="21" y="4" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="24" y="7" width="1" height="1"/>
+  <levelobject type="woodblock" points="200" x="26" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" points="200" x="20" y="4" width="1" height="1"/>
+  <levelobject type="powderkeg" points="200" x="25" y="7" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="14" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="16" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="16" y="5" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="16" y="4" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="14" y="5" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="14" y="4" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="19" y="3" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="19" y="2" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="21" y="3" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="21" y="2" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="24" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="24" y="5" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="24" y="4" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="26" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="26" y="5" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="26" y="4" width="1" height="1"/>
+  <levelobject type="treasure" points="1000" x="25" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" points="100" x="23" y="1" width="1" height="1"/>
+  <levelobject type="powderkeg" points="100" x="24" y="1" width="1" height="1"/>
+  <levelobject type="powderkeg" points="100" x="25" y="1" width="1" height="1"/>
+  <levelobject type="powderkeg" points="100" x="26" y="1" width="1" height="1"/>
+  <levelobject type="powderkeg" points="100" x="27" y="1" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="26" y="0" width="1" height="1"/>
+  <levelobject type="starcrate" points="100" x="25" y="0" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="24" y="0" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="15" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="20" y="3" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="20" y="2" width="1" height="1"/>
+  <levelobject type="glassblock" points="100" x="15" y="5" width="1" height="1"/>
+  <levelobject type="staticwoodenplatform" x="14" y="9" x2="17" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="17" y="9" x2="17" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="17" y="8" x2="14" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="14" y="8" x2="14" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="19" y="6" x2="22" y2="6"/>
+  <levelobject type="staticwoodenplatform" x="22" y="6" x2="22" y2="5"/>
+  <levelobject type="staticwoodenplatform" x="22" y="5" x2="19" y2="5"/>
+  <levelobject type="staticwoodenplatform" x="19" y="5" x2="19" y2="6"/>
+  <levelobject type="staticwoodenplatform" x="24" y="9" x2="24" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="24" y="8" x2="27" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="27" y="8" x2="27" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="27" y="9" x2="24" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="24" y="3" x2="27" y2="3"/>
+  <levelobject type="staticwoodenplatform" x="27" y="3" x2="27" y2="2"/>
+  <levelobject type="staticwoodenplatform" x="27" y="2" x2="24" y2="2"/>
+  <levelobject type="staticwoodenplatform" x="24" y="2" x2="24" y2="3"/>
+  <levelobject type="staticwoodenplatform" x="23" y="4" x2="23" y2="2"/>
+  <levelobject type="staticwoodenplatform" x="23" y="2" x2="24" y2="2"/>
+  <levelobject type="staticwoodenplatform" x="24" y="2" x2="24" y2="3"/>
+  <levelobject type="staticwoodenplatform" x="24" y="3" x2="23" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="27" y="3" x2="28" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="28" y="4" x2="28" y2="2"/>
+  <levelobject type="staticwoodenplatform" x="28" y="2" x2="27" y2="2"/>
+  
+  
+  <levelobject type="staticironplatform" x="33" y="7" x2="36" y2="7"/>
+  <levelobject type="staticironplatform" x="33" y="7" x2="33" y2="5"/>
+  <levelobject type="staticironplatform" x="36" y="7" x2="36" y2="5"/>
+  <levelobject type="goldcoin" x="34" y="6"/> 
+</level>

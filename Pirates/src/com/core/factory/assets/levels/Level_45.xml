@@ -1,0 +1,39 @@
+<level gridsize="50" par="2">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="enemypirate" x="12" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="14" y="5"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="16" y="7"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="18" y="5"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="9" y="5"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="16" y="3"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="11" y="3"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="powderkeg" x="16" y="8"/>
+  <levelobject type="powderkeg" x="12" y="8"/>
+  <levelobject type="powderkeg" x="14" y="6"/>
+  <levelobject type="powderkeg" x="11" y="4"/>
+  <levelobject type="powderkeg" x="9" y="6"/>
+  <levelobject type="powderkeg" x="16" y="4"/>
+  <levelobject type="goldcoin" x="20" y="2"/>
+  <levelobject type="starcrate" x="20" y="3"/>
+  <levelobject type="powderkeg" x="18" y="6"/>
+  <levelobject type="treasure" x="20" y="4"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="20" y="4"/>
+  <levelobject type="staticironplatform" x="9" y="7" x2="10" y2="7"/>
+  <levelobject type="staticironplatform" x="11" y="5" x2="12" y2="5"/>
+  <levelobject type="staticironplatform" x="14" y="7" x2="15" y2="7"/>
+  <levelobject type="staticironplatform" x="12" y="9" x2="13" y2="9"/>
+  <levelobject type="staticironplatform" x="16" y="9" x2="17" y2="9"/>
+  <levelobject type="staticironplatform" x="18" y="7" x2="19" y2="7"/>
+  <levelobject type="staticironplatform" x="16" y="5" x2="17" y2="5"/>
+  <levelobject type="staticironplatform" x="20" y="5" x2="21" y2="5"/>
+</level>

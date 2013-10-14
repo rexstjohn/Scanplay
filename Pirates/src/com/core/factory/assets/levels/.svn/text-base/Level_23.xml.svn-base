@@ -1,0 +1,42 @@
+<level gridsize="50" par="7" >
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="18" y="8" width="1" height="1"/>
+  <levelobject type="starcrate" x="18" y="7" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="16" y="3" width="1" height="1"/>
+  <levelobject type="enemypirate" x="19" y="3" width="1" height="1"/>
+  <levelobject type="powderkeg" x="17" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="19" y="7" width="1" height="1"/>
+  <levelobject type="ironblock" x="17" y="8" width="1" height="1"/>
+  <levelobject type="ironblock" x="19" y="8" width="1" height="1"/>
+  <levelobject type="ironblock" x="17" y="6" width="1" height="1"/>
+  <levelobject type="ironblock" x="19" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" x="18" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" x="16" y="6" width="1" height="1"/>
+  <levelobject type="glassblock" x="16" y="7" width="1" height="1"/>
+  <levelobject type="glassblock" x="16" y="8" width="1" height="1"/>
+  <levelobject type="glassblock" x="20" y="8" width="1" height="1"/>
+  <levelobject type="glassblock" x="20" y="7" width="1" height="1"/>
+  <levelobject type="glassblock" x="20" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="20" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="16" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="5" width="1" height="1"/>
+  <levelobject type="powderkeg" x="18" y="4" width="1" height="1"/>
+  <levelobject type="grog" x="17" y="5" width="1" height="1"/>
+  <levelobject type="grog" x="17" y="4" width="1" height="1"/>
+  <levelobject type="grog" x="16" y="4" width="1" height="1"/>
+  <levelobject type="grog" x="20" y="4" width="1" height="1"/>
+  <levelobject type="grog" x="19" y="4" width="1" height="1"/>
+  <levelobject type="grog" x="19" y="5" width="1" height="1"/>
+  <levelobject type="focuspoint" x="18" y="8"/>
+  <levelobject type="staticglassplatform" x="16" y="9" x2="21" y2="9"/>
+  <levelobject type="staticglassplatform" x="16" y="8" x2="21" y2="8"/>
+  <levelobject type="staticglassplatform" x="16" y="7" x2="21" y2="7"/>
+  <levelobject type="staticglassplatform" x="16" y="6" x2="21" y2="6"/>
+  <levelobject type="staticironplatform" x="28" y="5" x2="31" y2="5"/>
+  <levelobject type="goldcoin" x="29" y="4"/>
+</level>

@@ -1,0 +1,38 @@
+<level levelwidth="24" levelheight="40" gridsize="50" par="5" totalshots="6">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="description" text="Description Goes Here"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="powderkeg" x="23" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="24" y="7" width="1" height="1"/>
+  <levelobject type="powderkeg" x="22" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="25" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="23" y="6" width="1" height="1"/>
+  <levelobject type="powderkeg" x="24" y="6" width="1" height="1"/>
+  <levelobject type="treasure" x="24" y="8" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="treasure" x="23" y="8" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="24" y="8"/>
+  <levelobject type="starcrate" x="28" y="3" width="1" height="1"/>
+  <levelobject type="staticwoodenplatform" x="19" y="4" x2="23" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="23" y="8" x2="22" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="22" y="8" x2="18" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="19" y="4" x2="18" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="25" y="8" x2="28" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="28" y="4" x2="29" y2="4"/>
+  <levelobject type="staticwoodenplatform" x="29" y="4" x2="26" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="26" y="8" x2="25" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="22" y="8" x2="22" y2="10"/>
+  <levelobject type="staticwoodenplatform" x="22" y="10" x2="26" y2="10"/>
+  <levelobject type="staticwoodenplatform" x="26" y="10" x2="26" y2="8"/>
+  <levelobject type="staticwoodenplatform" x="25" y="8" x2="25" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="25" y="9" x2="23" y2="9"/>
+  <levelobject type="staticwoodenplatform" x="23" y="9" x2="23" y2="8"/>
+  
+  <levelobject type="staticglassplatform" x="33" y="5" x2="36" y2="5"/>
+  <levelobject type="staticglassplatform" x="33" y="7" x2="36" y2="7"/>
+  <levelobject type="staticglassplatform" x="33" y="7" x2="33" y2="5"/>
+  <levelobject type="staticglassplatform" x="36" y="7" x2="36" y2="5"/>
+  <levelobject type="goldcoin" x="34" y="6"/>  
+</level>

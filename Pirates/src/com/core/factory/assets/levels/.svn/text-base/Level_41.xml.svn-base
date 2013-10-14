@@ -1,0 +1,20 @@
+<level gridsize="50" par="3">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="17" y="7"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="treasure" x="13" y="4"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="enemypirate" x="21" y="2"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="enemypirate" x="25" y="4"/>
+  <levelobject type="objective" event="PirateKilled"/>
+  <levelobject type="focuspoint" x="17" y="7"/>
+  <levelobject type="goldcoin" x="13" y="3"/>
+  <levelobject type="starcrate" x="17" y="6"/>
+  <levelobject type="staticglassplatform" x="13" y="5" x2="14" y2="5"/>
+  <levelobject type="staticglassplatform" x="17" y="8" x2="18" y2="8"/>
+  <levelobject type="staticglassplatform" x="21" y="3" x2="22" y2="3"/>
+  <levelobject type="staticglassplatform" x="26" y="5" x2="25" y2="5"/>
+</level>

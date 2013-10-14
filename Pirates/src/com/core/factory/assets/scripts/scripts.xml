@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scripts>
+	<script id="Episode_1_Story_1">
+	</script>
+	<script id="Episode_1_Story_2">
+		<speech character="FemalePirate">
+			<title icon="ExclamationPoint">Weaklings!</title>
+			<text>It took a few days, but these are certainly from that same crew. Loot them at your leisure, Skamp.</text>
+			<button text="Next" command="LoadNextSpeech"  target="blah" />
+			<button text="Skip" command="LoadMenu"  target="episode_1" />
+		</speech>
+		<speech character="Skamp">
+			<title icon="TreasureMap">By my beak...</title>
+			<text>Would ye look at this, they had a bag of gold and this map! Have a look, cap'n.</text>
+			<button text="Next" command="LoadNextSpeech"  target="blah" />
+			<button text="Skip" command="LoadMenu"  target="episode_1" />
+		</speech>
+		<speech character="TreasureMap">
+			<title icon="TreasureMap">Secret Treasure Map</title>
+			<text>"Let's be sure t' hide the treasure properly this time...scatter it around so not a soul will find it!"</text>
+			<button text="Next" command="LoadNextSpeech"  target="blah" />
+			<button text="Skip" command="LoadMenu"  target="episode_1" />
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="Coin">Avast!</title>
+			<text>To the ship me hearties! We've got a score to settle an' gold to steal!</text>
+			<button text="Next" command="LoadMenu"  target="episode_1" />
+		</speech>
+	</script>
+	<script id="Level_1_Tutorial">
+		<speech character="Skamp">
+			<title icon="QuestionMark">Learn To Play?</title>
+			<text>It has been a while since we sailed, Would you like me to refresh you on how to be a pirate?</text>
+			<button text="Yes, Please" command="LoadNextSpeech"   />
+			<button text="No Thanks" command="CloseSpeech" />
+		</speech>
+		<speech character="Skamp">
+			<title icon="Cannonball">Shooting Your Cannon </title>
+			<text> Click anywhere and hold to charge your cannon, release to fire a shot and aim with the mouse</text>
+			<button text="Ok, I got it" command="LoadNextSpeech"  target="blah" />
+			<button text="Back" command="LoadLastSpeech"  target="blah" />
+		</speech>
+		<speech character="Skamp">
+			<title icon="PowerBar">Cannon Power</title>
+			<text>The "power bar" shows how strong your shot is. The longer you hold, the more powerful the blast will be.</text>
+			<button text="Alright!" command="CloseSpeech"  target="blah" />
+			<button text="Back" command="LoadLastSpeech"  target="blah" />
+		</speech>
+	</script>
+	<script id="Loss_Explanation_Tutorial">
+		<speech character="Skamp">
+			<title icon="ExclamationPoint"> You Lost A Level</title>
+			<text>You have to beat the level under par to win...</text>
+			<button text="Ok, I got it" command="LoadNextSpeech"  target="blah" />
+		</speech>
+	</script>	
+	<script id="Upgrade_Explanation_Tutorial">
+		<speech character="Skamp">
+			<title  icon="TreasureChest">Upgrades!</title>
+			<text>Spend your Treasure on upgrading your cannon wih different powers.</text>
+			<button text="Ok, I got it" command="CloseSpeech"  target="blah" />
+		</speech>
+	</script>	
+	<script id="Win_Explanation_Tutorial_SkullAndBones">
+		<speech character="Skamp">
+			<title  icon="TreasureChest">You Won A Level</title>
+			<text> Good Job, everytime you beat a level under par, you recieve a Treasure Chest! </text>
+			<button text="Ok, I got it" command="CloseSpeech"  target="blah" />
+		</speech>
+	</script>	
+	<script id="Win_Explanation_Tutorial">
+		<speech character="Skamp">
+			<title icon="ExclamationPoint">You Won A Level</title>
+			<text> You beat the level, but not under par. If you beat the level under Par, you can unlock a Treasure Chest!</text>
+			<button text="Ok, I got it" command="CloseSpeech"  target="blah" />
+		</speech>
+	</script>	
+	<script id="Level_3_Tutorial">
+		<speech character="Skamp">
+			<title icon="StarCrate">Star Crates</title>
+			<text>For every ten Star Crates you collect, your score will be multiplied by 2. Get them all! </text>
+			<button text="Ok, I Got It" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_4_Tutorial">
+		<speech character="Skamp">
+			<title icon="BlackFemalePirate">Gold Coins</title>
+			<text>Find 10 Coins and you unlock the rank of "Admiral" - your cannon fires exploding cannonballs 15% of the time!</text>
+			<button text="Ok, I Got It" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_6_Tutorial">
+		<speech character="Skamp">
+			<title  icon="MagnetBlock">Magnetic Blocks</title>
+			<text>Try to use the magnetic force from the block to shoot the Treasure Chest behind it.</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_10_Tutorial">
+		<speech character="Skamp">
+			<title icon="ExplosiveShotCrate">Ahoy, Explosive Shots!</title>
+			<text>Shoot that crate with the "E" on it to unlock an exploding cannonball powerup. Most useful...</text>
+			<button text="Ok, I Got it" command="LoadNextSpeech" target="blah"  />
+		</speech>		
+		<speech character="Skamp">
+			<title icon="TreasureChest">Extra Par</title>
+			<text>If you need more Par shots, spend your 'treasure on the "Par Bonus" upgrade on your upgrade screen</text>
+			<button text="Ok, I Got it" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_13_Tutorial">
+		<speech character="Skamp">
+			<title icon="RubberShotCrate">Rubber Shots</title>
+			<text>This is a rubber shot powerup - these cannonballs bounce around and can cause a lot of damage in an enclosed space.</text>
+			<button text="Ok, Thanks" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_15_Tutorial">
+		<speech character="Skamp">
+			<title icon="BlackShip">Black Pirateship</title>
+			<text>Find 21 Coins and you get a Black Pirateship that shoots explosive cannonballs 40% of the time!</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_20_Tutorial">
+		<speech character="Skamp">
+			<title icon="EnemyPirate">They're On To Us!</title>
+			<text>Looks like they are tired of us finding the treasure - you will have to shoot the pirates to win!</text>
+			<button text="Next" command="LoadNextSpeech" />
+		</speech>
+		<speech character="EnemyPirate">
+			<title icon="SkullAndBones">We Found Ya!</title>
+			<text>Yer going to have to go through us to get this treasure!</text>
+			<button text="Next" command="LoadNextSpeech"  />
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="CannonBarrel">Time To Fight</title>
+			<text>This is the end for you - give me that treasure</text>
+			<button text="Close" command="CloseSpeech" />
+		</speech>
+	</script>
+	<script id="Level_21_Tutorial">
+		<speech character="Skamp">
+			<title icon="EnemyPirate">This is going to be tough</title>
+			<text>From now on, in addition to getting all the treasure, we are going to need to shoot all the enemy pirates</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_26_Tutorial">
+		<speech character="Skamp">
+			<title icon="StickyBlock">Acid Blocks!</title>
+			<text>Those blocks will vaporize your cannonball if it touches them...</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_31_Tutorial">
+		<speech character="Skamp">
+			<title icon="DrunkenSeagull">Seagulls Ahoy</title>
+			<text>Looks like this treasure is guarded by seagulls...shoot them all!</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_38_Tutorial">
+		<speech character="Skamp">
+			<title icon="TripleShotCrate">More triple-shots</title>
+			<text>I love the smell of napalm in the morning</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Level_40_Tutorial">
+		<speech character="Skamp">
+			<title icon="TreasureChest">I think this is the last!</title>
+			<text>This is the last treasure on the map...lets wrap this one up</text>
+			<button text="Ok, Let Me Try" command="CloseSpeech" target="blah"  />
+		</speech>
+	</script>
+	<script id="Episode_1_Victory_1">
+		<speech character="EnemyPirate">
+			<title icon="TreasureChest">Ar Ya Won</title>
+			<text>You think ya won? We are headed away down south to Regroup</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_1_victory_2" />
+		</speech>
+		<speech character="EnemyPirate">
+			<title icon="TreasureChest">Ya can't escape</title>
+			<text>The CAPTAIN found a map...pointing to the largest stash o' treasure on earth</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_1_victory_2" />
+		</speech>
+		<speech character="EnemyPirate">
+			<title icon="EnemyPirateShip">We'll be back</title>
+			<text>Once we find it, we will be back with more guns and ships than ya can ever dream of </text>
+			<button text="Next" command="LoadMenu" target="episode_1_victory_2" />
+		</speech>
+	</script>
+	<script id="Episode_1_Victory_2">
+		<speech character="Skamp">
+			<title icon="EnemyPirate">Great tail-feathers!</title>
+			<text>Those scurvy dogs will never quit</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episodes" />
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="SkullAndBones">Tis' the truth</title>
+			<text>We must give chase and learn them a lesson</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episodes" />
+		</speech>
+		<speech character="Skamp">
+			<title icon="EnemyPirate">Batten the hatches</title>
+			<text>We set sail immediately for the frigid southern seas!</text>
+			<button text="Next" command="LoadMenu" target="episodes" />
+		</speech>
+	</script>
+	<script id="Episode_2_Story_1">
+		<speech character="EnemyPirate">
+			<title icon="SkullAndBones">Me beard is frozen!</title>
+			<text>*sob* me beard...me beloved beard. Frozen through and through...*sniff*</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="UglyPirate">
+			<title icon="ExclamationPoint">Har Har</title>
+			<text>Stupid pirate, stop rubbing chum in your beard and that won't happen</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="EnemyPirate">
+			<title icon="SkullAndBones">It pleases the ladies!</title>
+			<text>I can tell the way they look at me, they are drawn to a man with a fishy beard</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="UglyPirate">
+			<title icon="ExclamationPoint">Arr</title>
+			<text>We'll, I can't argue with that because it be true. </text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="UglyPirate">
+			<title icon="TreasureMap">It's time to move</title>
+			<text>The map I found says the treasure is all spread around this region. Lets go see if we can't find it</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="QuestionMark">Those pirates are dim!</title>
+			<text>They didn't spy us here behind this iceberg, we heard their whole plan</text>
+			<button text="Next" command="LoadNextSpeech"/>
+			<button text="Skip" command="LoadMenu" target="episode_2" />
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="ExclamationPoint">Avast</title>
+			<text>Lets move!</text>
+			<button text="Next" command="LoadMenu" target="episode_2" />
+		</speech>
+	</script>
+	<script id="Episode_2_Victory_1">
+		<speech character="EnemyPirate">
+			<title icon="SkullAndBones">Yargh! We're Beaten!</title>
+			<text>We are poor, pitiful, bruised and bereft of treasure *sob*</text>
+			<button text="Next" command="LoadNextSpeech"/>
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="IceBergC">That will show you</title>
+			<text>I hope that is the last we see of you</text>
+			<button text="Next" command="LoadNextSpeech"/>
+		</speech>
+		<speech character="Skamp">
+			<title icon="SkullAndBones">Yar!</title>
+			<text>I hope now we can finally enjoy this hard-earned treasure</text>
+			<button text="Next" command="LoadNextSpeech"/>
+		</speech>
+		<speech character="FemalePirate">
+			<title icon="TreasureChest">I'm with you!</title>
+			<text>Lets get out of here and back to where it's warm!</text>
+			<button text="Next" command="LoadMenu" target="episodes" />
+		</speech>
+	</script>
+	<script id="25">
+		<speech character="Skamp"/>
+	</script>
+	<script id="leveleditor">
+		<speech character="Skamp"/>
+	</script>
+</scripts>

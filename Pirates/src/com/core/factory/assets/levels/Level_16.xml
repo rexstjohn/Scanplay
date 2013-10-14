@@ -1,0 +1,28 @@
+<level gridsize="50" par="3" totalshots="9">
+  <levelobject type="background"/>
+  <levelobject type="water"/>
+  <levelobject type="pirateship" x="0" y="9"/>
+  <levelobject type="treasure" x="22" y="6" width="1" height="1"/>
+  <levelobject type="objective" event="TreasureFound"/>
+  <levelobject type="focuspoint" x="22" y="6"/>
+  <levelobject type="staticglassplatform" x="19" y="9" x2="19" y2="3"/>
+  <levelobject type="staticglassplatform" x="19" y="3" x2="26" y2="3"/>
+  <levelobject type="staticglassplatform" x="26" y="3" x2="26" y2="9"/>
+  <levelobject type="staticglassplatform" x="26" y="9" x2="19" y2="9"/>
+  <levelobject type="staticglassplatform" x="20" y="8" x2="20" y2="4"/>
+  <levelobject type="staticglassplatform" x="20" y="4" x2="25" y2="4"/>
+  <levelobject type="staticglassplatform" x="25" y="4" x2="25" y2="8"/>
+  <levelobject type="staticglassplatform" x="25" y="8" x2="20" y2="8"/>
+  <levelobject type="staticglassplatform" x="21" y="7" x2="21" y2="5"/>
+  <levelobject type="staticglassplatform" x="21" y="5" x2="24" y2="5"/>
+  <levelobject type="staticglassplatform" x="24" y="5" x2="24" y2="7"/>
+  <levelobject type="staticglassplatform" x="24" y="7" x2="21" y2="7"/>
+  <levelobject type="staticironplatform" x="13" y="4" x2="10" y2="4"/>
+  <levelobject type="explosiveshot" x="11" y="3"/>
+  
+  <levelobject type="starcrate" x="25" y="3"/>
+  <levelobject type="staticironplatform" x="33" y="7" x2="36" y2="7"/>
+  <levelobject type="staticironplatform" x="33" y="7" x2="33" y2="5"/>
+  <levelobject type="staticironplatform" x="36" y="7" x2="36" y2="5"/>
+  <levelobject type="goldcoin" x="34" y="6"/> 
+</level>

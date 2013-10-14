@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menus>
+	<menu name="main" >
+		<menuobject type="background"/>
+		<menuobject type="logo"/>
+		<menuobject type="button" text="Play Game" target="episode_1_story" command="LoadMenu" x="350" y="310"  height="35" width="150"  />
+		<menuobject type="button" text="Achievements" target="achievements" command="LoadMenu" x="350" y="390"  height="35" width="150"  />
+		<menuobject type="button" text="Level Editor" target="LoadEditor" command="LoadEditor" x="350" y="470"  height="35" width="150"  />
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+		<menuobject type="facebook" x="750" y ="40"/>
+		<menuobject type="textfield" text="(c) 2010 ScanPlay Games" x="260" y="550" style="subtext" />
+	</menu>
+	<menu name="achievements">
+		<menuobject type="background"/>
+		<menuobject type="textfield" y="80" text="Achievements" style="title" />
+		<menuobject type="facebook" x="750" y ="40"/>
+		<menuobject type="achievement" text="Launched (Launch A Cannonball" id="Launched" x="50" y="130"/>
+		<menuobject type="achievement" text="Look Out! (Shoot behind ya)" id="LookOut" x="50" y="190"/>
+		<menuobject type="achievement" text="Boomer (Blow up ten kegs)" id="Boomer" x="50" y="250"/>
+		<menuobject type="achievement" text="Winner (win the game)" id="Winner" x="50" y="310"/>
+		<menuobject type="achievement" text="20 Coins (Sharp Shooter)" id="20Coins" x="440" y="130"/>
+		<menuobject type="achievement" text="20 Stars (Certified Pirate)" id="20Stars" x="440" y="190"/>
+		<menuobject type="achievement" text="High Scorer (90,000 points)" id="HighScorer" x="440" y="250"/>
+		<menuobject type="achievement" text="Pirate Slayer (30 Killed)" id="PirateSlayer" x="440" y="310"/>
+		<menuobject type="button" text="back" target="main" command="LoadMenu"  x="350" y="570"  height="35" width="120" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+	</menu>
+	<menu name="episodes">
+		<menuobject type="background"/>
+		<menuobject type="textfield" x="400" y="80" text="Choose An Episode" style="title" />
+		<menuobject type="episode" text="Episode 1" target="episode_1_story" command="LoadStory"  locked="false" x="100" y="250"  height="120" width="120" />
+		<menuobject type="episode" text="Episode 2" target="episode_2_story" command="LoadStory"  locked="true" x="310" y="250"  height="120" width="120" />
+		<menuobject type="episode" text="Secret Stash" target="secret_stash"   command="LoadMenu" locked="true" x="500" y="250"  height="120" width="120" />
+		<menuobject type="episode" text="Level Editor" target="LoadEditor"   command="LoadEditor" locked="true" x="700" y="250"  height="120" width="120" />
+		<menuobject type="button" text="back" target="main" command="LoadMenu"  x="360" y="390"  height="35" width="120" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+		<menuobject type="textfield" text="(c) 2010 ScanPlay Games" x="260" y="530" style="subtext" />
+	</menu>	
+	<menu name="episode_2_story" skip="episode_2">
+		<menuobject type="graphic" id="Episode_2_Story_1" x="0" y="0" />
+		<menuobject type="script"  id="Episode_2_Story_1" x="0" y="0" />
+		<menuobject type="soundtoggle"  x="50" y="40" />	
+		<menuobject type="facebook"     x="750" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_1_story" skip="episode_1">
+		<menuobject type="graphic" id="Episode_1_Story_1" x="0" y="0" />
+		<menuobject type="button" text="Skip" target="episode_1" command="LoadMenu" x="400" y="550" />
+		<menuobject type="soundtoggle"  x="50" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_1_story_2">
+		<menuobject type="graphic" id="Episode_1_Story_2" x="0" y="0" />
+		<menuobject type="script"  id="Episode_1_Story_2" x="0" y="0" />
+		<menuobject type="soundtoggle"  x="50" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_1_victory_1">
+		<menuobject type="graphic" id="Episode_1_Victory_1" x="0" y="0" />
+		<menuobject type="button" text="Skip" target="main" command="LoadMenu" x="400" y="550" />
+		<menuobject type="soundtoggle"  x="50" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_1_victory_2">
+		<menuobject type="graphic" id="Episode_1_Victory_1" x="0" y="0" />
+		<menuobject type="script"  id="Episode_1_Victory_2" x="0" y="0" />
+		<menuobject type="soundtoggle"  x="50" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_2_victory_1">
+		<menuobject type="graphic" id="Episode_2_Victory_1" x="0" y="0" />
+		<menuobject type="script"  id="Episode_2_Victory_1" x="0" y="0" />
+		<menuobject type="soundtoggle"  x="50" y="40" />		
+		<menuobject type="mochilogin"   x="560" y="550"/>
+	</menu>
+	<menu name="episode_1">
+		<menuobject type="background"/>
+		<menuobject type="facebook" x="750" y ="40"/>
+		<menuobject type="textfield" y="80" text="Episode 1: The Stolen Treasure" style="title" />
+		<menuobject type="level" text="1" x="150" y="150" levelid="1" command="LoadLevelButtonClicked"/>
+		<menuobject type="level" text="2" x="250" y="150" levelid="2" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="3" x="350" y="150" levelid="3" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="4" x="450" y="150" levelid="4" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="5" x="550" y="150" levelid="5" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="6" x="650" y="150" levelid="6" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="7" x="150" y="225" levelid="7" command="LoadLevelButtonClicked"/>
+		<menuobject type="level" text="8" x="250" y="225" levelid="8" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="9" x="350" y="225" levelid="9" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="10" x="450" y="225" levelid="10" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="11" x="550" y="225" levelid="11" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="12" x="650" y="225" levelid="12" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="13" x="150" y="300" levelid="13" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="14" x="250" y="300" levelid="14" command="LoadLevelButtonClicked"/>
+		<menuobject type="level" text="15" x="350" y="300" levelid="15" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="16" x="450" y="300" levelid="16" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="17" x="550" y="300" levelid="17" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="18" x="650" y="300" levelid="18" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="19" x="350" y="375" levelid="19" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="20" x="450" y="375" levelid="20" command="LoadLevelButtonClicked" />
+		<menuobject type="button" text="back" target="episodes"  command="LoadMenu" x="350" y="520"  height="35" width="120" />	
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+	</menu>
+	<menu name="episode_2">
+		<menuobject type="background"/>
+		<menuobject type="facebook"     x="750" y="40" />
+		<menuobject type="textfield" y="80" text="Episode 2: The Arctic Hunt" style="title" />
+		<menuobject type="level" text="1"  x="350" y="300" levelid="21" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="2"  x="450" y="300" levelid="22" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="3"  x="550" y="300" levelid="23" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="4"  x="650" y="300" levelid="24" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="5"  x="650" y="300" levelid="25" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="6"  x="650" y="300" levelid="26" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="7"  x="650" y="300" levelid="27" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="8"  x="650" y="300" levelid="28" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="9"  x="650" y="300" levelid="29" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="10" x="650" y="300" levelid="30" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="11" x="650" y="300" levelid="31" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="12" x="650" y="300" levelid="32" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="13" x="650" y="300" levelid="33" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="14" x="650" y="300" levelid="34" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="15" x="650" y="300" levelid="35" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="16" x="650" y="300" levelid="36" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="17" x="650" y="300" levelid="37" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="18" x="650" y="300" levelid="38" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="19" x="650" y="300" levelid="39" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="20" x="650" y="300" levelid="40" command="LoadLevelButtonClicked" />
+		<menuobject type="button" text="back" target="episodes"  command="LoadMenu" x="350" y="520"  height="35" width="120" />	
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+	</menu>
+	<menu name="secret_stash">
+		<menuobject type="background"/>
+		<menuobject type="facebook"     x="750" y="40" />
+		<menuobject type="textfield" y="80" text="Secret Stash Levels" style="title" />
+		<menuobject type="level" text="1"  x="350" y="300" levelid="41" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="2"  x="450" y="300" levelid="42" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="3"  x="550" y="300" levelid="43" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="4"  x="650" y="300" levelid="44" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="5"  x="650" y="300" levelid="45" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="6"  x="650" y="300" levelid="46" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="7"  x="650" y="300" levelid="47" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="8"  x="650" y="300" levelid="48" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="9"  x="650" y="300" levelid="49" command="LoadLevelButtonClicked" />
+		<menuobject type="level" text="10" x="650" y="300" levelid="50" command="LoadLevelButtonClicked" />
+		<menuobject type="button" text="back" target="episodes"  command="LoadMenu" x="350" y="520"  height="35" width="120" />	
+		<menuobject type="mochilogin"   x="560" y="550"/>
+		<menuobject type="soundtoggle"  x="50" y="40" />
+	</menu>
+</menus>
