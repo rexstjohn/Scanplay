@@ -9,6 +9,7 @@
 #import "SPAnswerTableViewController.h"
 #import "SPStackOverflowQuestion.h"
 #import "SPStackOverflowAnswer.h"
+#import "NSString+StripHTML.h"
 
 @interface SPAnswerTableViewController ()
 @property(nonatomic,strong, readwrite) NSArray *answers;
@@ -41,39 +42,76 @@
     _answers = question.answers;
     
     __weak SPAnswerTableViewController *weakSelf= self;
-    __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.answers.count];
-    __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count];
+    __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
+    __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
     
     [titleTexts addObject:question.title];
     [bodyTexts addObject:question.body];
+    self.titleArray = titleTexts;
     
-    [self.answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isMemberOfClass:[SPStackOverflowQuestion class]]) {
-            [bodyTexts addObject:[obj body]];
-            [titleTexts addObject:[obj title]];
-        }
-        if(idx == weakSelf.answers.count-1){
-            weakSelf.titleArray = [NSArray arrayWithArray:titleTexts];
-            weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
-            [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData)
-                                                 withObject:nil
-                                              waitUntilDone:YES];
-        }
-    }];
+    if(self.answers.count != 0 && self.answers != nil){
+        [self.answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isMemberOfClass:[SPStackOverflowAnswer class]]) {
+                [bodyTexts addObject:[obj body]];
+            }
+            if(idx == weakSelf.answers.count-1){
+                weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
+                [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData)
+                                                     withObject:nil
+                                                  waitUntilDone:YES];
+            }
+        }];
+    } else {
+        weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
+        [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData)
+                                             withObject:nil
+                                          waitUntilDone:YES];
+    }
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(indexPath.section == 2){
+        if(self.answers.count == 0){
+            return 54.0f;
+        } else {
+            return 0.0f;
+        }
+    }
+    
+    NSString *bodyText  = @"";
+    NSString *titleText = @"";
+    
+    if(self.bodyTextArray.count > indexPath.row){
+        bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
+    }
+    
+    if(self.titleArray.count > indexPath.row){
+        titleText = [self.titleArray objectAtIndex:indexPath.row];
+    }
+    
+    CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    return bodyTextSize.height + titleTextSize.height + 80;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(section == 0){
         return 1;
-    } else{
+    } else if (section == 1){
         return self.answers.count;
+    } else{
+        if(self.answers.count == 0){
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
 
@@ -81,21 +119,22 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
+    UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
     
     if(indexPath.section == 0){
-        UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
         titleLabel.text = self.question.title;
+        bodyLabel.text = [NSString stringByStrippingHTMLString: self.question.body];
         
-        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
-        bodyLabel.text = self.question.body;
-    } else{
+        cell.backgroundColor = [UIColor lightGrayColor];
+    } else if (indexPath.section == 1){
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
-        
-        UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
         titleLabel.text = @"";
-        
-        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
-        bodyLabel.text = answer.body;
+        bodyLabel.text = [NSString stringByStrippingHTMLString: answer.body];
+        cell.backgroundColor = [UIColor blueColor];
+    } else {
+        titleLabel.text = @"This question has no answer.";
+        bodyLabel.text = @"";
     }
     
     return cell;

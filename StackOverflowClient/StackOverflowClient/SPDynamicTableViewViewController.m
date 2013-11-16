@@ -15,10 +15,19 @@
 @implementation SPDynamicTableViewViewController
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
-    NSString *titleText = [self.titleArray objectAtIndex:indexPath.row];
+    NSString *bodyText  = @"";
+    NSString *titleText = @"";
+    
+    if(self.bodyTextArray.count > indexPath.row){
+        bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
+    }
+    
+    if(self.titleArray.count > indexPath.row){
+        titleText = [self.titleArray objectAtIndex:indexPath.row];
+    }
+    
     CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
-    CGSize titleTextSize = [self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
     return bodyTextSize.height + titleTextSize.height + 80;
 }
 

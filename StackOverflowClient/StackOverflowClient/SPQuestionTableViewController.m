@@ -10,6 +10,7 @@
 #import "SPStackOverflowNetworkingEngine.h"
 #import "SPStackOverflowQuestion.h"
 #import "SPAnswerTableViewController.h"
+#import "NSString+StripHTML.h"
 
 @interface SPQuestionTableViewController ()
 @property(nonatomic,strong) SPStackOverflowNetworkingEngine *networkingEngine;
@@ -100,7 +101,7 @@
     titleLabel.text = question.title;
     
     UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
-    bodyLabel.text = question.body;
+    bodyLabel.text = [NSString stringByStrippingHTMLString: question.body];
     
     return cell;
 }
