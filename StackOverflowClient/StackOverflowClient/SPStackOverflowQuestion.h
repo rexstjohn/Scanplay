@@ -1,0 +1,18 @@
+//
+//  SPStackOverflowQuestion.h
+//  StackOverflowClient
+//
+//  Created by Rex St. John on 11/15/13.
+//  Copyright (c) 2013 Rex St. John. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SPStackOverflowQuestion : NSObject
+@property(nonatomic,copy) NSString *title;
+@property(nonatomic,copy) NSURL *link;
+@property(nonatomic,copy) NSNumber *question_id;
+@property(nonatomic,copy) NSString *body;
+@property(nonatomic,assign) BOOL is_answered;
+@property(nonatomic,strong) NSArray *answers;
+@end
