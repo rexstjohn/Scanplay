@@ -46,13 +46,13 @@
     __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
     
     [titleTexts addObject:question.title];
-    [bodyTexts addObject:question.body];
+    [bodyTexts addObject:[NSString stringByStrippingHTMLString:question.body]];
     self.titleArray = titleTexts;
     
     if(self.answers.count != 0 && self.answers != nil){
         [self.answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             if ([obj isMemberOfClass:[SPStackOverflowAnswer class]]) {
-                [bodyTexts addObject:[obj body]];
+                [bodyTexts addObject:[NSString stringByStrippingHTMLString:[obj body]]];
             }
             if(idx == weakSelf.answers.count-1){
                 weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
@@ -86,7 +86,7 @@
         bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
     }
     
-    if(self.titleArray.count > indexPath.row){
+    if(self.titleArray.count > indexPath.row && indexPath.section != 2){
         titleText = [self.titleArray objectAtIndex:indexPath.row];
     }
     
