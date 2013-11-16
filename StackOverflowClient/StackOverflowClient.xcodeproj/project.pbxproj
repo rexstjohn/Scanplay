@@ -13,6 +13,8 @@
 		519BF06418374F690016C968 /* SPDynamicTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BF06218374F690016C968 /* SPDynamicTableViewViewController.m */; };
 		51B09AAD1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
+		51B09AB11838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
+		51B09AB21838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
 		51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E9842F1836D53E00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E984331836E53400D6E882 /* NSArray+StackOverflowQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984321836E53400D6E882 /* NSArray+StackOverflowQuestions.m */; };
@@ -60,6 +62,8 @@
 		519BF06218374F690016C968 /* SPDynamicTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicTableViewViewController.m; sourceTree = "<group>"; };
 		51B09AAB1838276C00739B13 /* NSString+StripHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StripHTML.h"; path = "StackOverflowClient/NSString+StripHTML.h"; sourceTree = "<group>"; };
 		51B09AAC1838276C00739B13 /* NSString+StripHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTML.m"; path = "StackOverflowClient/NSString+StripHTML.m"; sourceTree = "<group>"; };
+		51B09AAF1838333600739B13 /* SPModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPModelObject.h; path = StackOverflowClient/SPModelObject.h; sourceTree = "<group>"; };
+		51B09AB01838333600739B13 /* SPModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPModelObject.m; path = StackOverflowClient/SPModelObject.m; sourceTree = "<group>"; };
 		51E984281836D12F00D6E882 /* SPStackOverflowNetworkingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPStackOverflowNetworkingEngine.h; path = StackOverflowClient/SPStackOverflowNetworkingEngine.h; sourceTree = "<group>"; };
 		51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPStackOverflowNetworkingEngine.m; path = StackOverflowClient/SPStackOverflowNetworkingEngine.m; sourceTree = "<group>"; };
 		51E984311836E53400D6E882 /* NSArray+StackOverflowQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+StackOverflowQuestions.h"; path = "StackOverflowClient/NSArray+StackOverflowQuestions.h"; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				51E984351836E59F00D6E882 /* SPStackOverflowQuestion.m */,
 				51E9843D1836F1F400D6E882 /* SPStackOverflowAnswer.h */,
 				51E9843E1836F1F400D6E882 /* SPStackOverflowAnswer.m */,
+				51B09AAF1838333600739B13 /* SPModelObject.h */,
+				51B09AB01838333600739B13 /* SPModelObject.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				519BF06318374F690016C968 /* SPDynamicTableViewViewController.m in Sources */,
 				51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */,
 				51E984401836F73C00D6E882 /* SPStackOverflowAnswer.m in Sources */,
+				51B09AB11838333600739B13 /* SPModelObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +446,7 @@
 				51E984411836F73F00D6E882 /* SPStackOverflowQuestion.m in Sources */,
 				519BF06418374F690016C968 /* SPDynamicTableViewViewController.m in Sources */,
 				51E9842F1836D53E00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */,
+				51B09AB21838333600739B13 /* SPModelObject.m in Sources */,
 				51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */,
 				51E9843F1836F1F400D6E882 /* SPStackOverflowAnswer.m in Sources */,
 			);

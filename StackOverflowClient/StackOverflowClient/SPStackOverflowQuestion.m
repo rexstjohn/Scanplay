@@ -24,7 +24,12 @@
         }
         [answerObjects addObject:answer];
     }
-    _answers = [NSArray arrayWithArray:answerObjects];
+    // Set ascending:NO so that "YES" would appear ahead of "NO"
+    NSSortDescriptor *boolDescr = [[NSSortDescriptor alloc] initWithKey:@"is_accepted" ascending:NO];
+    NSArray *sortDescriptors = @[boolDescr];
+    NSArray *sortedArray = [answerObjects sortedArrayUsingDescriptors:sortDescriptors];
+    
+    _answers = [NSArray arrayWithArray:sortedArray];
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "SPAnswerTableViewController.h"
 #import "SPStackOverflowQuestion.h"
 #import "SPStackOverflowAnswer.h"
-#import "NSString+StripHTML.h"
 
 @interface SPAnswerTableViewController ()
 @property(nonatomic,strong, readwrite) NSArray *answers;
@@ -46,13 +45,13 @@
     __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
     
     [titleTexts addObject:question.title];
-    [bodyTexts addObject:[NSString stringByStrippingHTMLString:question.body]];
+    [bodyTexts addObject:question.body];
     self.titleArray = titleTexts;
     
     if(self.answers.count != 0 && self.answers != nil){
         [self.answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             if ([obj isMemberOfClass:[SPStackOverflowAnswer class]]) {
-                [bodyTexts addObject:[NSString stringByStrippingHTMLString:[obj body]]];
+                [bodyTexts addObject:[obj body]];
             }
             if(idx == weakSelf.answers.count-1){
                 weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
@@ -86,7 +85,7 @@
         bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
     }
     
-    if(self.titleArray.count > indexPath.row && indexPath.section != 2){
+    if(self.titleArray.count > indexPath.row && indexPath.section == 1){
         titleText = [self.titleArray objectAtIndex:indexPath.row];
     }
     
@@ -124,14 +123,19 @@
     
     if(indexPath.section == 0){
         titleLabel.text = self.question.title;
-        bodyLabel.text = [NSString stringByStrippingHTMLString: self.question.body];
+        bodyLabel.text = self.question.body;
         
         cell.backgroundColor = [UIColor lightGrayColor];
     } else if (indexPath.section == 1){
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
         titleLabel.text = @"";
-        bodyLabel.text = [NSString stringByStrippingHTMLString: answer.body];
-        cell.backgroundColor = [UIColor blueColor];
+        bodyLabel.text = answer.body;
+        
+        if(answer.is_accepted == YES){
+            cell.backgroundColor = [UIColor greenColor];
+        } else{
+            cell.backgroundColor = [UIColor whiteColor];
+        }
     } else {
         titleLabel.text = @"This question has no answer.";
         bodyLabel.text = @"";

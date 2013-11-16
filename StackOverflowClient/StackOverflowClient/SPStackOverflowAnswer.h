@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPModelObject.h"
 
-@interface SPStackOverflowAnswer : NSObject 
+@interface SPStackOverflowAnswer : SPModelObject
 @property(nonatomic,copy) NSString *body;
+@property(nonatomic,assign) BOOL is_accepted;
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SPModelObject.h"
 
-@interface SPStackOverflowQuestion : NSObject
+@interface SPStackOverflowQuestion : SPModelObject
 @property(nonatomic,copy) NSString *title;
 @property(nonatomic,copy) NSURL *link;
 @property(nonatomic,copy) NSNumber *question_id;

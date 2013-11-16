@@ -7,7 +7,7 @@
 //
 
 #import "SPStackOverflowAnswer.h"
+#import "NSString+StripHTML.h"
 
 @implementation SPStackOverflowAnswer
-
 @end
