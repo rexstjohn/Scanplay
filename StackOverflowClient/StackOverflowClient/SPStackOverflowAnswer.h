@@ -9,7 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SPStackOverflowAnswer : NSObject 
-@property(nonatomic,copy) NSString *title;
-@property(nonatomic,copy) NSURL *link;
 @property(nonatomic,copy) NSString *body;
 @end

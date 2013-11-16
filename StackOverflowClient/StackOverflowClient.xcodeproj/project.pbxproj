@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510163B71836FBF800499F9B /* SPQuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510163B61836FBF800499F9B /* SPQuestionTableViewController.m */; };
+		510163BA1836FDD800499F9B /* SPAnswerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510163B91836FDD800499F9B /* SPAnswerTableViewController.m */; };
 		51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E9842F1836D53E00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E984331836E53400D6E882 /* NSArray+StackOverflowQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984321836E53400D6E882 /* NSArray+StackOverflowQuestions.m */; };
@@ -23,8 +25,6 @@
 		51FDE62D1836CB0800782095 /* SPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FDE62C1836CB0800782095 /* SPAppDelegate.m */; };
 		51FDE6301836CB0800782095 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FDE62E1836CB0800782095 /* Main_iPhone.storyboard */; };
 		51FDE6331836CB0800782095 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51FDE6311836CB0800782095 /* Main_iPad.storyboard */; };
-		51FDE6361836CB0800782095 /* SPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FDE6351836CB0800782095 /* SPFirstViewController.m */; };
-		51FDE6391836CB0800782095 /* SPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FDE6381836CB0800782095 /* SPSecondViewController.m */; };
 		51FDE63B1836CB0800782095 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FDE63A1836CB0800782095 /* Images.xcassets */; };
 		51FDE6421836CB0800782095 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FDE6411836CB0800782095 /* XCTest.framework */; };
 		51FDE6431836CB0800782095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FDE61C1836CB0800782095 /* Foundation.framework */; };
@@ -48,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		254B1FF49734434AA8DFA7A6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		510163B51836FBF800499F9B /* SPQuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPQuestionTableViewController.h; sourceTree = "<group>"; };
+		510163B61836FBF800499F9B /* SPQuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPQuestionTableViewController.m; sourceTree = "<group>"; };
+		510163B81836FDD800499F9B /* SPAnswerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAnswerTableViewController.h; sourceTree = "<group>"; };
+		510163B91836FDD800499F9B /* SPAnswerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAnswerTableViewController.m; sourceTree = "<group>"; };
 		51E984281836D12F00D6E882 /* SPStackOverflowNetworkingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPStackOverflowNetworkingEngine.h; path = StackOverflowClient/SPStackOverflowNetworkingEngine.h; sourceTree = "<group>"; };
 		51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPStackOverflowNetworkingEngine.m; path = StackOverflowClient/SPStackOverflowNetworkingEngine.m; sourceTree = "<group>"; };
 		51E984311836E53400D6E882 /* NSArray+StackOverflowQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+StackOverflowQuestions.h"; path = "StackOverflowClient/NSArray+StackOverflowQuestions.h"; sourceTree = "<group>"; };
@@ -69,10 +73,6 @@
 		51FDE62C1836CB0800782095 /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
 		51FDE62F1836CB0800782095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		51FDE6321836CB0800782095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		51FDE6341836CB0800782095 /* SPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPFirstViewController.h; sourceTree = "<group>"; };
-		51FDE6351836CB0800782095 /* SPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPFirstViewController.m; sourceTree = "<group>"; };
-		51FDE6371836CB0800782095 /* SPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSecondViewController.h; sourceTree = "<group>"; };
-		51FDE6381836CB0800782095 /* SPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSecondViewController.m; sourceTree = "<group>"; };
 		51FDE63A1836CB0800782095 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = StackOverflowClient/Images.xcassets; sourceTree = "<group>"; };
 		51FDE6401836CB0800782095 /* StackOverflowClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FDE6411836CB0800782095 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -199,10 +199,10 @@
 			children = (
 				51FDE62B1836CB0800782095 /* SPAppDelegate.h */,
 				51FDE62C1836CB0800782095 /* SPAppDelegate.m */,
-				51FDE6341836CB0800782095 /* SPFirstViewController.h */,
-				51FDE6351836CB0800782095 /* SPFirstViewController.m */,
-				51FDE6371836CB0800782095 /* SPSecondViewController.h */,
-				51FDE6381836CB0800782095 /* SPSecondViewController.m */,
+				510163B51836FBF800499F9B /* SPQuestionTableViewController.h */,
+				510163B61836FBF800499F9B /* SPQuestionTableViewController.m */,
+				510163B81836FDD800499F9B /* SPAnswerTableViewController.h */,
+				510163B91836FDD800499F9B /* SPAnswerTableViewController.m */,
 			);
 			path = StackOverflowClient;
 			sourceTree = "<group>";
@@ -406,10 +406,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FDE6291836CB0800782095 /* main.m in Sources */,
-				51FDE6391836CB0800782095 /* SPSecondViewController.m in Sources */,
 				51E984331836E53400D6E882 /* NSArray+StackOverflowQuestions.m in Sources */,
-				51FDE6361836CB0800782095 /* SPFirstViewController.m in Sources */,
+				510163BA1836FDD800499F9B /* SPAnswerTableViewController.m in Sources */,
 				51E984361836E59F00D6E882 /* SPStackOverflowQuestion.m in Sources */,
+				510163B71836FBF800499F9B /* SPQuestionTableViewController.m in Sources */,
 				51FDE62D1836CB0800782095 /* SPAppDelegate.m in Sources */,
 				51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */,
 				51E984401836F73C00D6E882 /* SPStackOverflowAnswer.m in Sources */,

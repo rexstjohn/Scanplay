@@ -1,5 +1,5 @@
 //
-//  SPFirstViewController.h
+//  SPTableViewController.h
 //  StackOverflowClient
 //
 //  Created by Rex St. John on 11/15/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPFirstViewController : UIViewController
+@interface SPQuestionTableViewController : UITableViewController <UIAlertViewDelegate>
 
 @end
