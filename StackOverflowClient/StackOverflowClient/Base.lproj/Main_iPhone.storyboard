@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Question Table View Controller - Root View Controller-->
+        <!--Question Table View Controller - Stack Overflow-->
         <scene sceneID="jsq-rU-o8G">
             <objects>
                 <tableViewController id="UyC-7b-fzW" customClass="SPQuestionTableViewController" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bp-If-xRQ">
                                             <rect key="frame" x="15" y="10" width="278" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -42,7 +42,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="NbX-Oz-ziI"/>
+                    <navigationItem key="navigationItem" title="Stack Overflow" id="NbX-Oz-ziI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIN-Im-qmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
