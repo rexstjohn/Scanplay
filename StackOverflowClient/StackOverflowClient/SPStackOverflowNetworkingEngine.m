@@ -26,7 +26,7 @@
          NSError *error = nil;
          NSArray *values = [NSArray questionsArrayFromJSON:[completedOperation responseData] error:&error];
          
-         if(error != nil){
+         if(error == nil){
              completion(values);
          } else{
              errorBlock(error);
@@ -56,7 +56,7 @@
          NSError *error = nil;
          SPStackOverflowQuestion *value;// = [NSArray questionsArrayFromJSON:[completedOperation responseData] error:&error];
          
-         if(error != nil){
+         if(error == nil){
              completion(value);
          } else{
              errorBlock(error);
