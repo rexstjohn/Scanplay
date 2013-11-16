@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SPDynamicTableViewViewController : UITableViewController
-
+@property(nonatomic,strong) NSArray *bodyTextArray;
+@property(nonatomic,strong) NSArray *titleArray;
 @end

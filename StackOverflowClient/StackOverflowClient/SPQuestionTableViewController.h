@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPDynamicTableViewViewController.h"
 
-@interface SPQuestionTableViewController : UITableViewController <UIAlertViewDelegate>
+@interface SPQuestionTableViewController : SPDynamicTableViewViewController <UIAlertViewDelegate>
 
 @end

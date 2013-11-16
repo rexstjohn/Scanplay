@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SPDynamicTableViewViewController.h"
 @class SPStackOverflowQuestion;
 
-@interface SPAnswerTableViewController : UITableViewController
+@interface SPAnswerTableViewController : SPDynamicTableViewViewController
 
 @property(nonatomic,strong) NSArray *answers;
 @property(nonatomic,strong) SPStackOverflowQuestion *question;
