@@ -11,6 +11,7 @@
 #import "SPStackOverflowAnswer.h"
 
 @interface SPAnswerTableViewController ()
+@property(nonatomic,strong, readwrite) NSArray *answers;
 @end
 
 @implementation SPAnswerTableViewController
@@ -27,18 +28,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setQuestion:(SPStackOverflowQuestion*)question{
+    _question = question;
+    _answers = question.answers;
+    
+    __weak SPAnswerTableViewController *weakSelf= self;
+    __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.answers.count];
+    __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count];
+    
+    [titleTexts addObject:question.title];
+    [bodyTexts addObject:question.body];
+    
+    [self.answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isMemberOfClass:[SPStackOverflowQuestion class]]) {
+            [bodyTexts addObject:[obj body]];
+            [titleTexts addObject:[obj title]];
+        }
+        if(idx == weakSelf.answers.count-1){
+            weakSelf.titleArray = [NSArray arrayWithArray:titleTexts];
+            weakSelf.bodyTextArray = [NSArray arrayWithArray:bodyTexts];
+            [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData)
+                                                 withObject:nil
+                                              waitUntilDone:YES];
+        }
+    }];
 }
 
 
@@ -68,7 +89,6 @@
         UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
         bodyLabel.text = self.question.body;
     } else{
-        
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
         
         UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
@@ -78,59 +98,7 @@
         bodyLabel.text = answer.body;
     }
     
-    
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

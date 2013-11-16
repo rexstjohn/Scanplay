@@ -117,8 +117,7 @@
          SPStackOverflowQuestion *question = (SPStackOverflowQuestion*)self.questions[indexPath.row];
          
          SPAnswerTableViewController *answerTable = (SPAnswerTableViewController*)[segue destinationViewController];
-         answerTable.question=question;
-         answerTable.answers=question.answers;
+         answerTable.question = question;
      }
      
      

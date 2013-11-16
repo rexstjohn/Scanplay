@@ -12,7 +12,7 @@
 
 @interface SPAnswerTableViewController : SPDynamicTableViewViewController
 
-@property(nonatomic,strong) NSArray *answers;
+@property(nonatomic,strong, readonly) NSArray *answers;
 @property(nonatomic,strong) SPStackOverflowQuestion *question;
 
 @end
