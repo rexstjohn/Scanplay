@@ -62,16 +62,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if(indexPath.section == 0){
-        UILabel *titleLabel = (UILabel*)[cell viewWithTag:0];
+        UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
         titleLabel.text = self.question.title;
         
-        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:1];
+        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
         bodyLabel.text = self.question.body;
     } else{
         
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
         
-        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:1];
+        UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
+        titleLabel.text = @"";
+        
+        UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
         bodyLabel.text = answer.body;
     }
     

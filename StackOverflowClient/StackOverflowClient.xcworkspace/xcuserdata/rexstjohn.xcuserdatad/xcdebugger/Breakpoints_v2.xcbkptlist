@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
-            timestampString = "406255551.240221"
+            timestampString = "406277210.507327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-testQuestionsQuery"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
-            timestampString = "406255551.240221"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-testQuestionsQuery"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
-            timestampString = "406255551.240221"
+            timestampString = "406277210.507327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-testQuestionsQuery"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
+            timestampString = "406277210.507327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-testQuestionsQuery"
             landmarkType = "5">
          </BreakpointContent>
@@ -70,17 +70,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
-            timestampString = "406255551.240221"
+            timestampString = "406277210.507327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-testQuestionsQuery"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[StackOverflowClientTests testQuestionsQuery]"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.299878"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "906">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[StackOverflowClientTests testQuestionsQuery]"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.30027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "954">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -253,6 +283,190 @@
             endingLineNumber = "29"
             landmarkName = "-questionsWithParameters:completionHandler:errorHandler:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
+            timestampString = "406277197.942983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-testQuestionsQuery"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[StackOverflowClientTests testQuestionsQuery]_block_invoke"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.300745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[StackOverflowClientTests testQuestionsQuery]_block_invoke"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.301308"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
+            timestampString = "406277199.597715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-testQuestionQuery"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[StackOverflowClientTests testQuestionQuery]_block_invoke"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.301797"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[StackOverflowClientTests testQuestionQuery]_block_invoke"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.302136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
+            timestampString = "406277200.717678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-testQuestionQuery"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[StackOverflowClientTests testQuestionQuery]_block_invoke72"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.302429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[StackOverflowClientTests testQuestionQuery]_block_invoke72"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.302736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "406">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverflowClientTests/StackOverflowClientTests.m"
+            timestampString = "406277204.99494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-testQuestionsQuery"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[StackOverflowClientTests testQuestionsQuery]_block_invoke47"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.303055"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__46-[StackOverflowClientTests testQuestionsQuery]_block_invoke47"
+                  moduleName = "StackOverflowClientTests"
+                  urlString = "file:///Users/rexstjohn/Desktop/Scanplay/Scanplay/StackOverflowClient/StackOverflowClientTests/StackOverflowClientTests.m"
+                  timestampString = "406277213.303361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "406">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -27,8 +27,6 @@
 
 - (void)tearDown
 {
-    // Force the test to sleep the thread and allow async testing to complete.
-    [NSThread sleepForTimeInterval:1.0];
     
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];

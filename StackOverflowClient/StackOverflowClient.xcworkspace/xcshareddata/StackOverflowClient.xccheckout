@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0A8EA937-C8B8-45AD-9BB3-956342999956</string>
+	<key>IDESourceControlProjectName</key>
+	<string>StackOverflowClient</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DD48C393-C562-4B74-8925-E71857C63674</key>
+		<string>ssh://github.com/rexstjohn/Scanplay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>StackOverflowClient/StackOverflowClient.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DD48C393-C562-4B74-8925-E71857C63674</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/rexstjohn/Scanplay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD48C393-C562-4B74-8925-E71857C63674</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD48C393-C562-4B74-8925-E71857C63674</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Scanplay</string>
+		</dict>
+	</array>
+</dict>
+</plist>

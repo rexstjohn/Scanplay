@@ -84,10 +84,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
-    UILabel *titleLabel = (UILabel*)[cell viewWithTag:0];
+    UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
     titleLabel.text = question.title;
     
-    UILabel *bodyLabel = (UILabel*)[cell viewWithTag:1];
+    UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
     bodyLabel.text = question.body;
     
     return cell;
