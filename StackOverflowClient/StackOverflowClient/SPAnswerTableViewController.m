@@ -78,15 +78,17 @@
         }
     }
     
+    // Have to adjust the row index due to there being multiple sections
     NSString *bodyText  = @"";
     NSString *titleText = @"";
+    NSUInteger row = (indexPath.section == 1)?1+indexPath.row:0;
     
-    if(self.bodyTextArray.count > indexPath.row){
-        bodyText = [self.bodyTextArray objectAtIndex:indexPath.row];
+    if(self.bodyTextArray.count > row){
+        bodyText = [self.bodyTextArray objectAtIndex:row];
     }
     
-    if(self.titleArray.count > indexPath.row && indexPath.section == 1){
-        titleText = [self.titleArray objectAtIndex:indexPath.row];
+    if(self.titleArray.count > row){
+        titleText = [self.titleArray objectAtIndex:row];
     }
     
     CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
@@ -127,9 +129,11 @@
         
         cell.backgroundColor = [UIColor lightGrayColor];
     } else if (indexPath.section == 1){
+        NSString *answerText = [self.bodyTextArray objectAtIndex:indexPath.row+1];
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
-        titleLabel.text = @"";
-        bodyLabel.text = answer.body;
+        NSString *accepted = (answer.is_accepted == YES)?@"YES":@"NO";
+        titleLabel.text = [NSString stringWithFormat:@"Answer #%i, Accepted: %@", indexPath.row+1, accepted];
+        bodyLabel.text = answerText;
         
         if(answer.is_accepted == YES){
             cell.backgroundColor = [UIColor greenColor];
