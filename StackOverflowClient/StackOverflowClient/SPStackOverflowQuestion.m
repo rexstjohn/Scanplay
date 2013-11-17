@@ -22,6 +22,9 @@
                 [answer setValue:[answersDic valueForKey:answerKey] forKey:answerKey];
             }
         }
+        if(answer.is_accepted){
+            self.hasAcceptedAnswer = YES;
+        }
         [answerObjects addObject:answer];
     }
     // Set ascending:NO so that "YES" would appear ahead of "NO"

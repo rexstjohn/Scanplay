@@ -244,11 +244,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StackOverflowClient/SPStackOverflowQuestion.m"
-            timestampString = "406337392.053225"
+            timestampString = "406340271.651257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-setAnswers:"
             landmarkType = "5">
          </BreakpointContent>

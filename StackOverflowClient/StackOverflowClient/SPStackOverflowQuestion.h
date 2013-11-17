@@ -15,5 +15,6 @@
 @property(nonatomic,copy) NSNumber *question_id;
 @property(nonatomic,copy) NSString *body;
 @property(nonatomic,assign) BOOL is_answered;
+@property(nonatomic,assign) BOOL hasAcceptedAnswer;
 @property(nonatomic,strong) NSArray *answers;
 @end
