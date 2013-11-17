@@ -170,21 +170,8 @@ NSInteger const kPageSize = 3;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
-//    UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-//    
-//    UIColor* textColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
-//    NSDictionary *attrs = @{
-//                             NSFontAttributeName : font,
-//                             NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
-//    NSDictionary *colorAttrs = @{ NSForegroundColorAttributeName : textColor};
-//    
-//    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]
-//                                      initWithString:[NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title]
-//                                      attributes:attrs];
-//    [attrString addAttributes:colorAttrs range:NSMakeRange(0, [[NSNumber numberWithInt:indexPath.row+1] stringValue].length+1)];
     
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
-//    titleLabel.attributedText = attrString;
     titleLabel.text = [NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title];
     
     UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
