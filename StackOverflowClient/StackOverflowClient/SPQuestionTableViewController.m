@@ -44,11 +44,22 @@ NSInteger const kPageSize = 3;
     self.activityView.center=self.view.center;
     [self.view addSubview:self.activityView];
     [self.activityView setHidden:YES];
+    
+    // Get more footer button.
+    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0,0,self.tableView.frame.size.width,44.0f)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:@"Get More Questions" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [aView addSubview:button];
+    [button setFrame:aView.frame];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    self.tableView.tableFooterView = aView;
 }
 
 -(void)getQuestionsByPageIndex:(NSUInteger)pageIndex{
     
-    [self.activityView setHidden:NO];
+    [self toggleLoadingState:YES];
     NSDictionary *parameters = @{@"tagged":@"objective-c",
                                  @"site":@"stackoverflow",
                                  @"order":@"desc",
@@ -58,7 +69,7 @@ NSInteger const kPageSize = 3;
                                  @"pagesize":[[NSNumber numberWithInteger:kPageSize] stringValue]};
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
-        [self.activityView setHidden:YES];
+        [self toggleLoadingState:NO];
         self.rowCount = self.questions.count + questions.count;
         if(self.questions.count > 0){
             [self.questions addObjectsFromArray:questions];
@@ -71,8 +82,7 @@ NSInteger const kPageSize = 3;
     
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
-        
-        [self.activityView setHidden:YES];
+        [self toggleLoadingState:NO];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to get results"
                                                         message:@"Check your internet connection and try again"
                                                        delegate:self
@@ -84,6 +94,19 @@ NSInteger const kPageSize = 3;
     [self.networkingEngine questionsWithParameters:parameters
                                  completionHandler:response
                                       errorHandler:errorBlock];
+}
+
+-(void)toggleLoadingState:(BOOL)isLoading{
+    if(isLoading == NO){
+        [self.activityView setHidden:YES];
+        [self.tableView.tableFooterView setHidden:NO];
+        [self.tableView setUserInteractionEnabled:YES];
+    } else {
+        [self.activityView setHidden:NO];
+        [self.tableView.tableFooterView setHidden:YES];
+        self.activityView.center= CGPointMake(self.activityView.center.x,self.tableView.contentOffset.y + self.activityView.frame.size.height);
+        [self.tableView setUserInteractionEnabled:NO];
+    }
 }
 
 
@@ -129,25 +152,6 @@ NSInteger const kPageSize = 3;
     }];
 }
 
-#pragma mark - Table View Delegate
-
-- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    
-    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0,0,self.tableView.frame.size.width,44.0f)];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setTitle:@"Get More Questions" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    [aView addSubview:button];
-    [button setFrame:aView.frame];
-    [button setBackgroundColor:[UIColor lightGrayColor]];
-    return aView;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 44.0f;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -166,21 +170,22 @@ NSInteger const kPageSize = 3;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
-    UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    
-    UIColor* textColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
-    NSDictionary *attrs = @{
-                             NSFontAttributeName : font,
-                             NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
-    NSDictionary *colorAttrs = @{ NSForegroundColorAttributeName : textColor};
-    
-    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]
-                                      initWithString:[NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title]
-                                      attributes:attrs];
-    [attrString addAttributes:colorAttrs range:NSMakeRange(0, [[NSNumber numberWithInt:indexPath.row+1] stringValue].length+1)];
+//    UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+//    
+//    UIColor* textColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
+//    NSDictionary *attrs = @{
+//                             NSFontAttributeName : font,
+//                             NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
+//    NSDictionary *colorAttrs = @{ NSForegroundColorAttributeName : textColor};
+//    
+//    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]
+//                                      initWithString:[NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title]
+//                                      attributes:attrs];
+//    [attrString addAttributes:colorAttrs range:NSMakeRange(0, [[NSNumber numberWithInt:indexPath.row+1] stringValue].length+1)];
     
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
-    titleLabel.attributedText = attrString;
+//    titleLabel.attributedText = attrString;
+    titleLabel.text = [NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title];
     
     UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
     bodyLabel.text = question.body;
