@@ -102,6 +102,10 @@
     UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
     bodyLabel.text = question.body;
     
+    UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
+    NSString *isAnswered = (question.is_answered == YES)?@"YES":@"NO";
+    detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Is Answered: %@", question.answers.count, isAnswered ];
+    
     return cell;
 }
 

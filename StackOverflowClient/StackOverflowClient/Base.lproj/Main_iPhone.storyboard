@@ -28,20 +28,30 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="body" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="UWo-rC-3bP">
-                                            <rect key="frame" x="15" y="39" width="291" height="74"/>
+                                            <rect key="frame" x="15" y="39" width="291" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Answers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkl-MW-PBh">
+                                            <rect key="frame" x="15" y="95" width="291" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="UWo-rC-3bP" secondAttribute="trailing" constant="-19" id="4Ii-uy-Yoh"/>
                                         <constraint firstAttribute="trailing" secondItem="5Bp-If-xRQ" secondAttribute="trailing" constant="-6" id="4f8-Sp-Jsb"/>
                                         <constraint firstItem="UWo-rC-3bP" firstAttribute="leading" secondItem="raX-gL-Zhp" secondAttribute="leading" constant="15" id="C1j-ga-VPE"/>
-                                        <constraint firstItem="UWo-rC-3bP" firstAttribute="top" secondItem="5Bp-If-xRQ" secondAttribute="bottom" constant="8" id="drk-Tc-r2q"/>
-                                        <constraint firstAttribute="bottom" secondItem="UWo-rC-3bP" secondAttribute="bottom" constant="10" id="gZV-QZ-wFs"/>
+                                        <constraint firstAttribute="trailing" secondItem="lkl-MW-PBh" secondAttribute="trailing" constant="-19" id="PkD-bW-Cr9"/>
+                                        <constraint firstAttribute="bottom" secondItem="lkl-MW-PBh" secondAttribute="bottom" constant="7" id="hmL-bw-786"/>
+                                        <constraint firstItem="lkl-MW-PBh" firstAttribute="leading" secondItem="raX-gL-Zhp" secondAttribute="leading" constant="15" id="iZ2-Kx-ASe"/>
+                                        <constraint firstItem="lkl-MW-PBh" firstAttribute="top" secondItem="UWo-rC-3bP" secondAttribute="bottom" constant="10" id="mXl-TS-opL"/>
                                         <constraint firstItem="5Bp-If-xRQ" firstAttribute="leading" secondItem="raX-gL-Zhp" secondAttribute="leading" constant="15" id="osg-xw-ZHp"/>
+                                        <constraint firstItem="UWo-rC-3bP" firstAttribute="top" secondItem="5Bp-If-xRQ" secondAttribute="bottom" priority="999" constant="8" id="syN-fl-b6P"/>
                                         <constraint firstItem="5Bp-If-xRQ" firstAttribute="top" secondItem="raX-gL-Zhp" secondAttribute="top" constant="10" id="xoA-OQ-Yy7"/>
                                     </constraints>
                                 </tableViewCellContentView>

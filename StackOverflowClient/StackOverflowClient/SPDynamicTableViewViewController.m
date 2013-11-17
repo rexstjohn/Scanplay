@@ -28,7 +28,7 @@
     
     CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
     CGSize titleTextSize =[self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
-    return bodyTextSize.height + titleTextSize.height + 80;
+    return bodyTextSize.height + titleTextSize.height + 100;
 }
 
 -(CGSize)frameForText:(NSString*)text sizeWithFont:(UIFont*)font constrainedToSize:(CGSize)size{
