@@ -45,6 +45,7 @@
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
         XCTAssertNotNil(questions);
+        XCTAssertTrue(questions.count > 0);
         NSLog(@"Questions returned with length: %i", questions.count);
     };
     
@@ -70,7 +71,7 @@
                                  @"filter":@"withbody"};
     StackOverflowQuestionResponseBlock response = ^(SPStackOverflowQuestion *question){
         XCTAssertNotNil(question);
-        NSLog(@"Question returned with body %@", question.body);
+        NSLog(@"Question returned with body: %@", question.body);
     };
     
     
