@@ -11,11 +11,11 @@
 @implementation SPDefaultTheme
 
 - (void)themeQuestionTableViewCell:(UITableViewCell*)cell{
-    [cell setBackgroundColor:[UIColor lightGrayColor]];
+    [cell setBackgroundColor:[UIColor colorWithRed:250.0f/255.0f green:250.0f/255.0f blue:210.0f/255.0f alpha:1.0]];
 }
 
 - (void)themeAnswerTableViewCell:(UITableViewCell*)cell{
-    [cell setBackgroundColor:[UIColor blueColor]];
+    [cell setBackgroundColor:[UIColor colorWithRed:100.0f/255.0f green:149.0f/255.0f blue:237.0f/255.0f alpha:1.0]];
 }
 
 - (void)themeQuestionFooterButton:(UIButton*)button{ 
