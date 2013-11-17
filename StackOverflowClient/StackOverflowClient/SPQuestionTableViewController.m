@@ -106,11 +106,12 @@ NSInteger const kPageSize = 3;
 
 - (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
+    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0,0,44.0f,100.0f)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.titleLabel.text = @"Get More";
     [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
-    [button setFrame:CGRectMake(0,0,44.0f,100.0f)];
-    return button;
+    [aView addSubview:button];
+    return aView;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
