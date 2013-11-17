@@ -50,7 +50,8 @@ NSInteger const kPageSize = 3;
         } else {
             self.questions = [NSMutableArray arrayWithArray:questions];
         }
-        [self.tableView reloadData];
+        // Force the questions data to reload itself.
+        self.questions = _questions;
     };
     
     
@@ -92,6 +93,7 @@ NSInteger const kPageSize = 3;
     
     _questions = [questions mutableCopy];
     __weak SPQuestionTableViewController *weakSelf= self;
+    
     __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
     __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
     
