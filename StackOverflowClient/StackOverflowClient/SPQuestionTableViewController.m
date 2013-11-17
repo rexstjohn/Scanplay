@@ -14,9 +14,12 @@
 @interface SPQuestionTableViewController ()
 @property(nonatomic,strong) SPStackOverflowNetworkingEngine *networkingEngine;
 @property(nonatomic,strong) NSArray *questions;
+@property(nonatomic,assign) NSUInteger currentPageIndex;
 @end
 
 @implementation SPQuestionTableViewController
+
+NSInteger const kPageSize = 10;
 
 - (void)viewDidLoad
 {
@@ -24,12 +27,19 @@
     
     self.networkingEngine = [[SPStackOverflowNetworkingEngine alloc] initWithHostName:@"api.stackexchange.com"];
     [self.networkingEngine useCache];
+    self.currentPageIndex = 1;
+    [self getQuestionsByPageIndex:self.currentPageIndex];
+}
+
+-(void)getQuestionsByPageIndex:(NSUInteger)pageIndex{
     
     NSDictionary *parameters = @{@"tagged":@"objective-c",
                                  @"site":@"stackoverflow",
                                  @"order":@"desc",
                                  @"sort":@"activity",
-                                 @"filter":@"!-.CabyPaznWF"};
+                                 @"filter":@"!-.CabyPaznWF",
+                                 @"page":[[NSNumber numberWithInteger:pageIndex] stringValue],
+                                 @"pagesize":[[NSNumber numberWithInteger:kPageSize] stringValue]};
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
         self.questions = questions;
@@ -37,15 +47,38 @@
     
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to get results" message:@"Check your internet connection and try again" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to get results"
+                                                        message:@"Check your internet connection and try again"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Try Again", nil];
         [alert show];
     };
-    
     
     [self.networkingEngine questionsWithParameters:parameters
                                  completionHandler:response
                                       errorHandler:errorBlock];
 }
+
+
+-(void)didTapGetMoreButton:(id)sender{
+    self.currentPageIndex++;
+    [self getQuestionsByPageIndex:self.currentPageIndex];
+}
+
+#pragma mark - AlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == [alertView cancelButtonIndex]){
+        // Cancel button.
+    }else{
+        // Try again.
+        [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+        [self getQuestionsByPageIndex:self.currentPageIndex];
+    }
+}
+
+#pragma mark - Setters
 
 - (void) setQuestions:(NSArray *)questions{
     
@@ -67,6 +100,16 @@
                                               waitUntilDone:YES];
         }
     }];
+}
+
+#pragma mark - Table View Delegate
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.titleLabel.text = @"Get More";
+    [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
 }
 
 #pragma mark - Table view data source
