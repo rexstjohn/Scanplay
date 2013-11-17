@@ -17,6 +17,8 @@
 @property(nonatomic,strong) NSMutableArray *questions;
 @property(nonatomic,assign) NSUInteger currentPageIndex;
 @property(nonatomic,assign) NSUInteger rowCount;
+@property(nonatomic,strong) UIActivityIndicatorView *indicatorView;
+@property(nonatomic,strong) UIView *activityView;
 @end
 
 @implementation SPQuestionTableViewController
@@ -31,10 +33,22 @@ NSInteger const kPageSize = 3;
     [self.networkingEngine useCache];
     self.currentPageIndex = 1;
     [self getQuestionsByPageIndex:self.currentPageIndex];
+    
+    // Loading view
+    self.activityView = [[UIView alloc]initWithFrame:CGRectMake(0,0,200,200)];
+    [self.activityView setBackgroundColor:[UIColor lightGrayColor]];
+    self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.indicatorView setHidesWhenStopped:NO];
+    [self.activityView addSubview:self.indicatorView];
+    self.indicatorView.center = self.activityView.center;
+    self.activityView.center=self.view.center;
+    [self.view addSubview:self.activityView];
+    [self.activityView setHidden:YES];
 }
 
 -(void)getQuestionsByPageIndex:(NSUInteger)pageIndex{
     
+    [self.activityView setHidden:NO];
     NSDictionary *parameters = @{@"tagged":@"objective-c",
                                  @"site":@"stackoverflow",
                                  @"order":@"desc",
@@ -44,6 +58,7 @@ NSInteger const kPageSize = 3;
                                  @"pagesize":[[NSNumber numberWithInteger:kPageSize] stringValue]};
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
+        [self.activityView setHidden:YES];
         self.rowCount = self.questions.count + questions.count;
         if(self.questions.count > 0){
             [self.questions addObjectsFromArray:questions];
@@ -56,6 +71,8 @@ NSInteger const kPageSize = 3;
     
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
+        
+        [self.activityView setHidden:YES];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to get results"
                                                         message:@"Check your internet connection and try again"
                                                        delegate:self
