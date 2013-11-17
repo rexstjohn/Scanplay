@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/loading_frame_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@drawable/dark_background"
+              android:layout_centerHorizontal="true">
+
+
+    <TextView
+         android:id="@+id/how_to_play_label"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="25px"
+         android:layout_marginTop="25px"
+         android:gravity="center_horizontal"
+         android:shadowColor="#2E8B57"
+         android:shadowRadius="5"
+         android:shadowDx="3"
+         android:shadowDy="3"
+         android:text="@string/how_to_play_text"
+        />
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+platform :ios, '5.0'
+pod 'Foursquare-API-v2',       '~> 1.2' 

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/elastic.js">
+    <Files>
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonCamera.js" Line="231" Column="1" />
+      <File FileName="Assets/smoothlookat.js" Line="11" Column="2" />
+      <File FileName="Assets/constantforce.js" Line="3" Column="48" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonController.js" Line="39" Column="22" />
+      <File FileName="Assets/GameMenu.js" Line="19" Column="4" />
+      <File FileName="Assets/menus.js" Line="14" Column="2" />
+      <File FileName="Assets/elastic.js" Line="74" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

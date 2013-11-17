@@ -1,0 +1,10 @@
+PODS:
+  - Foursquare-API-v2 (1.2.1)
+
+DEPENDENCIES:
+  - Foursquare-API-v2 (~> 1.2)
+
+SPEC CHECKSUMS:
+  Foursquare-API-v2: f7343fca1caab4d789d024d61b03e646acc5b08f
+
+COCOAPODS: 0.21.0

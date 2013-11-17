@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes
+END
+b2MassData.as
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2MassData.as
+END
+b2Shape.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2Shape.as
+END
+b2CircleShape.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2CircleShape.as
+END
+b2EdgeShape.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2EdgeShape.as
+END
+b2EdgeChainDef.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2EdgeChainDef.as
+END
+b2PolygonShape.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/scanplaygames/RandomProjects/svn/!svn/ver/2/Redditron/src/Box2D/Collision/Shapes/b2PolygonShape.as
+END

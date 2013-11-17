@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WordACross</string>
+    <string name="start_game_button_label">Start Blitz Game</string>
+    <string name="how_to_play_button_label">How To Play</string>
+    <string name="leaderboards_button_label">Leaderboards</string>
+    <string name="loading_screen_text_label">Loading...</string>
+    <string name="dialogue_button_ok">ok</string>
+    <string name="game_title_text">Word A Cross</string>
+    <string name="endless_game_button_label">Start Endless Game</string>
+    <string name="you_lose_text">You Lose!</string>
+    <string name="you_lose_button_label">Back to Main Menu</string>
+    <string name="you_lose_help_text">You took too long to find words - the more words you create the slower your timer runs out</string>
+    <string name="game_logo_subtext">(lite)</string>
+    <string name="how_to_play_text">Swipe letters with your finger to create words. Shake your phone if you get stuck to reset the board. If you are playing Blitz Mode - make words to survive longer. Have Fun!</string>
+</resources>

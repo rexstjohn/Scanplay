@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main_menu_linear_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@drawable/dark_background"
+                >
+
+    <TextView
+         android:id="@+id/game_logo_text"
+         android:layout_height="60px"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="40px"
+         android:layout_marginTop="25px"
+         android:gravity="center_horizontal"
+         android:text="@string/game_title_text"
+        />
+    <TextView
+         android:id="@+id/game_logo_subtext_label"
+         android:layout_height="20px"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="10px"
+         android:layout_marginTop="25px"
+         android:gravity="center_horizontal"
+         android:text="@string/game_logo_subtext"
+        />
+
+
+    <Button
+         android:id="@+id/start_blitz_game_button"
+         android:layout_height="50px"
+         android:layout_width="125px"
+         android:text="@string/start_game_button_label"
+         android:layout_gravity="center_horizontal"
+         android:onClick="startBlitzGame"
+         android:layout_marginTop="55px"
+         android:textColor="#FFFFFF"
+         android:background="@drawable/game_button_selector"/>
+
+    <Button
+         android:id="@+id/start_endless_game_button"
+         android:layout_height="50px"
+         android:layout_width="150px"
+         android:text="@string/endless_game_button_label"
+         android:layout_gravity="center_horizontal"
+         android:onClick="startEndlessGame"
+         android:layout_marginTop="25px"
+         android:textColor="#FFFFFF"
+         android:background="@drawable/game_button_selector"/>
+
+    <Button
+         android:id="@+id/how_to_play_button"
+         android:layout_height="50px"
+         android:layout_width="150px"
+         android:layout_marginTop="25px"
+         android:text="@string/how_to_play_button_label"
+         android:layout_gravity="center_horizontal"
+         android:onClick="loadHowToPlay"
+         android:textColor="#FFFFFF"
+         android:background="@drawable/game_button_selector" />
+</LinearLayout>

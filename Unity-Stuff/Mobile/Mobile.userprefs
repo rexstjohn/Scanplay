@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js">
+    <Files>
+      <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="67" Column="59" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/ThirdPersonController.js" Line="278" Column="20" />
+      <File FileName="Assets/Standard Assets (Mobile)/Scripts/RollABall.js" Line="1" Column="1" />
+      <File FileName="Assets/Game/SlingShotController.js" Line="73" Column="2" />
+      <File FileName="Assets/TouchMove.js" Line="5" Column="37" />
+      <File FileName="Assets/NewBehaviourScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Game/movetouch.js" Line="1" Column="1" />
+      <File FileName="Assets/Game/CameraLookAt.js" Line="1" Column="1" />
+      <File FileName="Assets/printTouches.js" Line="10" Column="2" />
+      <File FileName="Assets/Standard Assets (Mobile)/Scripts/Joystick.js" Line="1" Column="1" />
+      <File FileName="Assets/ShufflePuckController.js" Line="6" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rexstjohn/Mobile/Assets/Game/SlingShotController.js" line="67" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

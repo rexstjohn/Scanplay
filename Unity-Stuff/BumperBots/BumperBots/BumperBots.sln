@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+
+Project("{9E890950-43C2-8ABD-3BF1-7C613F064CD1}") = "BumperBots", "Assembly-CSharp-firstpass.csproj", "{AC12362C-CC30-590B-1778-9852FFC1ABD8}"
+EndProject
+Project("{9E890950-43C2-8ABD-3BF1-7C613F064CD1}") = "BumperBots", "Assembly-UnityScript-firstpass.unityproj", "{6E56CE34-1AF4-4BA6-F4C5-496AA034A515}"
+EndProject
+Project("{9E890950-43C2-8ABD-3BF1-7C613F064CD1}") = "BumperBots", "Assembly-UnityScript.unityproj", "{181DDA0B-D2C7-1B4D-3270-9E72FA047CC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC12362C-CC30-590B-1778-9852FFC1ABD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC12362C-CC30-590B-1778-9852FFC1ABD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC12362C-CC30-590B-1778-9852FFC1ABD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC12362C-CC30-590B-1778-9852FFC1ABD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E56CE34-1AF4-4BA6-F4C5-496AA034A515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E56CE34-1AF4-4BA6-F4C5-496AA034A515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E56CE34-1AF4-4BA6-F4C5-496AA034A515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E56CE34-1AF4-4BA6-F4C5-496AA034A515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181DDA0B-D2C7-1B4D-3270-9E72FA047CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181DDA0B-D2C7-1B4D-3270-9E72FA047CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181DDA0B-D2C7-1B4D-3270-9E72FA047CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181DDA0B-D2C7-1B4D-3270-9E72FA047CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

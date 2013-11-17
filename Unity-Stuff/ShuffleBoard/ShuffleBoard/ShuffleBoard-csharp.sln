@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+
+Project("{6AF89317-A61D-2EC2-2E5F-C6B62637B14C}") = "ShuffleBoard", "Assembly-CSharp-firstpass-vs.csproj", "{9C62CD95-2A5A-C4A9-D352-30143F115A8B}"
+EndProject
+Project("{6AF89317-A61D-2EC2-2E5F-C6B62637B14C}") = "ShuffleBoard", "Assembly-CSharp-vs.csproj", "{9E19B523-8F39-2938-B2E7-D50FA2E5207F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C62CD95-2A5A-C4A9-D352-30143F115A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C62CD95-2A5A-C4A9-D352-30143F115A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C62CD95-2A5A-C4A9-D352-30143F115A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C62CD95-2A5A-C4A9-D352-30143F115A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E19B523-8F39-2938-B2E7-D50FA2E5207F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E19B523-8F39-2938-B2E7-D50FA2E5207F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E19B523-8F39-2938-B2E7-D50FA2E5207F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E19B523-8F39-2938-B2E7-D50FA2E5207F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	
+EndGlobal

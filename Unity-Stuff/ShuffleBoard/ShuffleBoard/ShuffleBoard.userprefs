@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Rubberband/RubberBandLaunchController.js">
+    <Files>
+      <File FileName="Assets/Slingshot/CreateSlingShot.js" Line="4" Column="2" />
+      <File FileName="Assets/Elastic Shuffleboard Example/ForceLineToShufflePuck.js" Line="1" Column="1" />
+      <File FileName="Assets/Elastic Shuffleboard Example/DrawLineToMouse.js" Line="30" Column="3" />
+      <File FileName="Assets/Standard Assets/Scripts/General Scripts/DragRigidbody.js" Line="85" Column="2" />
+      <File FileName="Assets/Standard Assets/Scripts/Camera Scripts/SmoothFollow.js" Line="55" Column="53" />
+      <File FileName="Assets/Elastic Shuffleboard Example/SlingShotScript.js" Line="109" Column="2" />
+      <File FileName="Assets/Shuffleboard Example/CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets/Elastic Shuffleboard Example/FirePuck.js" Line="9" Column="2" />
+      <File FileName="Assets/Rubberband/RubberBandLaunchController.js" Line="51" Column="19" />
+      <File FileName="Assets/Slingshot/DrawLineToImpact.js" Line="33" Column="87" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

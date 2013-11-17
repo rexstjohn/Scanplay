@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/you_lose_linear_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@drawable/dark_background"
+        >
+
+
+    <TextView
+         android:id="@+id/you_lose_text"
+         android:layout_height="60px"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="40px"
+         android:layout_marginTop="25px"
+         android:gravity="center_horizontal"
+         android:shadowColor="#2E8B57"
+         android:shadowRadius="5"
+         android:shadowDx="3"
+         android:shadowDy="3"
+         android:text="@string/you_lose_text"
+        />
+
+    <TextView
+         android:id="@+id/you_lose_help_label"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="25px"
+         android:layout_marginTop="25px"
+         android:gravity="center_horizontal"
+         android:shadowColor="#2E8B57"
+         android:shadowRadius="5"
+         android:shadowDx="3"
+         android:shadowDy="3"
+         android:text="@string/you_lose_help_text"
+        />
+
+
+    <TextView
+         android:id="@+id/your_score_label"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:textColor="#FFFFFF"
+         android:textSize="25px"
+         android:layout_marginTop="15px"
+         android:gravity="center_horizontal"
+         android:shadowColor="#2E8B57"
+         android:shadowRadius="5"
+         android:shadowDx="3"
+         android:shadowDy="3"
+        />
+
+    <Button
+         android:id="@+id/you_lose_ok_button"
+         android:layout_height="50px"
+         android:layout_width="125px"
+         android:text="@string/you_lose_button_label"
+         android:layout_gravity="center_horizontal"
+         android:onClick="backToMainMenu"
+         android:layout_marginTop="80px"
+         android:textColor="#FFFFFF"
+         android:background="@drawable/game_button_selector"/>
+
+</LinearLayout>
