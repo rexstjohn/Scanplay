@@ -19,7 +19,7 @@
 
 @implementation SPQuestionTableViewController
 
-NSInteger const kPageSize = 10;
+NSInteger const kPageSize = 3;
 
 - (void)viewDidLoad
 {
@@ -109,7 +109,12 @@ NSInteger const kPageSize = 10;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.titleLabel.text = @"Get More";
     [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(0,0,44.0f,100.0f)];
     return button;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 44.0f;
 }
 
 #pragma mark - Table view data source
