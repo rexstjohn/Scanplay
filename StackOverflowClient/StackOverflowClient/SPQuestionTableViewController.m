@@ -11,6 +11,7 @@
 #import "SPStackOverflowQuestion.h"
 #import "SPAnswerTableViewController.h"
 #import <CoreText/CoreText.h>
+#import "UITableViewCell+StackOverflowQuestionBinding.h"
 
 @interface SPQuestionTableViewController ()
 @property(nonatomic,strong) SPStackOverflowNetworkingEngine *networkingEngine;
@@ -183,34 +184,10 @@ NSInteger const kPageSize = 3;
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Populate fields.
+    // Example application of how a category binding method is used to seperate concerns.
+    // We don't want view controllers depending directly on a given model.
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
-    
-    UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
-    titleLabel.text = [NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title];
-    
-    UITextView *bodyTextView = (UITextView*)[cell viewWithTag:11];
-    bodyTextView.text = question.body;
-    
-    UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
-    NSString *isAnswered = (question.hasAcceptedAnswer == YES)?@"YES":@"NO";
-    detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
-    [detailsLabel setBackgroundColor:[UIColor whiteColor]];
-    
-    // Example exclusion zone.
-    UIImageView *imageView = (UIImageView*)[cell viewWithTag:13];
-    UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(imageView.center.x-10.0f, imageView.center.y-80.0f)
-                                   radius:(MAX(imageView.frame.size.width, imageView.frame.size.height) * 0.5 + 20.0f)
-                               startAngle:-180.0f
-                                 endAngle:180.0f
-                                clockwise:YES];
-    bodyTextView.textContainer.exclusionPaths  = @[exclusionPath];
-    
-    // Apply theme.
-    [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
-    [[SPThemeResolver theme] themeTitleLabel:titleLabel];
-    [[SPThemeResolver theme] themeBodyLabel:detailsLabel]; 
-    [[SPThemeResolver theme] themeBodyTextView:bodyTextView];
+    [cell bind:question atIndexPath:indexPath];
     
     return cell;
 }

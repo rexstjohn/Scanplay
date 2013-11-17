@@ -18,6 +18,8 @@
 		51A6A45C18386F3F00AB58E5 /* SPDefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6A45A18386F3F00AB58E5 /* SPDefaultTheme.m */; };
 		51A6A45F18386FC200AB58E5 /* SPThemeResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6A45E18386FC200AB58E5 /* SPThemeResolver.m */; };
 		51A6A46018386FC200AB58E5 /* SPThemeResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6A45E18386FC200AB58E5 /* SPThemeResolver.m */; };
+		51A6A4631838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6A4621838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m */; };
+		51A6A4641838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A6A4621838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m */; };
 		51B09AAD1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AB11838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
@@ -76,6 +78,8 @@
 		51A6A45A18386F3F00AB58E5 /* SPDefaultTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPDefaultTheme.m; path = StackOverflowClient/SPDefaultTheme.m; sourceTree = "<group>"; };
 		51A6A45D18386FC200AB58E5 /* SPThemeResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPThemeResolver.h; path = StackOverflowClient/SPThemeResolver.h; sourceTree = "<group>"; };
 		51A6A45E18386FC200AB58E5 /* SPThemeResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPThemeResolver.m; path = StackOverflowClient/SPThemeResolver.m; sourceTree = "<group>"; };
+		51A6A4611838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+StackOverflowQuestionBinding.h"; path = "StackOverflowClient/UITableViewCell+StackOverflowQuestionBinding.h"; sourceTree = "<group>"; };
+		51A6A4621838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+StackOverflowQuestionBinding.m"; path = "StackOverflowClient/UITableViewCell+StackOverflowQuestionBinding.m"; sourceTree = "<group>"; };
 		51B09AAB1838276C00739B13 /* NSString+StripHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StripHTML.h"; path = "StackOverflowClient/NSString+StripHTML.h"; sourceTree = "<group>"; };
 		51B09AAC1838276C00739B13 /* NSString+StripHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTML.m"; path = "StackOverflowClient/NSString+StripHTML.m"; sourceTree = "<group>"; };
 		51B09AAF1838333600739B13 /* SPModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPModelObject.h; path = StackOverflowClient/SPModelObject.h; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				51B09AAC1838276C00739B13 /* NSString+StripHTML.m */,
 				51B09AB7183844FB00739B13 /* SPStackOverflowQuestion+JSON.h */,
 				51B09AB8183844FB00739B13 /* SPStackOverflowQuestion+JSON.m */,
+				51A6A4611838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.h */,
+				51A6A4621838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				51B09AAD1838276C00739B13 /* NSString+StripHTML.m in Sources */,
 				51A6A45F18386FC200AB58E5 /* SPThemeResolver.m in Sources */,
 				51E984361836E59F00D6E882 /* SPStackOverflowQuestion.m in Sources */,
+				51A6A4631838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m in Sources */,
 				510163B71836FBF800499F9B /* SPQuestionTableViewController.m in Sources */,
 				51FDE62D1836CB0800782095 /* SPAppDelegate.m in Sources */,
 				51A6A45B18386F3F00AB58E5 /* SPDefaultTheme.m in Sources */,
@@ -488,6 +495,7 @@
 				519BF06418374F690016C968 /* SPDynamicTableViewViewController.m in Sources */,
 				51A6A45C18386F3F00AB58E5 /* SPDefaultTheme.m in Sources */,
 				51A6A46018386FC200AB58E5 /* SPThemeResolver.m in Sources */,
+				51A6A4641838816700AB58E5 /* UITableViewCell+StackOverflowQuestionBinding.m in Sources */,
 				51E9842F1836D53E00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */,
 				51B09AB21838333600739B13 /* SPModelObject.m in Sources */,
 				51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */,
