@@ -41,7 +41,9 @@
                                  @"site":@"stackoverflow",
                                  @"order":@"desc",
                                  @"sort":@"activity",
-                                 @"filter":@"!-.CabyPaznWF"};
+                                 @"filter":@"!-.CabyPaznWF",
+                                 @"page":[[NSNumber numberWithInteger:1] stringValue],
+                                 @"pagesize":[[NSNumber numberWithInteger:3] stringValue]};
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
         XCTAssertNotNil(questions);
