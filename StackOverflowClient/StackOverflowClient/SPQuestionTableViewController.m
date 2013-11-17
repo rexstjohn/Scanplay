@@ -194,6 +194,7 @@ NSInteger const kPageSize = 3;
     UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
     NSString *isAnswered = (question.hasAcceptedAnswer == YES)?@"YES":@"NO";
     detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
+    [detailsLabel setBackgroundColor:[UIColor whiteColor]];
     
     //
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:13];
