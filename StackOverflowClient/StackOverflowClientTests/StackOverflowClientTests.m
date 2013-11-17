@@ -45,6 +45,7 @@
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
         XCTAssertNotNil(questions);
+        NSLog(@"Questions returned with length: %i", questions.count);
     };
     
     
@@ -69,6 +70,7 @@
                                  @"filter":@"withbody"};
     StackOverflowQuestionResponseBlock response = ^(SPStackOverflowQuestion *question){
         XCTAssertNotNil(question);
+        NSLog(@"Question returned with body %@", question.body);
     };
     
     
@@ -77,7 +79,7 @@
     };
     
     
-    [self.networkingEngine questionWithQuestionId:@1
+    [self.networkingEngine questionWithQuestionId:@20025570
                                    withParameters:parameters
                                 completionHandler:response
                                      errorHandler:errorBlock];

@@ -15,6 +15,8 @@
 		51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AB11838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
 		51B09AB21838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
+		51B09AB9183844FB00739B13 /* SPStackOverflowQuestion+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB8183844FB00739B13 /* SPStackOverflowQuestion+JSON.m */; };
+		51B09ABA183844FB00739B13 /* SPStackOverflowQuestion+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB8183844FB00739B13 /* SPStackOverflowQuestion+JSON.m */; };
 		51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E9842F1836D53E00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */; };
 		51E984331836E53400D6E882 /* NSArray+StackOverflowQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E984321836E53400D6E882 /* NSArray+StackOverflowQuestions.m */; };
@@ -64,6 +66,8 @@
 		51B09AAC1838276C00739B13 /* NSString+StripHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTML.m"; path = "StackOverflowClient/NSString+StripHTML.m"; sourceTree = "<group>"; };
 		51B09AAF1838333600739B13 /* SPModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPModelObject.h; path = StackOverflowClient/SPModelObject.h; sourceTree = "<group>"; };
 		51B09AB01838333600739B13 /* SPModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPModelObject.m; path = StackOverflowClient/SPModelObject.m; sourceTree = "<group>"; };
+		51B09AB7183844FB00739B13 /* SPStackOverflowQuestion+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SPStackOverflowQuestion+JSON.h"; path = "StackOverflowClient/SPStackOverflowQuestion+JSON.h"; sourceTree = "<group>"; };
+		51B09AB8183844FB00739B13 /* SPStackOverflowQuestion+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPStackOverflowQuestion+JSON.m"; path = "StackOverflowClient/SPStackOverflowQuestion+JSON.m"; sourceTree = "<group>"; };
 		51E984281836D12F00D6E882 /* SPStackOverflowNetworkingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPStackOverflowNetworkingEngine.h; path = StackOverflowClient/SPStackOverflowNetworkingEngine.h; sourceTree = "<group>"; };
 		51E984291836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPStackOverflowNetworkingEngine.m; path = StackOverflowClient/SPStackOverflowNetworkingEngine.m; sourceTree = "<group>"; };
 		51E984311836E53400D6E882 /* NSArray+StackOverflowQuestions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+StackOverflowQuestions.h"; path = "StackOverflowClient/NSArray+StackOverflowQuestions.h"; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				51E984321836E53400D6E882 /* NSArray+StackOverflowQuestions.m */,
 				51B09AAB1838276C00739B13 /* NSString+StripHTML.h */,
 				51B09AAC1838276C00739B13 /* NSString+StripHTML.m */,
+				51B09AB7183844FB00739B13 /* SPStackOverflowQuestion+JSON.h */,
+				51B09AB8183844FB00739B13 /* SPStackOverflowQuestion+JSON.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				51E9842A1836D12F00D6E882 /* SPStackOverflowNetworkingEngine.m in Sources */,
 				51E984401836F73C00D6E882 /* SPStackOverflowAnswer.m in Sources */,
 				51B09AB11838333600739B13 /* SPModelObject.m in Sources */,
+				51B09AB9183844FB00739B13 /* SPStackOverflowQuestion+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +456,7 @@
 				51B09AB21838333600739B13 /* SPModelObject.m in Sources */,
 				51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */,
 				51E9843F1836F1F400D6E882 /* SPStackOverflowAnswer.m in Sources */,
+				51B09ABA183844FB00739B13 /* SPStackOverflowQuestion+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
