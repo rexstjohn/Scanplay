@@ -183,6 +183,7 @@ NSInteger const kPageSize = 3;
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    // Populate fields.
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
     
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
@@ -196,7 +197,7 @@ NSInteger const kPageSize = 3;
     detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
     [detailsLabel setBackgroundColor:[UIColor whiteColor]];
     
-    //
+    // Example exclusion zone.
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:13];
     UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(imageView.center.x-10.0f, imageView.center.y-80.0f)
                                    radius:(MAX(imageView.frame.size.width, imageView.frame.size.height) * 0.5 + 20.0f)
