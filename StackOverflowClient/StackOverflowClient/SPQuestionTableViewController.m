@@ -69,15 +69,6 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Alert View Delegate
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -122,6 +113,7 @@
          
          SPAnswerTableViewController *answerTable = (SPAnswerTableViewController*)[segue destinationViewController];
          answerTable.question = question;
+         answerTable.title = @"Answer";
      }
      
      
