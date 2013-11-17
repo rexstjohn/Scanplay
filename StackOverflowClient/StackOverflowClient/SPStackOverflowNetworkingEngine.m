@@ -16,7 +16,7 @@
                               completionHandler:(StackOverflowQuestionsResponseBlock)completion
                                    errorHandler:(MKNKErrorBlock)errorBlock {
     
-    NSString *queryPath = @"/2.1/search?";
+    static NSString *queryPath = @"/2.1/search?";
     MKNetworkOperation *op = [self operationWithPath:queryPath
                                               params:parameters
                                           httpMethod:@"GET"];
@@ -54,7 +54,7 @@
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
      {
          NSError *error = nil;
-         SPStackOverflowQuestion *value;// = [NSArray questionsArrayFromJSON:[completedOperation responseData] error:&error];
+         SPStackOverflowQuestion *value;
          
          if(error == nil){
              completion(value);
