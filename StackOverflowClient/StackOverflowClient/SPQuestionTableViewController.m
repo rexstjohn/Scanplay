@@ -50,10 +50,9 @@ NSInteger const kPageSize = 3;
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTitle:@"Get More Questions" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     [aView addSubview:button];
     [button setFrame:aView.frame];
-    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [[SPThemeResolver theme] themeQuestionFooterButton:button];
     self.tableView.tableFooterView = aView;
 }
 
@@ -180,6 +179,8 @@ NSInteger const kPageSize = 3;
     UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
     NSString *isAnswered = (question.hasAcceptedAnswer == YES)?@"YES":@"NO";
     detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
+    
+    [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
     
     return cell;
 }

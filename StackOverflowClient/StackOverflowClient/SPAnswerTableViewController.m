@@ -106,11 +106,10 @@
     if(indexPath.section == 0){
         titleLabel.text = self.question.title;
         bodyLabel.text = self.question.body;
-        
-        cell.backgroundColor = [UIColor lightGrayColor];
+        [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
     } else if (indexPath.section == 1){
-        NSString *answerText = [self.bodyTextArray objectAtIndex:indexPath.row+1];
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
+        NSString *answerText = answer.body;
         NSString *accepted = (answer.is_accepted == YES)?@"YES":@"NO";
         titleLabel.text = [NSString stringWithFormat:@"Answer #%i, Accepted: %@", indexPath.row+1, accepted];
         bodyLabel.text = answerText;
@@ -118,7 +117,7 @@
         if(answer.is_accepted == YES){
             cell.backgroundColor = [UIColor greenColor];
         } else{
-            cell.backgroundColor = [UIColor whiteColor];
+            [[SPThemeResolver theme] themeAnswerTableViewCell:cell];
         }
     } else {
         titleLabel.text = @"This question has no answer.";
