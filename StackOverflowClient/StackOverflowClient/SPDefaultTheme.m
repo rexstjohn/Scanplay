@@ -31,4 +31,8 @@
     label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
+- (void)themeBodyTextView:(UITextView*)textView{
+    textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+}
+
 @end

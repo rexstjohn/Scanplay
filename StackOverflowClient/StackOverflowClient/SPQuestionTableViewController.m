@@ -188,8 +188,8 @@ NSInteger const kPageSize = 3;
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
     titleLabel.text = [NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title];
     
-    UITextView *bodyLabel = (UITextView*)[cell viewWithTag:11];
-    bodyLabel.text = question.body;
+    UITextView *bodyTextView = (UITextView*)[cell viewWithTag:11];
+    bodyTextView.text = question.body;
     
     UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
     NSString *isAnswered = (question.hasAcceptedAnswer == YES)?@"YES":@"NO";
@@ -197,17 +197,18 @@ NSInteger const kPageSize = 3;
     
     //
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:13];
-    UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(imageView.center.x, imageView.center.y-50.0f)
-                                   radius:(MAX(imageView.frame.size.width, imageView.frame.size.height) * 0.5 + 5.0f)
+    UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(imageView.center.x-10.0f, imageView.center.y-80.0f)
+                                   radius:(MAX(imageView.frame.size.width, imageView.frame.size.height) * 0.5 + 20.0f)
                                startAngle:-180.0f
                                  endAngle:180.0f
                                 clockwise:YES];
-    bodyLabel.textContainer.exclusionPaths  = @[exclusionPath];
+    bodyTextView.textContainer.exclusionPaths  = @[exclusionPath];
     
     // Apply theme.
     [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
     [[SPThemeResolver theme] themeTitleLabel:titleLabel];
-    [[SPThemeResolver theme] themeBodyLabel:detailsLabel];
+    [[SPThemeResolver theme] themeBodyLabel:detailsLabel]; 
+    [[SPThemeResolver theme] themeBodyTextView:bodyTextView];
     
     return cell;
 }

@@ -16,6 +16,7 @@
 - (void)themeQuestionFooterButton:(UIButton*)button;
 - (void)themeTitleLabel:(UILabel*)label;
 - (void)themeBodyLabel:(UILabel*)label;
+- (void)themeBodyTextView:(UITextView*)textView;
 @optional
 // Theming UITableView
 - (void)themeTableView:(UITableView*)tableView;
