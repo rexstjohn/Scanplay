@@ -10,6 +10,7 @@
 #import "SPStackOverflowNetworkingEngine.h"
 #import "SPStackOverflowQuestion.h"
 #import "SPAnswerTableViewController.h"
+#import <CoreText/CoreText.h>
 
 @interface SPQuestionTableViewController ()
 @property(nonatomic,strong) SPStackOverflowNetworkingEngine *networkingEngine;
@@ -148,14 +149,16 @@ NSInteger const kPageSize = 3;
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
     UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     
-    UIColor* textColor = [UIColor colorWithRed:0.175f green:0.458f blue:0.831f alpha:1.0f];
-    NSDictionary *attrs = @{ NSForegroundColorAttributeName : textColor,
+    UIColor* textColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
+    NSDictionary *attrs = @{
                              NSFontAttributeName : font,
                              NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
+    NSDictionary *colorAttrs = @{ NSForegroundColorAttributeName : textColor};
     
-    NSAttributedString* attrString = [[NSAttributedString alloc]
+    NSMutableAttributedString* attrString = [[NSMutableAttributedString alloc]
                                       initWithString:[NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title]
                                       attributes:attrs];
+    [attrString addAttributes:colorAttrs range:NSMakeRange(0, [[NSNumber numberWithInt:indexPath.row+1] stringValue].length+1)];
     
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
     titleLabel.attributedText = attrString;

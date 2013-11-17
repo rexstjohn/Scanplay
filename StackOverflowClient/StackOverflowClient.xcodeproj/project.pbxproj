@@ -11,6 +11,9 @@
 		510163BA1836FDD800499F9B /* SPAnswerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510163B91836FDD800499F9B /* SPAnswerTableViewController.m */; };
 		519BF06318374F690016C968 /* SPDynamicTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BF06218374F690016C968 /* SPDynamicTableViewViewController.m */; };
 		519BF06418374F690016C968 /* SPDynamicTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519BF06218374F690016C968 /* SPDynamicTableViewViewController.m */; };
+		51A6A4501838611E00AB58E5 /* stackexchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6A44F1838611E00AB58E5 /* stackexchange.png */; };
+		51A6A4511838611E00AB58E5 /* stackexchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A6A44F1838611E00AB58E5 /* stackexchange.png */; };
+		51A6A453183861F600AB58E5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A6A452183861F600AB58E5 /* CoreText.framework */; };
 		51B09AAD1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AAE1838276C00739B13 /* NSString+StripHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AAC1838276C00739B13 /* NSString+StripHTML.m */; };
 		51B09AB11838333600739B13 /* SPModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B09AB01838333600739B13 /* SPModelObject.m */; };
@@ -62,6 +65,8 @@
 		510163B91836FDD800499F9B /* SPAnswerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAnswerTableViewController.m; sourceTree = "<group>"; };
 		519BF06118374F690016C968 /* SPDynamicTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDynamicTableViewViewController.h; sourceTree = "<group>"; };
 		519BF06218374F690016C968 /* SPDynamicTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDynamicTableViewViewController.m; sourceTree = "<group>"; };
+		51A6A44F1838611E00AB58E5 /* stackexchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stackexchange.png; sourceTree = "<group>"; };
+		51A6A452183861F600AB58E5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		51B09AAB1838276C00739B13 /* NSString+StripHTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StripHTML.h"; path = "StackOverflowClient/NSString+StripHTML.h"; sourceTree = "<group>"; };
 		51B09AAC1838276C00739B13 /* NSString+StripHTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTML.m"; path = "StackOverflowClient/NSString+StripHTML.m"; sourceTree = "<group>"; };
 		51B09AAF1838333600739B13 /* SPModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPModelObject.h; path = StackOverflowClient/SPModelObject.h; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A6A453183861F600AB58E5 /* CoreText.framework in Frameworks */,
 				51FDE61F1836CB0800782095 /* CoreGraphics.framework in Frameworks */,
 				51FDE6211836CB0800782095 /* UIKit.framework in Frameworks */,
 				51FDE61D1836CB0800782095 /* Foundation.framework in Frameworks */,
@@ -128,6 +134,7 @@
 		51E984241836D01500D6E882 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51A6A44F1838611E00AB58E5 /* stackexchange.png */,
 				51FDE6571836CC4C00782095 /* Podfile */,
 				51FDE63A1836CB0800782095 /* Images.xcassets */,
 				51E984251836D01C00D6E882 /* Storyboards */,
@@ -207,6 +214,7 @@
 		51FDE61B1836CB0800782095 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51A6A452183861F600AB58E5 /* CoreText.framework */,
 				51FDE61C1836CB0800782095 /* Foundation.framework */,
 				51FDE61E1836CB0800782095 /* CoreGraphics.framework */,
 				51FDE6201836CB0800782095 /* UIKit.framework */,
@@ -344,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FDE6581836CC4C00782095 /* Podfile in Resources */,
+				51A6A4501838611E00AB58E5 /* stackexchange.png in Resources */,
 				51FDE6331836CB0800782095 /* Main_iPad.storyboard in Resources */,
 				51FDE63B1836CB0800782095 /* Images.xcassets in Resources */,
 				51FDE6301836CB0800782095 /* Main_iPhone.storyboard in Resources */,
@@ -356,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51FDE64C1836CB0800782095 /* InfoPlist.strings in Resources */,
+				51A6A4511838611E00AB58E5 /* stackexchange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
