@@ -23,4 +23,12 @@
     [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
 }
 
+- (void)themeTitleLabel:(UILabel*)label{
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+}
+
+- (void)themeBodyLabel:(UILabel*)label{
+    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+}
+
 @end

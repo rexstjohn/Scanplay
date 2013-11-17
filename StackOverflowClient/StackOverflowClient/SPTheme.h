@@ -14,6 +14,8 @@
 - (void)themeQuestionTableViewCell:(UITableViewCell*)cell;
 - (void)themeAnswerTableViewCell:(UITableViewCell*)cell;
 - (void)themeQuestionFooterButton:(UIButton*)button;
+- (void)themeTitleLabel:(UILabel*)label;
+- (void)themeBodyLabel:(UILabel*)label;
 @optional
 // Theming UITableView
 - (void)themeTableView:(UITableView*)tableView;

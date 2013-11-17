@@ -181,6 +181,9 @@ NSInteger const kPageSize = 3;
     detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
     
     [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
+    [[SPThemeResolver theme] themeTitleLabel:titleLabel];
+    [[SPThemeResolver theme] themeBodyLabel:bodyLabel];
+    [[SPThemeResolver theme] themeBodyLabel:detailsLabel];
     
     return cell;
 }

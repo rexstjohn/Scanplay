@@ -123,7 +123,9 @@
         titleLabel.text = @"This question has no answer.";
         bodyLabel.text = @"";
     }
-    
+     
+    [[SPThemeResolver theme] themeTitleLabel:titleLabel];
+    [[SPThemeResolver theme] themeBodyLabel:bodyLabel];
     return cell;
 }
 
