@@ -17,7 +17,7 @@
                               completionHandler:(StackOverflowQuestionsResponseBlock)completion
                                    errorHandler:(MKNKErrorBlock)errorBlock {
     
-    static NSString *queryPath = @"/2.1/search?";
+    static NSString *queryPath = @"/2.1/search";
     MKNetworkOperation *op = [self operationWithPath:queryPath
                                               params:parameters
                                           httpMethod:@"GET"];
@@ -47,7 +47,7 @@
                             completionHandler:(StackOverflowQuestionResponseBlock)completion
                                  errorHandler:(MKNKErrorBlock)errorBlock{
     
-    NSString *queryPath = [NSString stringWithFormat:@"/2.1/questions/%i?", [questionId integerValue]];
+    NSString *queryPath = [NSString stringWithFormat:@"/2.1/questions/%i", [questionId integerValue]];
     MKNetworkOperation *op = [self operationWithPath:queryPath
                                               params:parameters
                                           httpMethod:@"GET"];

@@ -13,8 +13,9 @@
 
 @interface SPQuestionTableViewController ()
 @property(nonatomic,strong) SPStackOverflowNetworkingEngine *networkingEngine;
-@property(nonatomic,strong) NSArray *questions;
+@property(nonatomic,strong) NSMutableArray *questions;
 @property(nonatomic,assign) NSUInteger currentPageIndex;
+@property(nonatomic,assign) NSUInteger rowCount;
 @end
 
 @implementation SPQuestionTableViewController
@@ -42,7 +43,13 @@ NSInteger const kPageSize = 3;
                                  @"pagesize":[[NSNumber numberWithInteger:kPageSize] stringValue]};
     
     StackOverflowQuestionsResponseBlock response = ^(NSArray *questions){
-        self.questions = questions;
+        self.rowCount = self.questions.count + questions.count;
+        if(self.questions.count > 0){
+            [self.questions addObjectsFromArray:questions];
+        } else {
+            self.questions = [NSMutableArray arrayWithArray:questions];
+        }
+        [self.tableView reloadData];
     };
     
     
@@ -82,7 +89,7 @@ NSInteger const kPageSize = 3;
 
 - (void) setQuestions:(NSArray *)questions{
     
-    _questions = questions;
+    _questions = [questions mutableCopy];
     __weak SPQuestionTableViewController *weakSelf= self;
     __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
     __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
@@ -106,11 +113,14 @@ NSInteger const kPageSize = 3;
 
 - (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
-    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0,0,44.0f,100.0f)];
+    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0,0,self.tableView.frame.size.width,44.0f)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.titleLabel.text = @"Get More";
+    [button setTitle:@"Get More Questions" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(didTapGetMoreButton:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     [aView addSubview:button];
+    [button setFrame:aView.frame];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
     return aView;
 }
 
@@ -127,7 +137,7 @@ NSInteger const kPageSize = 3;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.questions.count;
+    return self.rowCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -136,8 +146,19 @@ NSInteger const kPageSize = 3;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     SPStackOverflowQuestion *question = [self.questions objectAtIndex:indexPath.row];
+    UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    
+    UIColor* textColor = [UIColor colorWithRed:0.175f green:0.458f blue:0.831f alpha:1.0f];
+    NSDictionary *attrs = @{ NSForegroundColorAttributeName : textColor,
+                             NSFontAttributeName : font,
+                             NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
+    
+    NSAttributedString* attrString = [[NSAttributedString alloc]
+                                      initWithString:[NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title]
+                                      attributes:attrs];
+    
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
-    titleLabel.text = question.title;
+    titleLabel.attributedText = attrString;
     
     UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
     bodyLabel.text = question.body;
