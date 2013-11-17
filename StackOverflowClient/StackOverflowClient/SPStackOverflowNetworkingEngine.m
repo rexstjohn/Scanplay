@@ -9,6 +9,7 @@
 #import "SPStackOverflowNetworkingEngine.h" 
 #import "NSArray+StackOverflowQuestions.h"
 #import "SPStackOverflowQuestion.h"
+#import "SPStackOverflowQuestion+JSON.h"
 
 @implementation SPStackOverflowNetworkingEngine
 
@@ -54,7 +55,7 @@
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
      {
          NSError *error = nil;
-         SPStackOverflowQuestion *value;
+         SPStackOverflowQuestion *value = [SPStackOverflowQuestion questionsFromJSON:[completedOperation responseData] error:&error];
          
          if(error == nil){
              completion(value);
