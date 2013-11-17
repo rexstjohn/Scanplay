@@ -22,7 +22,6 @@
 - (void)themeTableCellTitle:(UILabel*)titleLabel;
 - (void)themeTableCellSubTitle:(UILabel*)subTitleLabel;
 // Theming general UI Controls
-- (void)themeTitleLabel:(UILabel*)label;
 - (void)themeProfileImage:(UIImageView*)imageView;
 - (void)themeViewBackground:(UIView*)view;
 @end

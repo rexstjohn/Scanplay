@@ -29,12 +29,13 @@ NSInteger const kPageSize = 3;
 {
     [super viewDidLoad];
     
+    // Networking.
     self.networkingEngine = [[SPStackOverflowNetworkingEngine alloc] initWithHostName:@"api.stackexchange.com"];
     [self.networkingEngine useCache];
     self.currentPageIndex = 1;
     [self getQuestionsByPageIndex:self.currentPageIndex];
     
-    // Loading view
+    // Loading view.
     self.activityView = [[UIView alloc]initWithFrame:CGRectMake(0,0,200,200)];
     [self.activityView setBackgroundColor:[UIColor lightGrayColor]];
     self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -54,7 +55,22 @@ NSInteger const kPageSize = 3;
     [button setFrame:aView.frame];
     [[SPThemeResolver theme] themeQuestionFooterButton:button];
     self.tableView.tableFooterView = aView;
+    
+    // Content size changes
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(preferredContentSizeChanged:)
+     name:UIContentSizeCategoryDidChangeNotification
+     object:nil];
 }
+
+#pragma mark - Content Size Changes
+
+- (void)preferredContentSizeChanged:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
+
+#pragma mark - Question fetching and loading
 
 -(void)getQuestionsByPageIndex:(NSUInteger)pageIndex{
     
@@ -78,7 +94,6 @@ NSInteger const kPageSize = 3;
         // Force the questions data to reload itself.
         self.questions = _questions;
     };
-    
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
         [self toggleLoadingState:NO];
@@ -173,24 +188,32 @@ NSInteger const kPageSize = 3;
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
     titleLabel.text = [NSString stringWithFormat:@"#%i %@",indexPath.row+1,question.title];
     
-    UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
+    UITextView *bodyLabel = (UITextView*)[cell viewWithTag:11];
     bodyLabel.text = question.body;
     
     UILabel *detailsLabel = (UILabel*)[cell viewWithTag:12];
     NSString *isAnswered = (question.hasAcceptedAnswer == YES)?@"YES":@"NO";
     detailsLabel.text = [NSString stringWithFormat:@"Answers: %i Accepted? %@", question.answers.count, isAnswered ];
     
+    //
+    UIImageView *imageView = (UIImageView*)[cell viewWithTag:13];
+    UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(imageView.center.x, imageView.center.y-50.0f)
+                                   radius:(MAX(imageView.frame.size.width, imageView.frame.size.height) * 0.5 + 5.0f)
+                               startAngle:-180.0f
+                                 endAngle:180.0f
+                                clockwise:YES];
+    bodyLabel.textContainer.exclusionPaths  = @[exclusionPath];
+    
+    // Apply theme.
     [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
     [[SPThemeResolver theme] themeTitleLabel:titleLabel];
-    [[SPThemeResolver theme] themeBodyLabel:bodyLabel];
     [[SPThemeResolver theme] themeBodyLabel:detailsLabel];
     
     return cell;
 }
 
  #pragma mark - Navigation
- 
- // In a story board-based application, you will often want to do a little preparation before navigation
+
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
  {
      if([[segue identifier] isEqualToString:@"AnswerSegue"]){
@@ -203,8 +226,6 @@ NSInteger const kPageSize = 3;
          answerTable.question = question;
          answerTable.title = @"Answer";
      }
-     
-     
  }
  
 

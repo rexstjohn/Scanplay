@@ -16,6 +16,25 @@
 
 @implementation SPAnswerTableViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    // Content size changes
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(preferredContentSizeChanged:)
+     name:UIContentSizeCategoryDidChangeNotification
+     object:nil];
+}
+
+#pragma mark - Content Size Changes
+
+- (void)preferredContentSizeChanged:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
+
+#pragma mark - Question fetching and loading
+
 -(void)setQuestion:(SPStackOverflowQuestion*)question{
     _question = question;
     _answers = question.answers;
