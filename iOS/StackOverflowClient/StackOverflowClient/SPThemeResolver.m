@@ -27,12 +27,20 @@ static NSString* const kOtherThemeKey = @"other";
         if([themeName isEqualToString:kDefaultThemeKey]) {
             theme = [[SPDefaultTheme alloc] init];
         } else if([themeName isEqualToString:kOtherThemeKey]) {
-            theme = [[SPDefaultTheme alloc] init];
+            //
         } else {
             //
         }
+        
         [_themes setValue:theme forKey:themeName];
     }
+    
+    // Configure some example appearance selectors.
+    // Use this space to set all appearance configurations.
+    [[UITableView appearance] setSeparatorColor:[UIColor lightGrayColor]];
+    [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [[UITextView appearance] setBackgroundColor:[UIColor clearColor]];
+    
     return theme;
 }
 
