@@ -148,9 +148,8 @@ NSInteger const kPageSize = 3;
     
     _questions = [questions mutableCopy];
     __weak SPQuestionTableViewController *weakSelf= self;
-    
-    __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
-    __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
+    NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
+    NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.questions.count];
     
     [self.questions enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         if ([obj isMemberOfClass:[SPStackOverflowQuestion class]]) {
