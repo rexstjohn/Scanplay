@@ -1,1 +1,1 @@
-Assorted collection of projects I have worked on over the years, a lot of Flex and AS3 utilities and other assorted experiments. 
+Various projects and tutorials and other fun things of that nature in mobile software and whatever I feel like doing next.
