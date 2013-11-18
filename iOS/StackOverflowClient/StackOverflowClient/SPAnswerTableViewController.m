@@ -40,8 +40,8 @@
     _answers = question.answers;
     
     __weak SPAnswerTableViewController *weakSelf= self;
-    __weak NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
-    __weak NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
+    NSMutableArray *bodyTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
+    NSMutableArray *titleTexts = [NSMutableArray arrayWithCapacity:self.answers.count+1];
     
     [titleTexts addObject:question.title];
     [bodyTexts addObject:question.body];
