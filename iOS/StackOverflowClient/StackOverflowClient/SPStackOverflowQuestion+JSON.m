@@ -11,7 +11,7 @@
 
 @implementation SPStackOverflowQuestion (JSON)
 
-+ (SPStackOverflowQuestion *)questionsFromJSON:(NSData *)objectNotation error:(NSError **)error
++ (SPStackOverflowQuestion *)questionFromJSON:(NSData *)objectNotation error:(NSError **)error
 {
     NSError *localError = nil;
     NSDictionary *parsedObject = [NSJSONSerialization JSONObjectWithData:objectNotation options:0 error:&localError];

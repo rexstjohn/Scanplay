@@ -10,6 +10,7 @@
 
 @interface NSString (StripHTML)
 
+// Forcefully strips out HTML text from the question information.
 +(NSString *)stringByStrippingHTMLString:(NSString *)html;
 
 @end

@@ -10,6 +10,7 @@
 
 @interface SPStackOverflowQuestion (JSON)
 
-+ (SPStackOverflowQuestion *)questionsFromJSON:(NSData *)objectNotation error:(NSError **)error;
+// Renders a question from JSON.
++ (SPStackOverflowQuestion *)questionFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end

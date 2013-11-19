@@ -10,6 +10,9 @@
 
 @interface SPDynamicTableViewViewController ()
 
+@property (nonatomic,strong, readwrite) UIFont *fontForTitleLabel;
+@property (nonatomic,strong, readwrite) UIFont *fontForBodyTextView;
+
 @end
 
 @implementation SPDynamicTableViewViewController
@@ -26,8 +29,8 @@
         titleText = [self.titleArray objectAtIndex:indexPath.row];
     }
     
-    CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
-    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:self.fontForBodyTextView constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:self.fontForTitleLabel constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
     return bodyTextSize.height + titleTextSize.height + 100;
 }
 

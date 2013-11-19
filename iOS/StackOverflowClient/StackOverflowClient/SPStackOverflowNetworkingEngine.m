@@ -55,7 +55,7 @@
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation)
      {
          NSError *error = nil;
-         SPStackOverflowQuestion *value = [SPStackOverflowQuestion questionsFromJSON:[completedOperation responseData] error:&error];
+         SPStackOverflowQuestion *value = [SPStackOverflowQuestion questionFromJSON:[completedOperation responseData] error:&error];
          
          if(error == nil){
              completion(value);

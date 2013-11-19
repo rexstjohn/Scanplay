@@ -10,8 +10,16 @@
 
 @interface SPDynamicTableViewViewController : UITableViewController
 
+// Used to calculate the frame used by a text view.
 -(CGSize)frameForText:(NSString*)text sizeWithFont:(UIFont*)font constrainedToSize:(CGSize)size;
 
+// Array of body texts used for sizing the table cells.
 @property(nonatomic,strong) NSArray *bodyTextArray;
+
+// Array of title texts for resizing the table sells.
 @property(nonatomic,strong) NSArray *titleArray;
+
+@property (nonatomic,strong, readonly) UIFont *fontForTitleLabel;
+@property (nonatomic,strong, readonly) UIFont *fontForBodyTextView;
+
 @end

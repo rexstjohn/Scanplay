@@ -10,6 +10,7 @@
 
 @interface NSArray (StackOverflowQuestions)
 
+// Renders JSON into SPStackOverflowQuestion objects.
 + (NSArray *)questionsArrayFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end

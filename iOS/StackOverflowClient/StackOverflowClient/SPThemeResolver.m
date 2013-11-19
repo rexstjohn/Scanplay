@@ -40,6 +40,7 @@ static NSString* const kOtherThemeKey = @"other";
     [[UITableView appearance] setSeparatorColor:[UIColor lightGrayColor]];
     [[UITableViewCell appearance] setSelectionStyle:UITableViewCellSelectionStyleNone];
     [[UITextView appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UIButton appearance] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     return theme;
 }

@@ -20,7 +20,7 @@
 
 - (void)themeQuestionFooterButton:(UIButton*)button{ 
     [button setBackgroundColor:[UIColor lightGrayColor]];
-    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 }
 
 - (void)themeTitleLabel:(UILabel*)label{
@@ -33,6 +33,7 @@
 
 - (void)themeBodyTextView:(UITextView*)textView{
     textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    [textView setBackgroundColor:[UIColor clearColor]];
 }
 
 @end

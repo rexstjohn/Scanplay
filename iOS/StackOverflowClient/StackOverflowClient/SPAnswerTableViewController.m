@@ -90,9 +90,9 @@
         titleText = [self.titleArray objectAtIndex:row];
     }
     
-    CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
-    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:nil constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
-    return bodyTextSize.height + titleTextSize.height + 80;
+    CGSize bodyTextSize = [self frameForText:bodyText sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody] constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    CGSize titleTextSize =[self frameForText:titleText sizeWithFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline] constrainedToSize:CGSizeMake(300.f, CGFLOAT_MAX)];
+    return bodyTextSize.height + titleTextSize.height + 120;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -120,18 +120,18 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     UILabel *titleLabel = (UILabel*)[cell viewWithTag:10];
-    UILabel *bodyLabel = (UILabel*)[cell viewWithTag:11];
+    UITextView *bodyTextView = (UITextView*)[cell viewWithTag:11];
     
     if(indexPath.section == 0){
         titleLabel.text = self.question.title;
-        bodyLabel.text = self.question.body;
+        bodyTextView.text = self.question.body;
         [[SPThemeResolver theme] themeQuestionTableViewCell:cell];
     } else if (indexPath.section == 1){
         SPStackOverflowAnswer *answer = [self.answers objectAtIndex:indexPath.row];
         NSString *answerText = answer.body;
         NSString *accepted = (answer.is_accepted == YES)?@"YES":@"NO";
         titleLabel.text = [NSString stringWithFormat:@"Answer #%i, Accepted: %@", indexPath.row+1, accepted];
-        bodyLabel.text = answerText;
+        bodyTextView.text = answerText;
         
         if(answer.is_accepted == YES){
             cell.backgroundColor = [UIColor greenColor];
@@ -140,11 +140,11 @@
         }
     } else {
         titleLabel.text = @"This question has no answer.";
-        bodyLabel.text = @"";
+        bodyTextView.text = @"";
     }
      
     [[SPThemeResolver theme] themeTitleLabel:titleLabel];
-    [[SPThemeResolver theme] themeBodyLabel:bodyLabel];
+    [[SPThemeResolver theme] themeBodyTextView:bodyTextView];
     return cell;
 }
 
