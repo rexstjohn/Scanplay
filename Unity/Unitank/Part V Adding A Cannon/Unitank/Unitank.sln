@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{A8CA5A3E-46D2-B86B-09B8-520DCB0FDC2D}") = "Unitank", "Assembly-CSharp-vs.csproj", "{9E902FC7-9094-4A7B-E2EE-AF38B2BB1A4F}"
+Project("{A8CA5A3E-46D2-B86B-09B8-520DCB0FDC2D}") = "Unitank", "Assembly-CSharp.csproj", "{9E902FC7-9094-4A7B-E2EE-AF38B2BB1A4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,7 +17,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																			GlobalSection(MonoDevelopProperties) = preSolution
+																												GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
