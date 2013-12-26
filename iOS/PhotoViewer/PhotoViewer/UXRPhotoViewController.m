@@ -119,21 +119,6 @@ CGFloat const kInitialZoomScale = 0.5f;
     self.photoImageView.frame = contentsFrame;
 }
 
-#pragma mark - UIScrollViewDelegate
-
-- (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView{
-    return self.photoImageView;
-}
-
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    // The scroll view has zoomed, so you need to re-center the contents
-    [self centerScrollViewContents];
-}
-
--(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale{
-    [self centerScrollViewContents];
-}
-
 -(void)setCurrentPhotoIndex:(NSInteger)nextPhotoIndex animated:(BOOL)animated{
     
     // Reset the networkOperation.
@@ -161,6 +146,21 @@ CGFloat const kInitialZoomScale = 0.5f;
         [self setPhotoProperties];
     }
     [self toggleLeftRightButtonVisibility];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return self.photoImageView;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    // The scroll view has zoomed, so you need to re-center the contents
+    [self centerScrollViewContents];
+}
+
+-(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale{
+    [self centerScrollViewContents];
 }
 
 #pragma mark - Gestures.

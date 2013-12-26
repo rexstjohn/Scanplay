@@ -49,11 +49,13 @@
         XCTAssertNotNil(questions);
         XCTAssertTrue(questions.count > 0);
         NSLog(@"Questions returned with length: %i", questions.count);
+        EndBlock();
     };
     
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
         XCTAssertNil(error);
+        EndBlock();
     };
     
     
@@ -74,11 +76,13 @@
     StackOverflowQuestionResponseBlock response = ^(SPStackOverflowQuestion *question){
         XCTAssertNotNil(question);
         NSLog(@"Question returned with body: %@", question.body);
+        EndBlock();
     };
     
     
     MKNKErrorBlock errorBlock = ^(NSError *error) {
         XCTAssertNil(error);
+        EndBlock();
     };
     
     
